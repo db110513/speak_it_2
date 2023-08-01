@@ -2,28 +2,26 @@ import 'package:flutter/material.dart';
 import 'package:flutter_tts/flutter_tts.dart';
 
 void main() {
-  runApp(MyApp());
+  runApp(App());
 }
 
-class MyApp extends StatefulWidget {
-  @override
-  _MyAppState createState() => _MyAppState();
+class App extends StatefulWidget {
+
+  _AppState createState() => _AppState();
 }
 
 enum TtsState { playing, stopped }
 
-class _MyAppState extends State<MyApp> {
+class _AppState extends State<App> {
   late FlutterTts _flutterTts;
   String? _tts;
   TtsState _ttsState = TtsState.stopped;
 
-  @override
   void initState() {
     super.initState();
     initTts();
   }
 
-  @override
   void dispose() {
     super.dispose();
     _flutterTts.stop();
@@ -62,15 +60,17 @@ class _MyAppState extends State<MyApp> {
     });
   }
 
-  @override
   Widget build(BuildContext context) {
+
     return MaterialApp(
         home: Scaffold(
             appBar: AppBar(title: const Text('Flutter TTS')),
             body: SingleChildScrollView(
               scrollDirection: Axis.vertical,
-              child: Column(children: [input(), button()]),
-            )));
+              child: Column(children: [input(), button()])
+            )
+        )
+    );
   }
 
   Widget input() => Container(
@@ -86,14 +86,19 @@ class _MyAppState extends State<MyApp> {
       );
 
   Widget button() {
+
     if (_ttsState == TtsState.stopped) {
       return TextButton(onPressed: speak, child: const Text('Play'));
-    } else {
+    }
+
+    else {
       return TextButton(onPressed: stop, child: const Text('Stop'));
     }
+
   }
 
   Future speak() async {
+
     await _flutterTts.setVolume(1);
     await _flutterTts.setSpeechRate(0.5);
     await _flutterTts.setPitch(1);
