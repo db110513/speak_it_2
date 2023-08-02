@@ -13,46 +13,49 @@ class App extends StatefulWidget {
 enum TtsState { playing, stopped }
 
 class _AppState extends State<App> {
-  late FlutterTts _flutterTts;
+
+  late FlutterTts tts;
+
   String? _tts;
   TtsState _ttsState = TtsState.stopped;
 
   void initState() {
     super.initState();
     initTts();
+    tts.setLanguage('ca');
   }
 
   void dispose() {
     super.dispose();
-    _flutterTts.stop();
+    tts.stop();
   }
 
   initTts() async {
-    _flutterTts = FlutterTts();
-    await _flutterTts.awaitSpeakCompletion(true);
+    tts = FlutterTts();
+    await tts.awaitSpeakCompletion(true);
 
-    _flutterTts.setStartHandler(() {
+    tts.setStartHandler(() {
       setState(() {
         print("Playing");
         _ttsState = TtsState.playing;
       });
     });
 
-    _flutterTts.setCompletionHandler(() {
+    tts.setCompletionHandler(() {
       setState(() {
         print("Complete");
         _ttsState = TtsState.stopped;
       });
     });
 
-    _flutterTts.setCancelHandler(() {
+    tts.setCancelHandler(() {
       setState(() {
         print("Cancel");
         _ttsState = TtsState.stopped;
       });
     });
 
-    _flutterTts.setErrorHandler((message) {
+    tts.setErrorHandler((message) {
       setState(() {
         print("Error: $message");
         _ttsState = TtsState.stopped;
@@ -63,8 +66,14 @@ class _AppState extends State<App> {
   Widget build(BuildContext context) {
 
     return MaterialApp(
+
         home: Scaffold(
-            appBar: AppBar(title: const Text('Flutter TTS')),
+            appBar: AppBar(
+                title: const Text('TTS', style: TextStyle(fontSize:35)),
+                backgroundColor: Colors.grey,
+                centerTitle: true,
+            ),
+
             body: SingleChildScrollView(
               scrollDirection: Axis.vertical,
               child: Column(children: [input(), button()])
@@ -76,6 +85,7 @@ class _AppState extends State<App> {
   Widget input() => Container(
         alignment: Alignment.topCenter,
         padding: const EdgeInsets.all(25.0),
+
         child: TextField(
           onChanged: (String value) {
             setState(() {
@@ -99,23 +109,25 @@ class _AppState extends State<App> {
 
   Future speak() async {
 
-    await _flutterTts.setVolume(1);
-    await _flutterTts.setSpeechRate(0.5);
-    await _flutterTts.setPitch(1);
+    await tts.setVolume(1);
+    await tts.setSpeechRate(0.5);
+    await tts.setPitch(1);
 
     if (_tts != null) {
       if (_tts!.isNotEmpty) {
-        await _flutterTts.speak(_tts!);
+        await tts.speak(_tts!);
       }
     }
   }
 
   Future stop() async {
-    var result = await _flutterTts.stop();
+    var result = await tts.stop();
+
     if (result == 1) {
       setState(() {
         _ttsState = TtsState.stopped;
       });
     }
   }
+
 }
