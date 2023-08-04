@@ -1,13 +1,13 @@
 import 'package:flutter_tts/flutter_tts.dart';
 import 'package:flutter/material.dart';
 
-class Emocions extends StatefulWidget {
-  const Emocions({Key? key}) : super(key: key);
+class Begudes extends StatefulWidget {
+  const Begudes({Key? key}) : super(key: key);
 
-  State<Emocions> createState() => _EmocionsState();
+  State<Begudes> createState() => _BegudesState();
 }
 
-class _EmocionsState extends State<Emocions> {
+class _BegudesState extends State<Begudes> {
 
   Widget build(BuildContext context) {
 
@@ -15,7 +15,7 @@ class _EmocionsState extends State<Emocions> {
 
       appBar: AppBar(
         centerTitle: true,
-        title: const Text('Emocions', style: TextStyle(fontSize: 40)),
+        title: const Text('Begudes', style: TextStyle(fontSize: 40)),
       ),
 
       body: Container(
