@@ -4,6 +4,7 @@ import 'package:flutter_tts/flutter_tts.dart';
 import 'exports.dart';
 
 class App extends StatefulWidget {
+  late String txt;
 
   _AppState createState() => _AppState();
 }
@@ -12,7 +13,8 @@ enum TtsState { playing, stopped }
 
 class _AppState extends State<App> {
 
-  late String txt;
+  App app = App();
+
   late FlutterTts tts;
 
   void initState() {
@@ -76,7 +78,7 @@ class _AppState extends State<App> {
                           backgroundColor: Colors.white,
                         ),
                         onPressed: () {
-                          txt = 'animals';
+                          app.txt = 'animals';
                           speak();
                           Navigator.of(context).push(MaterialPageRoute(builder: (context) => Animals()));
                         },
@@ -88,7 +90,7 @@ class _AppState extends State<App> {
                           backgroundColor: Colors.white,
                         ),
                         onPressed: () {
-                          txt = 'menjar';
+                          app.txt = 'menjar';
                           speak();
                           Navigator.of(context).push(MaterialPageRoute(builder: (context) => Menjar()));
                         },
@@ -100,7 +102,7 @@ class _AppState extends State<App> {
                           backgroundColor: Colors.white,
                         ),
                         onPressed: () {
-                          txt = 'emocions';
+                          app.txt = 'emocions';
                           speak();
                           Navigator.of(context).push(MaterialPageRoute(builder: (context) => Emocions()));
                         },
@@ -112,7 +114,7 @@ class _AppState extends State<App> {
                           backgroundColor: Colors.white,
                         ),
                         onPressed: () {
-                          txt = 'jocs';
+                          app.txt = 'jocs';
                           speak();
                           Navigator.of(context).push(MaterialPageRoute(builder: (context) => Jocs()));
                         },
@@ -124,7 +126,7 @@ class _AppState extends State<App> {
                           backgroundColor: Colors.white,
                         ),
                         onPressed: () {
-                          txt = 'si';
+                          app.txt = 'si';
                           speak();
                         },
                         child: Image.asset('img/si.png', width:160, height:160, fit: BoxFit.cover)
@@ -135,7 +137,7 @@ class _AppState extends State<App> {
                           backgroundColor: Colors.white,
                         ),
                         onPressed: () {
-                          txt = 'no';
+                          app.txt = 'no';
                           speak();
                         },
                         child: Image.asset('img/no.png', width:160, height:160, fit: BoxFit.cover)
@@ -154,7 +156,7 @@ class _AppState extends State<App> {
                           backgroundColor: Colors.white,
                         ),
                         onPressed: () {
-                          txt = 'begudes';
+                          app.txt = 'begudes';
                           speak();
                           Navigator.of(context).push(MaterialPageRoute(builder: (context) => Begudes()));
                         },
@@ -167,7 +169,7 @@ class _AppState extends State<App> {
                           backgroundColor: Colors.white,
                         ),
                         onPressed: () {
-                          txt = 'accions';
+                          app.txt = 'accions';
                           speak();
                           Navigator.of(context).push(MaterialPageRoute(builder: (context) => Accions()));
                         },
@@ -181,7 +183,7 @@ class _AppState extends State<App> {
                           backgroundColor: Colors.white,
                         ),
                         onPressed: () {
-                          txt = 'transports';
+                          app.txt = 'transports';
                           speak();
                           Navigator.of(context).push(MaterialPageRoute(builder: (context) => Transports()));
                         },
@@ -195,7 +197,7 @@ class _AppState extends State<App> {
                           backgroundColor: Colors.white,
                         ),
                         onPressed: () {
-                          txt = 'persones';
+                          app.txt = 'persones';
                           speak();
                           Navigator.of(context).push(MaterialPageRoute(builder: (context) => Persones()));
                         },
@@ -207,7 +209,7 @@ class _AppState extends State<App> {
                           backgroundColor: Colors.white,
                         ),
                         onPressed: () {
-                          txt = 'vull';
+                          app.txt = 'vull';
                           speak();
                         },
                         child: Image.asset('img/vull.png', width:160, height:160, fit: BoxFit.cover)
@@ -218,7 +220,7 @@ class _AppState extends State<App> {
                           backgroundColor: Colors.white,
                         ),
                         onPressed: () {
-                          txt = 'no vull';
+                          app.txt = 'no vull';
                           speak();
                         },
                         child: Image.asset('img/no_vull.png', width:160, height:160, fit: BoxFit.cover)
@@ -270,11 +272,11 @@ class _AppState extends State<App> {
     await tts.setSpeechRate(0.5);
     await tts.setPitch(1);
 
-    if (txt != null) {
+    if (app.txt != null) {
 
-      if (txt!.isNotEmpty) {
+      if (app.txt!.isNotEmpty) {
 
-        await tts.speak(txt!);
+        await tts.speak(app.txt!);
 
       }
 

@@ -15,7 +15,6 @@ class _AnimalsState extends State<Animals> {
 
   App app = new App();
 
-  late String txt;
   late FlutterTts tts;
 
   void initState() {
@@ -56,7 +55,7 @@ class _AnimalsState extends State<Animals> {
                         backgroundColor: Colors.white,
                       ),
                       onPressed: () {
-                        txt = 'cocodril';
+                        app.txt = 'cocodril';
                         speak();
                       },
                       child: Image.asset('img/cocodril.png', width:160,
@@ -68,7 +67,7 @@ class _AnimalsState extends State<Animals> {
                         backgroundColor: Colors.white,
                       ),
                       onPressed: () {
-                        txt = 'elefant';
+                        app.txt = 'elefant';
                         speak();
                       },
                       child: Image.asset('img/elefant.png', width:160, height:160, fit: BoxFit.cover)
@@ -79,7 +78,7 @@ class _AnimalsState extends State<Animals> {
                         backgroundColor: Colors.white,
                       ),
                       onPressed: () {
-                        txt = 'gos';
+                        app.txt = 'gos';
                         speak();
                       },
                       child: Image.asset('img/gos.png', width:160, height:160, fit: BoxFit.cover)
@@ -90,7 +89,7 @@ class _AnimalsState extends State<Animals> {
                         backgroundColor: Colors.white,
                       ),
                       onPressed: () {
-                        txt = 'lloro';
+                        app.txt = 'lloro';
                         speak();
                       },
                       child: Image.asset('img/lloro.png', width:160, height:160, fit: BoxFit.cover)
@@ -101,7 +100,7 @@ class _AnimalsState extends State<Animals> {
                         backgroundColor: Colors.white,
                       ),
                       onPressed: () {
-                        txt = 'peix';
+                        app.txt = 'peix';
                         speak();
                       },
                       child: Image.asset('img/peix.png', width:160, height:160,
@@ -113,7 +112,7 @@ class _AnimalsState extends State<Animals> {
                         backgroundColor: Colors.white,
                       ),
                       onPressed: () {
-                        txt = 'pingüi';
+                        app.txt = 'pingüi';
                         speak();
                       },
                       child: Image.asset('img/pingui.png', width:160,
@@ -138,11 +137,11 @@ class _AnimalsState extends State<Animals> {
     await tts.setSpeechRate(0.5);
     await tts.setPitch(1);
 
-    if (txt != null) {
+    if (app.txt != null) {
 
-      if (txt!.isNotEmpty) {
+      if (app.txt!.isNotEmpty) {
 
-        await tts.speak(txt!);
+        await tts.speak(app.txt!);
 
       }
     }
