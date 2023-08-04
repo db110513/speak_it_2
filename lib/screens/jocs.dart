@@ -1,3 +1,4 @@
+import 'exports.dart';
 import 'package:flutter_tts/flutter_tts.dart';
 import 'package:flutter/material.dart';
 
@@ -8,6 +9,9 @@ class Jocs extends StatefulWidget {
 }
 
 class _JocsState extends State<Jocs> {
+
+  App app = App();
+  late String t = app.txt;
 
   Widget build(BuildContext context) {
 
@@ -22,11 +26,149 @@ class _JocsState extends State<Jocs> {
         padding: const EdgeInsets.all(10),
 
         child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
 
-          children: [
+            children: [
+              const SizedBox(height: 200),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  ElevatedButton(
+                      style: ElevatedButton.styleFrom(
+                        backgroundColor: Colors.white,
+                      ),
+                      onPressed: () {
+                        t += 'parxis';
+                      },
+                      child: Image.asset('img/parxis.png', width:160, height:160, fit: BoxFit.cover)
+                  ),
+                  const SizedBox(width: 10),
+                  ElevatedButton(
+                      style: ElevatedButton.styleFrom(
+                        backgroundColor: Colors.white,
+                      ),
+                      onPressed: () {
+                        t += 'dòmino';
+                        print ('elefant');
+                      },
+                      child: Image.asset('img/domino.png', width:160, height:160, fit: BoxFit.cover)
+                  ),
+                  const SizedBox(width: 10),
+                  ElevatedButton(
+                      style: ElevatedButton.styleFrom(
+                        backgroundColor: Colors.white,
+                      ),
+                      onPressed: () {
+                        t += 'dames';
+                      },
+                      child: Image.asset('img/dames.png', width:160, height:160, fit: BoxFit.cover)
+                  ),
+                  const SizedBox(width: 10),
+                  ElevatedButton(
+                      style: ElevatedButton.styleFrom(
+                        backgroundColor: Colors.white,
+                      ),
+                      onPressed: () {
+                        t += 'tetris';
+                      },
+                      child: Image.asset('img/tetris.png', width:160, height:160, fit: BoxFit.cover)
+                  ),
+                  const SizedBox(width: 10),
+                  ElevatedButton(
+                      style: ElevatedButton.styleFrom(
+                        backgroundColor: Colors.white,
+                      ),
+                      onPressed: () {
+                        t += 'ruleta';
+                      },
+                      child: Image.asset('img/ruleta.png', width:160, height:160,
+                          fit: BoxFit.cover)
+                  ),
+                  const SizedBox(width: 10),
+                  ElevatedButton(
+                      style: ElevatedButton.styleFrom(
+                        backgroundColor: Colors.white,
+                      ),
+                      onPressed: () {
+                        t += 'futboli';
+                      },
+                      child: Image.asset('img/futboli.png', width:160, height:160, fit: BoxFit.cover)
+                  ),
 
-          ],
+                ],
+
+              ),
+              const SizedBox(height: 10),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  ElevatedButton(
+                      style: ElevatedButton.styleFrom(
+                        backgroundColor: Colors.white,
+                      ),
+                      onPressed: () {
+                        t += 'cartes';
+                      },
+                      child: Image.asset('img/cartes.png', width:160, height:160, fit: BoxFit.cover)
+                  ),
+                  const SizedBox(width: 10),
+                  ElevatedButton(
+                      style: ElevatedButton.styleFrom(
+                        backgroundColor: Colors.white,
+                      ),
+                      onPressed: () {
+                        t += 'escacs';
+                      },
+                      child: Image.asset('img/escacs.png', width:160, height:160, fit: BoxFit.cover)
+                  ),
+                  const SizedBox(width: 10),
+                  ElevatedButton(
+                      style: ElevatedButton.styleFrom(
+                        backgroundColor: Colors.white,
+                      ),
+                      onPressed: () {
+                        t += 'fitxes';
+                      },
+                      child: Image.asset('img/fitxes.png', width:160, height:160, fit: BoxFit.cover)
+                  ),
+                  const SizedBox(width: 10),
+                  ElevatedButton(
+                      style: ElevatedButton.styleFrom(
+                        backgroundColor: Colors.white,
+                      ),
+                      onPressed: () {
+                        t += 'pacman';
+                      },
+                      child: Image.asset('img/pacman.png', width:160, height:160,
+                          fit: BoxFit.cover)
+                  ),
+                  const SizedBox(width: 10),
+                  ElevatedButton(
+                      style: ElevatedButton.styleFrom(
+                        backgroundColor: Colors.white,
+                      ),
+                      onPressed: () {
+                        t += 'billar';
+                      },
+                      child: Image.asset('img/billar.png', width:160, height:160,
+                          fit: BoxFit.cover)
+                  ),
+                  const SizedBox(width: 10),
+                  ElevatedButton(
+                      style: ElevatedButton.styleFrom(
+                        backgroundColor: Colors.white,
+                      ),
+                      onPressed: () {
+                        t += 'ruleta';
+                      },
+                      child: Image.asset('img/ruleta2.png', width:160,
+                          height:160, fit: BoxFit.cover)
+                  ),
+
+                ],
+
+              )
+
+            ]
 
         ),
 

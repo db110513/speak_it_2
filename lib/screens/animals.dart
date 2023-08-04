@@ -13,9 +13,11 @@ class Animals extends StatefulWidget {
 
 class _AnimalsState extends State<Animals> {
 
-  App app = new App();
+  App app = App();
+  late String t = app.txt;
 
   late FlutterTts tts;
+
 
   void initState() {
     super.initState();
@@ -23,12 +25,14 @@ class _AnimalsState extends State<Animals> {
     tts.setLanguage('ca');
   }
 
+
   initTts() async {
 
     tts = FlutterTts();
     await tts.awaitSpeakCompletion(true);
 
   }
+
 
   Widget build(BuildContext context) {
 
@@ -55,8 +59,8 @@ class _AnimalsState extends State<Animals> {
                         backgroundColor: Colors.white,
                       ),
                       onPressed: () {
-                        app.txt = 'cocodril';
-                        speak();
+                        t += 'cocodril';
+                        print ('cocodril');
                       },
                       child: Image.asset('img/cocodril.png', width:160,
                           height:160, fit: BoxFit.cover)
@@ -67,8 +71,8 @@ class _AnimalsState extends State<Animals> {
                         backgroundColor: Colors.white,
                       ),
                       onPressed: () {
-                        app.txt = 'elefant';
-                        speak();
+                        t += 'elefant';
+                        print ('elefant');
                       },
                       child: Image.asset('img/elefant.png', width:160, height:160, fit: BoxFit.cover)
                   ),
@@ -78,8 +82,8 @@ class _AnimalsState extends State<Animals> {
                         backgroundColor: Colors.white,
                       ),
                       onPressed: () {
-                        app.txt = 'gos';
-                        speak();
+                        t += 'gos';
+                        print ('gos');
                       },
                       child: Image.asset('img/gos.png', width:160, height:160, fit: BoxFit.cover)
                   ),
@@ -89,8 +93,7 @@ class _AnimalsState extends State<Animals> {
                         backgroundColor: Colors.white,
                       ),
                       onPressed: () {
-                        app.txt = 'lloro';
-                        speak();
+                        t += 'lloro';
                       },
                       child: Image.asset('img/lloro.png', width:160, height:160, fit: BoxFit.cover)
                   ),
@@ -100,8 +103,7 @@ class _AnimalsState extends State<Animals> {
                         backgroundColor: Colors.white,
                       ),
                       onPressed: () {
-                        app.txt = 'peix';
-                        speak();
+                        t += 'peix';
                       },
                       child: Image.asset('img/peix.png', width:160, height:160,
                           fit: BoxFit.cover)
@@ -112,16 +114,90 @@ class _AnimalsState extends State<Animals> {
                         backgroundColor: Colors.white,
                       ),
                       onPressed: () {
-                        app.txt = 'pingüi';
-                        speak();
+                        t += 'pingüi';
                       },
                       child: Image.asset('img/pingui.png', width:160,
                           height:160, fit: BoxFit.cover)
                   ),
+
                 ],
-                //button(),
+
+              ),
+              const SizedBox(height: 10),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  ElevatedButton(
+                      style: ElevatedButton.styleFrom(
+                        backgroundColor: Colors.white,
+                      ),
+                      onPressed: () {
+                        t += 'caball';
+                      },
+                      child: Image.asset('img/caball.png', width:160,
+                          height:160, fit: BoxFit.cover)
+                  ),
+                  const SizedBox(width: 10),
+                  ElevatedButton(
+                      style: ElevatedButton.styleFrom(
+                        backgroundColor: Colors.white,
+                      ),
+                      onPressed: () {
+                        t += 'ànec';
+                      },
+                      child: Image.asset('img/anec.png', width:160, height:160,
+                          fit: BoxFit.cover)
+                  ),
+                  const SizedBox(width: 10),
+                  ElevatedButton(
+                      style: ElevatedButton.styleFrom(
+                        backgroundColor: Colors.white,
+                      ),
+                      onPressed: () {
+                        t += 'aranya';
+                      },
+                      child: Image.asset('img/aranya.png', width:160, height:160, fit: BoxFit.cover)
+                  ),
+                  const SizedBox(width: 10),
+                  ElevatedButton(
+                      style: ElevatedButton.styleFrom(
+                        backgroundColor: Colors.white,
+                      ),
+                      onPressed: () {
+                        t += 'gat';
+                      },
+                      child: Image.asset('img/gat.png', width:160, height:160,
+                          fit: BoxFit.cover)
+                  ),
+                  const SizedBox(width: 10),
+                  ElevatedButton(
+                      style: ElevatedButton.styleFrom(
+                        backgroundColor: Colors.white,
+                      ),
+                      onPressed: () {
+                        t += 'hipopotam';
+                      },
+                      child: Image.asset('img/hipopotam.png', width:160, height:160,
+                          fit: BoxFit.cover)
+                  ),
+                  const SizedBox(width: 10),
+                  ElevatedButton(
+                      style: ElevatedButton.styleFrom(
+                        backgroundColor: Colors.white,
+                      ),
+                      onPressed: () {
+                        t += 'serp';
+                      },
+                      child: Image.asset('img/serp.png', width:160,
+                          height:160, fit: BoxFit.cover)
+                  ),
+
+                ],
+
               )
+
             ]
+
         ),
 
       ),

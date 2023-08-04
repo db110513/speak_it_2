@@ -4,7 +4,7 @@ import 'package:flutter_tts/flutter_tts.dart';
 import 'exports.dart';
 
 class App extends StatefulWidget {
-  late String txt;
+  late String txt = '';
 
   _AppState createState() => _AppState();
 }
