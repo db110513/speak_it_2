@@ -49,9 +49,9 @@ class _AccionsState extends State<Accions> {
                         backgroundColor: Colors.white,
                       ),
                       onPressed: () {
-                        t += 'esgotar';
+                        t += 'preguntar';
                       },
-                      child: Image.asset('img/esgotar.png', width:160, height:160, fit: BoxFit.cover)
+                      child: Image.asset('img/preguntar.png', width:160, height:160, fit: BoxFit.cover)
                   ),
                   const SizedBox(width: 10),
                   ElevatedButton(
@@ -59,9 +59,9 @@ class _AccionsState extends State<Accions> {
                         backgroundColor: Colors.white,
                       ),
                       onPressed: () {
-                        t += 'agafar';
+                        t += 'beure';
                       },
-                      child: Image.asset('img/agafar.png', width:160, height:160, fit: BoxFit.cover)
+                      child: Image.asset('img/beure.png', width:160, height:160, fit: BoxFit.cover)
                   ),
                   const SizedBox(width: 10),
                   ElevatedButton(
@@ -79,9 +79,9 @@ class _AccionsState extends State<Accions> {
                         backgroundColor: Colors.white,
                       ),
                       onPressed: () {
-                        t += 'aixecar la ma';
+                        t += 'pixar';
                       },
-                      child: Image.asset('img/aixecarma.png', width:160, height:160,
+                      child: Image.asset('img/pixar.png', width:160, height:160,
                           fit: BoxFit.cover)
                   ),
                   const SizedBox(width: 10),
@@ -90,9 +90,9 @@ class _AccionsState extends State<Accions> {
                         backgroundColor: Colors.white,
                       ),
                       onPressed: () {
-                        t += 'atendre';
+                        t += 'cagar';
                       },
-                      child: Image.asset('img/atendre.png', width:160,
+                      child: Image.asset('img/cagar.png', width:160,
                           height:160, fit: BoxFit.cover)
                   ),
 
@@ -108,9 +108,9 @@ class _AccionsState extends State<Accions> {
                         backgroundColor: Colors.white,
                       ),
                       onPressed: () {
-                        t += 'celebrar';
+                        t += 'sortir';
                       },
-                      child: Image.asset('img/celebrar.png', width:160,
+                      child: Image.asset('img/sortir.png', width:160,
                           height:160, fit: BoxFit.cover)
                   ),
                   const SizedBox(width: 10),
@@ -119,9 +119,10 @@ class _AccionsState extends State<Accions> {
                         backgroundColor: Colors.white,
                       ),
                       onPressed: () {
-                        t += 'xuclar';
+                        t += 'menjar';
                       },
-                      child: Image.asset('img/xuclar.png', width:160, height:160,
+                      child: Image.asset('img/menjar2.png', width:160,
+                          height:160,
                           fit: BoxFit.cover)
                   ),
                   const SizedBox(width: 10),
@@ -130,9 +131,9 @@ class _AccionsState extends State<Accions> {
                         backgroundColor: Colors.white,
                       ),
                       onPressed: () {
-                        t += 'xiular';
+                        t += 'dutxar';
                       },
-                      child: Image.asset('img/xiular.png', width:160, height:160, fit: BoxFit.cover)
+                      child: Image.asset('img/dutxar.png', width:160, height:160, fit: BoxFit.cover)
                   ),
                   const SizedBox(width: 10),
                   ElevatedButton(
@@ -150,9 +151,9 @@ class _AccionsState extends State<Accions> {
                         backgroundColor: Colors.white,
                       ),
                       onPressed: () {
-                        t += 'recordar';
+                        t += 'voler';
                       },
-                      child: Image.asset('img/recordar.png', width:160, height:160, fit: BoxFit.cover)
+                      child: Image.asset('img/voler.png', width:160, height:160, fit: BoxFit.cover)
                   ),
                   const SizedBox(width: 10),
                   ElevatedButton(
@@ -160,9 +161,9 @@ class _AccionsState extends State<Accions> {
                         backgroundColor: Colors.white,
                       ),
                       onPressed: () {
-                        t += 'guanyar';
+                        t += 'anar';
                       },
-                      child: Image.asset('img/guanyar.png', width:160,
+                      child: Image.asset('img/anar.png', width:160,
                           height:160, fit: BoxFit.cover)
                   ),
 
