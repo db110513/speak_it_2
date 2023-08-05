@@ -1,40 +1,25 @@
-
 import 'exports.dart';
-import 'package:flutter_tts/flutter_tts.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_tts/flutter_tts.dart';
 
+class Verdures extends StatefulWidget {
+  const Verdures({Key? key}) : super(key: key);
 
-class Menjar extends StatefulWidget {
-  late String txt = '';
-
-  State<Menjar> createState() => _MenjarState();
+  State<Verdures> createState() => _VerduresState();
 }
 
-class _MenjarState extends State<Menjar> {
+class _VerduresState extends State<Verdures> {
 
   App app = App();
-
-  late FlutterTts tts;
-
-  void initState() {
-    super.initState();
-    initTts();
-    tts.setLanguage('ca');
-  }
-
   late String t = app.txt;
 
-  initTts() async {
-    tts = FlutterTts();
-    await tts.awaitSpeakCompletion(true);
-  }
-
   Widget build(BuildContext context) {
+
     return Scaffold(
 
       appBar: AppBar(
         centerTitle: true,
-        title: const Text('Menjar', style: TextStyle(fontSize: 40)),
+        title: const Text('Verdures', style: TextStyle(fontSize: 40)),
       ),
 
       body: Container(
@@ -53,12 +38,10 @@ class _MenjarState extends State<Menjar> {
                         backgroundColor: Colors.white,
                       ),
                       onPressed: () {
-                        t += 'fruita';
-                        Navigator.of(context).push(MaterialPageRoute(builder:(context) => Fruita()));
-
+                        t += 'tomàquet';
                       },
-                      child: Image.asset('img/fruita.png', width: 160,
-                          height: 160, fit: BoxFit.cover)
+                      child: Image.asset('img/tomaquet.png', width:160,
+                          height:160, fit: BoxFit.cover)
                   ),
                   const SizedBox(width: 10),
                   ElevatedButton(
@@ -66,10 +49,39 @@ class _MenjarState extends State<Menjar> {
                         backgroundColor: Colors.white,
                       ),
                       onPressed: () {
-                        t += 'formatge';
+                        t += 'enciam';
                       },
-                      child: Image.asset('img/formatge.png', width: 160,
-                          height: 160,
+                      child: Image.asset('img/enciam.png', width:160, height:160, fit: BoxFit.cover)
+                  ),
+                  const SizedBox(width: 10),
+                  ElevatedButton(
+                      style: ElevatedButton.styleFrom(
+                        backgroundColor: Colors.white,
+                      ),
+                      onPressed: () {
+                        t += 'carabassó';
+                      },
+                      child: Image.asset('img/carabasso.png', width:160, height:160, fit: BoxFit.cover)
+                  ),
+                  const SizedBox(width: 10),
+                  ElevatedButton(
+                      style: ElevatedButton.styleFrom(
+                        backgroundColor: Colors.white,
+                      ),
+                      onPressed: () {
+                        t += 'carbassa';
+                      },
+                      child: Image.asset('img/carbassa.png', width:160, height:160, fit: BoxFit.cover)
+                  ),
+                  const SizedBox(width: 10),
+                  ElevatedButton(
+                      style: ElevatedButton.styleFrom(
+                        backgroundColor: Colors.white,
+                      ),
+                      onPressed: () {
+                        t += 'pebrot verd';
+                      },
+                      child: Image.asset('img/pebrot_verd.png', width:160, height:160,
                           fit: BoxFit.cover)
                   ),
                   const SizedBox(width: 10),
@@ -78,46 +90,10 @@ class _MenjarState extends State<Menjar> {
                         backgroundColor: Colors.white,
                       ),
                       onPressed: () {
-                        t += 'galeta';
+                        t += 'carxofa';
                       },
-                      child: Image.asset('img/galeta.png', width: 160,
-                          height: 160,
-                          fit: BoxFit.cover)
-                  ),
-                  const SizedBox(width: 10),
-                  ElevatedButton(
-                      style: ElevatedButton.styleFrom(
-                        backgroundColor: Colors.white,
-                      ),
-                      onPressed: () {
-                        t += 'peix';
-                      },
-                      child: Image.asset('img/peix.png', width: 160,
-                          height: 160,
-                          fit: BoxFit.cover)
-                  ),
-                  const SizedBox(width: 10),
-                  ElevatedButton(
-                      style: ElevatedButton.styleFrom(
-                        backgroundColor: Colors.white,
-                      ),
-                      onPressed: () {
-                        t += 'pa';
-                      },
-                      child: Image.asset('img/pa.png', width: 160, height: 160,
-                          fit: BoxFit.cover)
-                  ),
-                  const SizedBox(width: 10),
-                  ElevatedButton(
-                      style: ElevatedButton.styleFrom(
-                        backgroundColor: Colors.white,
-                      ),
-                      onPressed: () {
-                        t += 'verdures';
-                        speak();
-                        Navigator.of(context).push(MaterialPageRoute(builder: (context) => Verdures()));
-                      },
-                      child: Image.asset('img/verdures.png', width: 160, height: 160, fit: BoxFit.cover)
+                      child: Image.asset('img/carxofa.png', width:160,
+                          height:160, fit: BoxFit.cover)
                   ),
 
                 ],
@@ -132,10 +108,10 @@ class _MenjarState extends State<Menjar> {
                         backgroundColor: Colors.white,
                       ),
                       onPressed: () {
-                        t += 'pastanaga';
+                        t += 'ceba';
                       },
-                      child: Image.asset('img/pastanaga.png', width: 160,
-                          height: 160, fit: BoxFit.cover)
+                      child: Image.asset('img/ceba.png', width:160,
+                          height:160, fit: BoxFit.cover)
                   ),
                   const SizedBox(width: 10),
                   ElevatedButton(
@@ -143,10 +119,10 @@ class _MenjarState extends State<Menjar> {
                         backgroundColor: Colors.white,
                       ),
                       onPressed: () {
-                        t += 'carn';
+                        t += 'blat de moro';
                       },
-                      child: Image.asset(
-                          'img/carn.png', width: 160, height: 160,
+                      child: Image.asset('img/blat_de_moro.png', width:160,
+                          height:160,
                           fit: BoxFit.cover)
                   ),
                   const SizedBox(width: 10),
@@ -155,11 +131,9 @@ class _MenjarState extends State<Menjar> {
                         backgroundColor: Colors.white,
                       ),
                       onPressed: () {
-                        t += 'hamburguesa';
+                        t += 'broquil';
                       },
-                      child: Image.asset('img/hamburguesa.png', width: 160,
-                          height: 160,
-                          fit: BoxFit.cover)
+                      child: Image.asset('img/broquil.png', width:160, height:160, fit: BoxFit.cover)
                   ),
                   const SizedBox(width: 10),
                   ElevatedButton(
@@ -167,11 +141,9 @@ class _MenjarState extends State<Menjar> {
                         backgroundColor: Colors.white,
                       ),
                       onPressed: () {
-                        t += 'dolços';
+                        t += 'coliflor';
                       },
-                      child: Image.asset(
-                          'img/dolcos.png', width: 160, height: 160,
-                          fit: BoxFit.cover)
+                      child: Image.asset('img/coliflor.png', width:160, height:160, fit: BoxFit.cover)
                   ),
                   const SizedBox(width: 10),
                   ElevatedButton(
@@ -179,11 +151,9 @@ class _MenjarState extends State<Menjar> {
                         backgroundColor: Colors.white,
                       ),
                       onPressed: () {
-                        t += 'postres';
+                        t += 'porro';
                       },
-                      child: Image.asset('img/postres.png', width: 160,
-                          height: 160,
-                          fit: BoxFit.cover)
+                      child: Image.asset('img/porro.png', width:160, height:160, fit: BoxFit.cover)
                   ),
                   const SizedBox(width: 10),
                   ElevatedButton(
@@ -191,10 +161,10 @@ class _MenjarState extends State<Menjar> {
                         backgroundColor: Colors.white,
                       ),
                       onPressed: () {
-                        t += 'marisc';
+                        t += 'espàrrec verd';
                       },
-                      child: Image.asset('img/marisc.png', width: 160,
-                          height: 160, fit: BoxFit.cover)
+                      child: Image.asset('img/esparrec_verd.png', width:160,
+                          height:160, fit: BoxFit.cover)
                   ),
 
                 ],
@@ -208,18 +178,7 @@ class _MenjarState extends State<Menjar> {
       ),
 
     );
-  }
 
-  Future speak() async {
-    await tts.setVolume(1);
-    await tts.setSpeechRate(0.5);
-    await tts.setPitch(1);
-
-    if (app.txt != null) {
-      if (app.txt!.isNotEmpty) {
-        await tts.speak(app.txt!);
-      }
-    }
   }
 
 }

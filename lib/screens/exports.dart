@@ -7,3 +7,5 @@ export 'accions.dart';
 export 'transports.dart';
 export 'persones.dart';
 export 'app.dart';
+export 'verdures.dart';
+export 'fruita.dart';

@@ -1,7 +1,7 @@
 
+import 'exports.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_tts/flutter_tts.dart';
-import 'exports.dart';
 
 class App extends StatefulWidget {
   late String txt = '';
@@ -29,14 +29,11 @@ class _AppState extends State<App> {
   }
 
   initTts() async {
-
     tts = FlutterTts();
     await tts.awaitSpeakCompletion(true);
-
   }
 
   Widget build(BuildContext context) {
-
     return Scaffold(
 
         appBar: AppBar(
@@ -281,6 +278,7 @@ class _AppState extends State<App> {
       }
 
     }
+
   }
 
 }

@@ -1,44 +1,28 @@
-
 import 'exports.dart';
 import 'package:flutter_tts/flutter_tts.dart';
 import 'package:flutter/material.dart';
 
+class Fruita extends StatefulWidget {
+  const Fruita({Key? key}) : super(key: key);
 
-class Menjar extends StatefulWidget {
-  late String txt = '';
-
-  State<Menjar> createState() => _MenjarState();
+  State<Fruita> createState() => _FruitaState();
 }
 
-class _MenjarState extends State<Menjar> {
+class _FruitaState extends State<Fruita> {
 
   App app = App();
-
-  late FlutterTts tts;
-
-  void initState() {
-    super.initState();
-    initTts();
-    tts.setLanguage('ca');
-  }
-
   late String t = app.txt;
 
-  initTts() async {
-    tts = FlutterTts();
-    await tts.awaitSpeakCompletion(true);
-  }
-
   Widget build(BuildContext context) {
+
     return Scaffold(
 
       appBar: AppBar(
         centerTitle: true,
-        title: const Text('Menjar', style: TextStyle(fontSize: 40)),
+        title: const Text('Fruita', style: TextStyle(fontSize: 40)),
       ),
 
       body: Container(
-
         padding: const EdgeInsets.all(10),
 
         child: Column(
@@ -53,12 +37,9 @@ class _MenjarState extends State<Menjar> {
                         backgroundColor: Colors.white,
                       ),
                       onPressed: () {
-                        t += 'fruita';
-                        Navigator.of(context).push(MaterialPageRoute(builder:(context) => Fruita()));
-
+                        t += 'raïm negre';
                       },
-                      child: Image.asset('img/fruita.png', width: 160,
-                          height: 160, fit: BoxFit.cover)
+                      child: Image.asset('img/raim_negre.png', width:160, height:160, fit: BoxFit.cover)
                   ),
                   const SizedBox(width: 10),
                   ElevatedButton(
@@ -66,10 +47,39 @@ class _MenjarState extends State<Menjar> {
                         backgroundColor: Colors.white,
                       ),
                       onPressed: () {
-                        t += 'formatge';
+                        t += 'mango';
                       },
-                      child: Image.asset('img/formatge.png', width: 160,
-                          height: 160,
+                      child: Image.asset('img/mango.png', width:160, height:160, fit: BoxFit.cover)
+                  ),
+                  const SizedBox(width: 10),
+                  ElevatedButton(
+                      style: ElevatedButton.styleFrom(
+                        backgroundColor: Colors.white,
+                      ),
+                      onPressed: () {
+                        t += 'poma groga';
+                      },
+                      child: Image.asset('img/poma_groga.png', width:160, height:160, fit: BoxFit.cover)
+                  ),
+                  const SizedBox(width: 10),
+                  ElevatedButton(
+                      style: ElevatedButton.styleFrom(
+                        backgroundColor: Colors.white,
+                      ),
+                      onPressed: () {
+                        t += 'poma verda';
+                      },
+                      child: Image.asset('img/poma_verda.png', width:160, height:160, fit: BoxFit.cover)
+                  ),
+                  const SizedBox(width: 10),
+                  ElevatedButton(
+                      style: ElevatedButton.styleFrom(
+                        backgroundColor: Colors.white,
+                      ),
+                      onPressed: () {
+                        t += 'poma vermella';
+                      },
+                      child: Image.asset('img/poma_vermella.png', width:160, height:160,
                           fit: BoxFit.cover)
                   ),
                   const SizedBox(width: 10),
@@ -78,46 +88,9 @@ class _MenjarState extends State<Menjar> {
                         backgroundColor: Colors.white,
                       ),
                       onPressed: () {
-                        t += 'galeta';
+                        t += 'mandarina';
                       },
-                      child: Image.asset('img/galeta.png', width: 160,
-                          height: 160,
-                          fit: BoxFit.cover)
-                  ),
-                  const SizedBox(width: 10),
-                  ElevatedButton(
-                      style: ElevatedButton.styleFrom(
-                        backgroundColor: Colors.white,
-                      ),
-                      onPressed: () {
-                        t += 'peix';
-                      },
-                      child: Image.asset('img/peix.png', width: 160,
-                          height: 160,
-                          fit: BoxFit.cover)
-                  ),
-                  const SizedBox(width: 10),
-                  ElevatedButton(
-                      style: ElevatedButton.styleFrom(
-                        backgroundColor: Colors.white,
-                      ),
-                      onPressed: () {
-                        t += 'pa';
-                      },
-                      child: Image.asset('img/pa.png', width: 160, height: 160,
-                          fit: BoxFit.cover)
-                  ),
-                  const SizedBox(width: 10),
-                  ElevatedButton(
-                      style: ElevatedButton.styleFrom(
-                        backgroundColor: Colors.white,
-                      ),
-                      onPressed: () {
-                        t += 'verdures';
-                        speak();
-                        Navigator.of(context).push(MaterialPageRoute(builder: (context) => Verdures()));
-                      },
-                      child: Image.asset('img/verdures.png', width: 160, height: 160, fit: BoxFit.cover)
+                      child: Image.asset('img/mandarina.png', width:160, height:160, fit: BoxFit.cover)
                   ),
 
                 ],
@@ -132,10 +105,9 @@ class _MenjarState extends State<Menjar> {
                         backgroundColor: Colors.white,
                       ),
                       onPressed: () {
-                        t += 'pastanaga';
+                        t += 'coco';
                       },
-                      child: Image.asset('img/pastanaga.png', width: 160,
-                          height: 160, fit: BoxFit.cover)
+                      child: Image.asset('img/coco.png', width:160, height:160, fit: BoxFit.cover)
                   ),
                   const SizedBox(width: 10),
                   ElevatedButton(
@@ -143,10 +115,29 @@ class _MenjarState extends State<Menjar> {
                         backgroundColor: Colors.white,
                       ),
                       onPressed: () {
-                        t += 'carn';
+                        t += 'kiwi';
                       },
-                      child: Image.asset(
-                          'img/carn.png', width: 160, height: 160,
+                      child: Image.asset('img/kiwi.png', width:160, height:160, fit: BoxFit.cover)
+                  ),
+                  const SizedBox(width: 10),
+                  ElevatedButton(
+                      style: ElevatedButton.styleFrom(
+                        backgroundColor: Colors.white,
+                      ),
+                      onPressed: () {
+                        t += 'prèssec';
+                      },
+                      child: Image.asset('img/pressec.png', width:160, height:160, fit: BoxFit.cover)
+                  ),
+                  const SizedBox(width: 10),
+                  ElevatedButton(
+                      style: ElevatedButton.styleFrom(
+                        backgroundColor: Colors.white,
+                      ),
+                      onPressed: () {
+                        t += 'pinya';
+                      },
+                      child: Image.asset('img/pinya.png', width:160, height:160,
                           fit: BoxFit.cover)
                   ),
                   const SizedBox(width: 10),
@@ -155,11 +146,9 @@ class _MenjarState extends State<Menjar> {
                         backgroundColor: Colors.white,
                       ),
                       onPressed: () {
-                        t += 'hamburguesa';
+                        t += 'billar';
                       },
-                      child: Image.asset('img/hamburguesa.png', width: 160,
-                          height: 160,
-                          fit: BoxFit.cover)
+                      child: Image.asset('img/banana.png', width:160, height:160, fit: BoxFit.cover)
                   ),
                   const SizedBox(width: 10),
                   ElevatedButton(
@@ -167,34 +156,10 @@ class _MenjarState extends State<Menjar> {
                         backgroundColor: Colors.white,
                       ),
                       onPressed: () {
-                        t += 'dolços';
+                        t += 'taronja';
                       },
-                      child: Image.asset(
-                          'img/dolcos.png', width: 160, height: 160,
-                          fit: BoxFit.cover)
-                  ),
-                  const SizedBox(width: 10),
-                  ElevatedButton(
-                      style: ElevatedButton.styleFrom(
-                        backgroundColor: Colors.white,
-                      ),
-                      onPressed: () {
-                        t += 'postres';
-                      },
-                      child: Image.asset('img/postres.png', width: 160,
-                          height: 160,
-                          fit: BoxFit.cover)
-                  ),
-                  const SizedBox(width: 10),
-                  ElevatedButton(
-                      style: ElevatedButton.styleFrom(
-                        backgroundColor: Colors.white,
-                      ),
-                      onPressed: () {
-                        t += 'marisc';
-                      },
-                      child: Image.asset('img/marisc.png', width: 160,
-                          height: 160, fit: BoxFit.cover)
+                      child: Image.asset('img/taronja.png', width:160,
+                          height:160, fit: BoxFit.cover)
                   ),
 
                 ],
@@ -208,18 +173,7 @@ class _MenjarState extends State<Menjar> {
       ),
 
     );
-  }
 
-  Future speak() async {
-    await tts.setVolume(1);
-    await tts.setSpeechRate(0.5);
-    await tts.setPitch(1);
-
-    if (app.txt != null) {
-      if (app.txt!.isNotEmpty) {
-        await tts.speak(app.txt!);
-      }
-    }
   }
 
 }
