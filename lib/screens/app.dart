@@ -54,7 +54,7 @@ class _AppState extends State<App> {
 
               children: [
 
-                ElevatedButton(
+                /*  ElevatedButton(
                     style: ElevatedButton.styleFrom(
                       backgroundColor: Colors.white,
                     ),
@@ -63,7 +63,8 @@ class _AppState extends State<App> {
                     },
                     child: Image.asset('img/play.png', width:80, height:80,
                         fit: BoxFit.cover)
-                ),
+                ),*/
+
 
                 const SizedBox(height: 200),
 

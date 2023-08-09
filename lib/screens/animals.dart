@@ -59,9 +59,11 @@ class _AnimalsState extends State<Animals> {
                         backgroundColor: Colors.white,
                       ),
                       onPressed: () {
+                        // el texto aquí es cocodril
                         t += 'cocodril';
                         print ('cocodril');
                       },
+                      // imagen
                       child: Image.asset('img/cocodril.png', width:160,
                           height:160, fit: BoxFit.cover)
                   ),
@@ -87,6 +89,8 @@ class _AnimalsState extends State<Animals> {
                       },
                       child: Image.asset('img/gos.png', width:160, height:160, fit: BoxFit.cover)
                   ),
+
+
                   const SizedBox(width: 10),
                   ElevatedButton(
                       style: ElevatedButton.styleFrom(

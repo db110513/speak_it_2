@@ -3,7 +3,6 @@ import 'exports.dart';
 import 'package:flutter_tts/flutter_tts.dart';
 import 'package:flutter/material.dart';
 
-
 class Menjar extends StatefulWidget {
   late String txt = '';
 
@@ -20,6 +19,11 @@ class _MenjarState extends State<Menjar> {
     super.initState();
     initTts();
     tts.setLanguage('ca');
+  }
+
+  void dispose() {
+    super.dispose();
+    tts.stop();
   }
 
   late String t = app.txt;
@@ -55,7 +59,6 @@ class _MenjarState extends State<Menjar> {
                       onPressed: () {
                         t += 'fruita';
                         Navigator.of(context).push(MaterialPageRoute(builder:(context) => Fruita()));
-
                       },
                       child: Image.asset('img/fruita.png', width: 160,
                           height: 160, fit: BoxFit.cover)
@@ -114,7 +117,6 @@ class _MenjarState extends State<Menjar> {
                       ),
                       onPressed: () {
                         t += 'verdures';
-                        speak();
                         Navigator.of(context).push(MaterialPageRoute(builder: (context) => Verdures()));
                       },
                       child: Image.asset('img/verdures.png', width: 160, height: 160, fit: BoxFit.cover)
@@ -209,17 +211,4 @@ class _MenjarState extends State<Menjar> {
 
     );
   }
-
-  Future speak() async {
-    await tts.setVolume(1);
-    await tts.setSpeechRate(0.5);
-    await tts.setPitch(1);
-
-    if (app.txt != null) {
-      if (app.txt!.isNotEmpty) {
-        await tts.speak(app.txt!);
-      }
-    }
-  }
-
 }
