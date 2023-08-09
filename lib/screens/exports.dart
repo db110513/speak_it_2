@@ -9,3 +9,7 @@ export 'persones.dart';
 export 'app.dart';
 export 'verdures.dart';
 export 'fruita.dart';
+export 'casa.dart';
+export 'cuina.dart';
+export 'llocs.dart';
+export 'roba.dart';

@@ -29,7 +29,8 @@ class _AccionsState extends State<Accions> {
           child: Column(
 
             children: [
-              const SizedBox(height: 200),
+
+              const SizedBox(height: 150),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
@@ -99,6 +100,7 @@ class _AccionsState extends State<Accions> {
                 ],
 
               ),
+
               const SizedBox(height: 10),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
@@ -169,7 +171,83 @@ class _AccionsState extends State<Accions> {
 
                 ],
 
-              )
+              ),
+
+              const SizedBox(height: 10),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  ElevatedButton(
+                      style: ElevatedButton.styleFrom(
+                        backgroundColor: Colors.white,
+                      ),
+                      onPressed: () {
+                        t += 'acompanyar';
+                      },
+                      child: Image.asset('img/acompanyar.png', width:160,
+                          height:160, fit: BoxFit.cover)
+                  ),
+                  const SizedBox(width: 10),
+
+                  ElevatedButton(
+                      style: ElevatedButton.styleFrom(
+                        backgroundColor: Colors.white,
+                      ),
+                      onPressed: () {
+                        t += 'renyar';
+                      },
+                      child: Image.asset('img/renyar.png', width:160,
+                          height:160,
+                          fit: BoxFit.cover)
+                  ),
+
+                  const SizedBox(width: 10),
+                  ElevatedButton(
+                      style: ElevatedButton.styleFrom(
+                        backgroundColor: Colors.white,
+                      ),
+                      onPressed: () {
+                        t += 'fugir';
+                      },
+                      child: Image.asset('img/fugir.png', width:160, height:160, fit: BoxFit.cover)
+                  ),
+
+                  const SizedBox(width: 10),
+                  ElevatedButton(
+                      style: ElevatedButton.styleFrom(
+                        backgroundColor: Colors.white,
+                      ),
+                      onPressed: () {
+                        t += 'vigilar';
+                      },
+                      child: Image.asset('img/vigilar.png', width:160, height:160, fit: BoxFit.cover)
+                  ),
+
+                  const SizedBox(width: 10),
+                  ElevatedButton(
+                      style: ElevatedButton.styleFrom(
+                        backgroundColor: Colors.white,
+                      ),
+                      onPressed: () {
+                        t += 'repartir';
+                      },
+                      child: Image.asset('img/repartir.png', width:160, height:160, fit: BoxFit.cover)
+                  ),
+
+                  const SizedBox(width: 10),
+                  ElevatedButton(
+                      style: ElevatedButton.styleFrom(
+                        backgroundColor: Colors.white,
+                      ),
+                      onPressed: () {
+                        t += 'vigilar';
+                      },
+                      child: Image.asset('img/vigilar.png', width:160, height:160, fit: BoxFit.cover)
+                  ),
+
+                ],
+
+              ),
 
             ]
 

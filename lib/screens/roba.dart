@@ -2,24 +2,23 @@ import 'exports.dart';
 import 'package:flutter_tts/flutter_tts.dart';
 import 'package:flutter/material.dart';
 
-class Begudes extends StatefulWidget {
-  const Begudes({Key? key}) : super(key: key);
+class Roba extends StatefulWidget {
+  const Roba({Key? key}) : super(key: key);
 
-  State<Begudes> createState() => _BegudesState();
+  State<Roba> createState() => _RobaState();
 }
 
-class _BegudesState extends State<Begudes> {
+class _RobaState extends State<Roba> {
 
   App app = App();
   late String t = app.txt;
 
   Widget build(BuildContext context) {
-
     return Scaffold(
 
       appBar: AppBar(
         centerTitle: true,
-        title: const Text('Begudes', style: TextStyle(fontSize: 40)),
+        title: const Text('Roba', style: TextStyle(fontSize: 40)),
       ),
 
       body: Container(
@@ -30,7 +29,7 @@ class _BegudesState extends State<Begudes> {
 
             children: [
 
-              const SizedBox(height: 200),
+              const SizedBox(height: 100),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
@@ -39,50 +38,10 @@ class _BegudesState extends State<Begudes> {
                         backgroundColor: Colors.white,
                       ),
                       onPressed: () {
-                        t += 'cafe';
+                        t += 'jeans';
                       },
-                      child: Image.asset('img/cafe.png', width:160,
-                          height:160, fit: BoxFit.cover)
-                  ),
-                  const SizedBox(width: 10),
-                  ElevatedButton(
-                      style: ElevatedButton.styleFrom(
-                        backgroundColor: Colors.white,
-                      ),
-                      onPressed: () {
-                        t += 'got d\'aigua';
-                      },
-                      child: Image.asset('img/got_aigua.png', width:160, height:160, fit: BoxFit.cover)
-                  ),
-                  const SizedBox(width: 10),
-                  ElevatedButton(
-                      style: ElevatedButton.styleFrom(
-                        backgroundColor: Colors.white,
-                      ),
-                      onPressed: () {
-                        t += 'xocolata desfeta';
-                      },
-                      child: Image.asset('img/xocolata_desfeta.png', width:160, height:160, fit: BoxFit.cover)
-                  ),
-                  const SizedBox(width: 10),
-                  ElevatedButton(
-                      style: ElevatedButton.styleFrom(
-                        backgroundColor: Colors.white,
-                      ),
-                      onPressed: () {
-                        t += 'sidra';
-                      },
-                      child: Image.asset('img/sidra.png', width:160, height:160, fit: BoxFit.cover)
-                  ),
-                  const SizedBox(width: 10),
-                  ElevatedButton(
-                      style: ElevatedButton.styleFrom(
-                        backgroundColor: Colors.white,
-                      ),
-                      onPressed: () {
-                        t += 'cava';
-                      },
-                      child: Image.asset('img/cava.png', width:160, height:160,
+                      child: Image.asset('img/jeans.png', width: 160,
+                          height: 160,
                           fit: BoxFit.cover)
                   ),
                   const SizedBox(width: 10),
@@ -91,10 +50,61 @@ class _BegudesState extends State<Begudes> {
                         backgroundColor: Colors.white,
                       ),
                       onPressed: () {
-                        t += 'cervesa';
+                        t += 'pantaló curt';
+                        Navigator.of(context).push(
+                            MaterialPageRoute(builder: (context) => Cuina()));
                       },
-                      child: Image.asset('img/cervesa.png', width:160,
-                          height:160, fit: BoxFit.cover)
+                      child: Image.asset('img/pant_curt.png', width: 160,
+                          height: 160,
+                          fit: BoxFit.cover)
+                  ),
+                  const SizedBox(width: 10),
+                  ElevatedButton(
+                      style: ElevatedButton.styleFrom(
+                        backgroundColor: Colors.white,
+                      ),
+                      onPressed: () {
+                        t += 'dessuadora';
+                      },
+                      child: Image.asset('img/dessuadora.png', width: 160,
+                          height: 160,
+                          fit: BoxFit.cover)
+                  ),
+                  const SizedBox(width: 10),
+                  ElevatedButton(
+                      style: ElevatedButton.styleFrom(
+                        backgroundColor: Colors.white,
+                      ),
+                      onPressed: () {
+                        t += 'americana';
+                      },
+                      child: Image.asset('img/americana.png', width: 160,
+                          height: 160,
+                          fit: BoxFit.cover)
+                  ),
+                  const SizedBox(width: 10),
+                  ElevatedButton(
+                      style: ElevatedButton.styleFrom(
+                        backgroundColor: Colors.white,
+                      ),
+                      onPressed: () {
+                        t += 'taca';
+                      },
+                      child: Image.asset('img/taca.png', width: 160,
+                          height: 160,
+                          fit: BoxFit.cover)
+                  ),
+                  const SizedBox(width: 10),
+                  ElevatedButton(
+                      style: ElevatedButton.styleFrom(
+                        backgroundColor: Colors.white,
+                      ),
+                      onPressed: () {
+                        t += 'samarreta de tirants';
+                      },
+                      child: Image.asset('img/samarr_tirants.png', width: 160,
+                          height: 160,
+                          fit: BoxFit.cover)
                   ),
 
                 ],
@@ -105,25 +115,29 @@ class _BegudesState extends State<Begudes> {
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
+
                   ElevatedButton(
                       style: ElevatedButton.styleFrom(
                         backgroundColor: Colors.white,
                       ),
                       onPressed: () {
-                        t += 'cocacola';
+                        t += 'camisa de màniga curta';
                       },
-                      child: Image.asset('img/cocacola.png', width:160,
-                          height:160, fit: BoxFit.cover)
+                      child: Image.asset('img/camina_mng_crta.png', width: 160,
+                          height: 160,
+                          fit: BoxFit.cover)
                   ),
+
                   const SizedBox(width: 10),
                   ElevatedButton(
                       style: ElevatedButton.styleFrom(
                         backgroundColor: Colors.white,
                       ),
                       onPressed: () {
-                        t += 'aigua';
+                        t += 'impermeable';
                       },
-                      child: Image.asset('img/aigua.png', width:160, height:160,
+                      child: Image.asset('img/impermeable.png', width: 160,
+                          height: 160,
                           fit: BoxFit.cover)
                   ),
                   const SizedBox(width: 10),
@@ -132,19 +146,10 @@ class _BegudesState extends State<Begudes> {
                         backgroundColor: Colors.white,
                       ),
                       onPressed: () {
-                        t += 'got de llet';
+                        t += 'gasolinera';
                       },
-                      child: Image.asset('img/got_llet.png', width:160, height:160, fit: BoxFit.cover)
-                  ),
-                  const SizedBox(width: 10),
-                  ElevatedButton(
-                      style: ElevatedButton.styleFrom(
-                        backgroundColor: Colors.white,
-                      ),
-                      onPressed: () {
-                        t += 'granitzat';
-                      },
-                      child: Image.asset('img/granitzat.png', width:160, height:160,
+                      child: Image.asset('img/gasolinera.png', width: 160,
+                          height: 160,
                           fit: BoxFit.cover)
                   ),
                   const SizedBox(width: 10),
@@ -153,9 +158,10 @@ class _BegudesState extends State<Begudes> {
                         backgroundColor: Colors.white,
                       ),
                       onPressed: () {
-                        t += 'vi rosat';
+                        t += 'jaqueta de punt';
                       },
-                      child: Image.asset('img/virosat.png', width:160, height:160,
+                      child: Image.asset('img/jaqueta_punt.png', width: 160,
+                          height: 160,
                           fit: BoxFit.cover)
                   ),
                   const SizedBox(width: 10),
@@ -164,10 +170,23 @@ class _BegudesState extends State<Begudes> {
                         backgroundColor: Colors.white,
                       ),
                       onPressed: () {
-                        t += 'vi blanc';
+                        t += 'sostenidor';
                       },
-                      child: Image.asset('img/viblanc.png', width:160,
-                          height:160, fit: BoxFit.cover)
+                      child: Image.asset('img/sostenidor.png', width: 160,
+                          height: 160,
+                          fit: BoxFit.cover)
+                  ),
+                  const SizedBox(width: 10),
+                  ElevatedButton(
+                      style: ElevatedButton.styleFrom(
+                        backgroundColor: Colors.white,
+                      ),
+                      onPressed: () {
+                        t += 'jersei';
+                      },
+                      child: Image.asset('img/jersei.png', width: 160,
+                          height: 160,
+                          fit: BoxFit.cover)
                   ),
 
                 ],
@@ -178,25 +197,29 @@ class _BegudesState extends State<Begudes> {
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
+
                   ElevatedButton(
                       style: ElevatedButton.styleFrom(
                         backgroundColor: Colors.white,
                       ),
                       onPressed: () {
-                        t += 'cocacola';
+                        t += 'botiga';
                       },
-                      child: Image.asset('img/cocacola.png', width:160,
-                          height:160, fit: BoxFit.cover)
+                      child: Image.asset('img/botiga.png', width: 160,
+                          height: 160,
+                          fit: BoxFit.cover)
                   ),
+
                   const SizedBox(width: 10),
                   ElevatedButton(
                       style: ElevatedButton.styleFrom(
                         backgroundColor: Colors.white,
                       ),
                       onPressed: () {
-                        t += 'aigua';
+                        t += 'copisteria';
                       },
-                      child: Image.asset('img/aigua.png', width:160, height:160,
+                      child: Image.asset('img/copisteria.png', width: 160,
+                          height: 160,
                           fit: BoxFit.cover)
                   ),
                   const SizedBox(width: 10),
@@ -205,19 +228,10 @@ class _BegudesState extends State<Begudes> {
                         backgroundColor: Colors.white,
                       ),
                       onPressed: () {
-                        t += 'got de llet';
+                        t += 'basar';
                       },
-                      child: Image.asset('img/got_llet.png', width:160, height:160, fit: BoxFit.cover)
-                  ),
-                  const SizedBox(width: 10),
-                  ElevatedButton(
-                      style: ElevatedButton.styleFrom(
-                        backgroundColor: Colors.white,
-                      ),
-                      onPressed: () {
-                        t += 'granitzat';
-                      },
-                      child: Image.asset('img/granitzat.png', width:160, height:160,
+                      child: Image.asset('img/basar.png', width: 160,
+                          height: 160,
                           fit: BoxFit.cover)
                   ),
                   const SizedBox(width: 10),
@@ -226,9 +240,10 @@ class _BegudesState extends State<Begudes> {
                         backgroundColor: Colors.white,
                       ),
                       onPressed: () {
-                        t += 'vi rosat';
+                        t += 'rellotgeria';
                       },
-                      child: Image.asset('img/virosat.png', width:160, height:160,
+                      child: Image.asset('img/rellotgeria.png', width: 160,
+                          height: 160,
                           fit: BoxFit.cover)
                   ),
                   const SizedBox(width: 10),
@@ -237,10 +252,23 @@ class _BegudesState extends State<Begudes> {
                         backgroundColor: Colors.white,
                       ),
                       onPressed: () {
-                        t += 'vi blanc';
+                        t += 'carnisseria';
                       },
-                      child: Image.asset('img/viblanc.png', width:160,
-                          height:160, fit: BoxFit.cover)
+                      child: Image.asset('img/carnisseria.png', width: 160,
+                          height: 160,
+                          fit: BoxFit.cover)
+                  ),
+                  const SizedBox(width: 10),
+                  ElevatedButton(
+                      style: ElevatedButton.styleFrom(
+                        backgroundColor: Colors.white,
+                      ),
+                      onPressed: () {
+                        t += 'peixateria';
+                      },
+                      child: Image.asset('img/peixateria.png', width: 160,
+                          height: 160,
+                          fit: BoxFit.cover)
                   ),
 
                 ],
@@ -257,4 +285,4 @@ class _BegudesState extends State<Begudes> {
 
   }
 
-}
+}// TODO Implement this library.

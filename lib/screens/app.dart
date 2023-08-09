@@ -66,7 +66,7 @@ class _AppState extends State<App> {
                 ),*/
 
 
-                const SizedBox(height: 200),
+                const SizedBox(height: 150),
 
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
@@ -124,10 +124,10 @@ class _AppState extends State<App> {
                           backgroundColor: Colors.white,
                         ),
                         onPressed: () {
-                          app.txt = 'si';
+                          app.txt = 'jo';
                           speak();
                         },
-                        child: Image.asset('img/si.png', width:160, height:160, fit: BoxFit.cover)
+                        child: Image.asset('img/jo.png', width:160, height:160, fit: BoxFit.cover)
                     ),
                     const SizedBox(width: 10),
                     ElevatedButton(
@@ -135,10 +135,10 @@ class _AppState extends State<App> {
                           backgroundColor: Colors.white,
                         ),
                         onPressed: () {
-                          app.txt = 'no';
+                          app.txt = 'tu';
                           speak();
                         },
-                        child: Image.asset('img/no.png', width:160, height:160, fit: BoxFit.cover)
+                        child: Image.asset('img/tu.png', width:160, height:160, fit: BoxFit.cover)
                     ),
                   ],
                   //button(),
@@ -222,6 +222,89 @@ class _AppState extends State<App> {
                           speak();
                         },
                         child: Image.asset('img/no_vull.png', width:160, height:160, fit: BoxFit.cover)
+                    ),
+                  ],
+
+                ),
+
+                const SizedBox(height: 10),
+
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    ElevatedButton(
+                        style: ElevatedButton.styleFrom(
+                          backgroundColor: Colors.white,
+                        ),
+                        onPressed: () {
+                          app.txt = 'casa';
+                          speak();
+                          Navigator.of(context).push(MaterialPageRoute(builder: (context) => Casa()));
+                        },
+                        child: Image.asset('img/casa.png', width:160,
+                            height:160, fit: BoxFit.cover)
+                    ),
+                    const SizedBox(width: 10),
+                    ElevatedButton(
+                        style: ElevatedButton.styleFrom(
+                          backgroundColor: Colors.white,
+                        ),
+                        onPressed: () {
+                          app.txt = 'roba';
+                          speak();
+                          Navigator.of(context).push(MaterialPageRoute(builder: (context) => Roba()));
+                        },
+                        child: Image.asset('img/roba.png',
+                            width:160, height:160, fit: BoxFit.cover
+                        )
+                    ),
+                    const SizedBox(width: 10),
+                    ElevatedButton(
+                        style: ElevatedButton.styleFrom(
+                          backgroundColor: Colors.white,
+                        ),
+                        onPressed: () {
+                          app.txt = 'transports';
+                          speak();
+                          Navigator.of(context).push(MaterialPageRoute(builder: (context) => Transports()));
+                        },
+                        child: Image.asset('img/transports.png',
+                            width:160, height:160, fit: BoxFit.cover
+                        )
+                    ),
+                    const SizedBox(width: 10),
+                    ElevatedButton(
+                        style: ElevatedButton.styleFrom(
+                          backgroundColor: Colors.white,
+                        ),
+                        onPressed: () {
+                          app.txt = 'llocs';
+                          speak();
+                          Navigator.of(context).push(MaterialPageRoute(builder: (context) => Llocs()));
+                        },
+                        child: Image.asset('img/llocs.png', width:160, height:160, fit: BoxFit.cover)
+                    ),
+                    const SizedBox(width: 10),
+                    ElevatedButton(
+                        style: ElevatedButton.styleFrom(
+                          backgroundColor: Colors.white,
+                        ),
+                        onPressed: () {
+                          app.txt = 'si';
+                          speak();
+                        },
+                        child: Image.asset('img/si.png', width:160, height:160, fit: BoxFit.cover)
+                    ),
+                    const SizedBox(width: 10),
+                    ElevatedButton(
+                        style: ElevatedButton.styleFrom(
+                          backgroundColor: Colors.white,
+                        ),
+                        onPressed: () {
+                          app.txt = 'no';
+                          speak();
+                        },
+                        child: Image.asset('img/no.png', width:160, height:160, fit: BoxFit.cover)
                     ),
                   ],
 

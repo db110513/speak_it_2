@@ -1,44 +1,25 @@
-
 import 'exports.dart';
 import 'package:flutter_tts/flutter_tts.dart';
 import 'package:flutter/material.dart';
 
-class Menjar extends StatefulWidget {
-  late String txt = '';
+class Casa extends StatefulWidget {
+  const Casa({Key? key}) : super(key: key);
 
-  State<Menjar> createState() => _MenjarState();
+  State<Casa> createState() => _CasaState();
 }
 
-class _MenjarState extends State<Menjar> {
+class _CasaState extends State<Casa> {
 
   App app = App();
-
-  late FlutterTts tts;
-
-  void initState() {
-    super.initState();
-    initTts();
-    tts.setLanguage('ca');
-  }
-
-  void dispose() {
-    super.dispose();
-    tts.stop();
-  }
-
   late String t = app.txt;
 
-  initTts() async {
-    tts = FlutterTts();
-    await tts.awaitSpeakCompletion(true);
-  }
-
   Widget build(BuildContext context) {
+
     return Scaffold(
 
       appBar: AppBar(
         centerTitle: true,
-        title: const Text('Menjar', style: TextStyle(fontSize: 40)),
+        title: const Text('Casa', style: TextStyle(fontSize: 40)),
       ),
 
       body: Container(
@@ -57,11 +38,9 @@ class _MenjarState extends State<Menjar> {
                         backgroundColor: Colors.white,
                       ),
                       onPressed: () {
-                        t += 'fruita';
-                        Navigator.of(context).push(MaterialPageRoute(builder:(context) => Fruita()));
+                        t += 'llit';
                       },
-                      child: Image.asset('img/fruita.png', width: 160,
-                          height: 160, fit: BoxFit.cover)
+                      child: Image.asset('img/llit.png', width:160, height:160, fit: BoxFit.cover)
                   ),
                   const SizedBox(width: 10),
                   ElevatedButton(
@@ -69,11 +48,10 @@ class _MenjarState extends State<Menjar> {
                         backgroundColor: Colors.white,
                       ),
                       onPressed: () {
-                        t += 'formatge';
+                        t += 'cuina';
+                        Navigator.of(context).push(MaterialPageRoute(builder: (context) => Cuina()));
                       },
-                      child: Image.asset('img/formatge.png', width: 160,
-                          height: 160,
-                          fit: BoxFit.cover)
+                      child: Image.asset('img/cuina.png', width:160, height:160, fit: BoxFit.cover)
                   ),
                   const SizedBox(width: 10),
                   ElevatedButton(
@@ -81,11 +59,9 @@ class _MenjarState extends State<Menjar> {
                         backgroundColor: Colors.white,
                       ),
                       onPressed: () {
-                        t += 'galeta';
+                        t += 'escombra';
                       },
-                      child: Image.asset('img/galeta.png', width: 160,
-                          height: 160,
-                          fit: BoxFit.cover)
+                      child: Image.asset('img/escombra.png', width:160, height:160, fit: BoxFit.cover)
                   ),
                   const SizedBox(width: 10),
                   ElevatedButton(
@@ -93,11 +69,9 @@ class _MenjarState extends State<Menjar> {
                         backgroundColor: Colors.white,
                       ),
                       onPressed: () {
-                        t += 'peix';
+                        t += 'recollidor';
                       },
-                      child: Image.asset('img/peix.png', width: 160,
-                          height: 160,
-                          fit: BoxFit.cover)
+                      child: Image.asset('img/recollidor.png', width:160, height:160, fit: BoxFit.cover)
                   ),
                   const SizedBox(width: 10),
                   ElevatedButton(
@@ -105,10 +79,9 @@ class _MenjarState extends State<Menjar> {
                         backgroundColor: Colors.white,
                       ),
                       onPressed: () {
-                        t += 'pa';
+                        t += 'habitacio';
                       },
-                      child: Image.asset('img/pa.png', width: 160, height: 160,
-                          fit: BoxFit.cover)
+                      child: Image.asset('img/habitacio.png', width:160, height:160, fit: BoxFit.cover)
                   ),
                   const SizedBox(width: 10),
                   ElevatedButton(
@@ -116,16 +89,14 @@ class _MenjarState extends State<Menjar> {
                         backgroundColor: Colors.white,
                       ),
                       onPressed: () {
-                        t += 'verdures';
-                        Navigator.of(context).push(MaterialPageRoute(builder: (context) => Verdures()));
+                        t += 'sofa';
                       },
-                      child: Image.asset('img/verdures.png', width: 160, height: 160, fit: BoxFit.cover)
+                      child: Image.asset('img/sofa.png', width:160, height:160, fit: BoxFit.cover)
                   ),
 
                 ],
 
               ),
-
               const SizedBox(height: 10),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
@@ -135,10 +106,9 @@ class _MenjarState extends State<Menjar> {
                         backgroundColor: Colors.white,
                       ),
                       onPressed: () {
-                        t += 'pastanaga';
+                        t += 'pica';
                       },
-                      child: Image.asset('img/pastanaga.png', width: 160,
-                          height: 160, fit: BoxFit.cover)
+                      child: Image.asset('img/pica.png', width:160, height:160, fit: BoxFit.cover)
                   ),
                   const SizedBox(width: 10),
                   ElevatedButton(
@@ -146,11 +116,9 @@ class _MenjarState extends State<Menjar> {
                         backgroundColor: Colors.white,
                       ),
                       onPressed: () {
-                        t += 'carn';
+                        t += 'lavabo';
                       },
-                      child: Image.asset(
-                          'img/carn.png', width: 160, height: 160,
-                          fit: BoxFit.cover)
+                      child: Image.asset('img/lavabo.png', width:160, height:160, fit: BoxFit.cover)
                   ),
                   const SizedBox(width: 10),
                   ElevatedButton(
@@ -158,11 +126,9 @@ class _MenjarState extends State<Menjar> {
                         backgroundColor: Colors.white,
                       ),
                       onPressed: () {
-                        t += 'hamburguesa';
+                        t += 'dutxa';
                       },
-                      child: Image.asset('img/hamburguesa.png', width: 160,
-                          height: 160,
-                          fit: BoxFit.cover)
+                      child: Image.asset('img/dutxa.png', width:160, height:160, fit: BoxFit.cover)
                   ),
                   const SizedBox(width: 10),
                   ElevatedButton(
@@ -170,11 +136,9 @@ class _MenjarState extends State<Menjar> {
                         backgroundColor: Colors.white,
                       ),
                       onPressed: () {
-                        t += 'dolços';
+                        t += 'banyera';
                       },
-                      child: Image.asset(
-                          'img/dolcos.png', width: 160, height: 160,
-                          fit: BoxFit.cover)
+                      child: Image.asset('img/banyera.png', width:160, height:160, fit: BoxFit.cover)
                   ),
                   const SizedBox(width: 10),
                   ElevatedButton(
@@ -182,11 +146,9 @@ class _MenjarState extends State<Menjar> {
                         backgroundColor: Colors.white,
                       ),
                       onPressed: () {
-                        t += 'postres';
+                        t += 'jacuzzi';
                       },
-                      child: Image.asset('img/postres.png', width: 160,
-                          height: 160,
-                          fit: BoxFit.cover)
+                      child: Image.asset('img/jacuzzi.png', width:160, height:160, fit: BoxFit.cover)
                   ),
                   const SizedBox(width: 10),
                   ElevatedButton(
@@ -194,18 +156,14 @@ class _MenjarState extends State<Menjar> {
                         backgroundColor: Colors.white,
                       ),
                       onPressed: () {
-                        t += 'marisc';
+                        t += 'tv';
                       },
-                      child: Image.asset('img/marisc.png', width: 160,
-                          height: 160, fit: BoxFit.cover)
+                      child: Image.asset('img/tv.png', width:160, height:160, fit: BoxFit.cover)
                   ),
-
-
 
                 ],
 
-              ),
-
+              )
 
             ]
 
@@ -214,5 +172,7 @@ class _MenjarState extends State<Menjar> {
       ),
 
     );
+
   }
-}
+
+}// TODO Implement this library.
