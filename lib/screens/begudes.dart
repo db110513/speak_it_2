@@ -30,7 +30,7 @@ class _BegudesState extends State<Begudes> {
 
             children: [
 
-              const SizedBox(height: 200),
+              const SizedBox(height: 150),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
@@ -183,9 +183,9 @@ class _BegudesState extends State<Begudes> {
                         backgroundColor: Colors.white,
                       ),
                       onPressed: () {
-                        t += 'cocacola';
+                        t += 'mat';
                       },
-                      child: Image.asset('img/cocacola.png', width:160,
+                      child: Image.asset('img/mat.png', width:160,
                           height:160, fit: BoxFit.cover)
                   ),
                   const SizedBox(width: 10),
@@ -194,9 +194,9 @@ class _BegudesState extends State<Begudes> {
                         backgroundColor: Colors.white,
                       ),
                       onPressed: () {
-                        t += 'aigua';
+                        t += 'suc de raim';
                       },
-                      child: Image.asset('img/aigua.png', width:160, height:160,
+                      child: Image.asset('img/suc_raim.png', width:160, height:160,
                           fit: BoxFit.cover)
                   ),
                   const SizedBox(width: 10),
@@ -205,9 +205,9 @@ class _BegudesState extends State<Begudes> {
                         backgroundColor: Colors.white,
                       ),
                       onPressed: () {
-                        t += 'got de llet';
+                        t += 'suc de tomàquet';
                       },
-                      child: Image.asset('img/got_llet.png', width:160, height:160, fit: BoxFit.cover)
+                      child: Image.asset('img/suc_tomaquet.png', width:160, height:160, fit: BoxFit.cover)
                   ),
                   const SizedBox(width: 10),
                   ElevatedButton(
@@ -215,9 +215,9 @@ class _BegudesState extends State<Begudes> {
                         backgroundColor: Colors.white,
                       ),
                       onPressed: () {
-                        t += 'granitzat';
+                        t += 'suc de pinya';
                       },
-                      child: Image.asset('img/granitzat.png', width:160, height:160,
+                      child: Image.asset('img/suc_pinya.png', width:160, height:160,
                           fit: BoxFit.cover)
                   ),
                   const SizedBox(width: 10),
@@ -226,9 +226,9 @@ class _BegudesState extends State<Begudes> {
                         backgroundColor: Colors.white,
                       ),
                       onPressed: () {
-                        t += 'vi rosat';
+                        t += 'suc de taronja';
                       },
-                      child: Image.asset('img/virosat.png', width:160, height:160,
+                      child: Image.asset('img/suc_taronja.png', width:160, height:160,
                           fit: BoxFit.cover)
                   ),
                   const SizedBox(width: 10),
@@ -237,9 +237,9 @@ class _BegudesState extends State<Begudes> {
                         backgroundColor: Colors.white,
                       ),
                       onPressed: () {
-                        t += 'vi blanc';
+                        t += 'suc de poma';
                       },
-                      child: Image.asset('img/viblanc.png', width:160,
+                      child: Image.asset('img/suc_poma.png', width:160,
                           height:160, fit: BoxFit.cover)
                   ),
 

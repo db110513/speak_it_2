@@ -1,37 +1,17 @@
-
-import 'package:flutter/material.dart';
-import 'package:flutter_tts/flutter_tts.dart';
 import 'exports.dart';
+import 'package:flutter_tts/flutter_tts.dart';
+import 'package:flutter/material.dart';
 
+class Sanitari extends StatefulWidget {
+  const Sanitari({Key? key}) : super(key: key);
 
-class Animals extends StatefulWidget {
-  const Animals({Key? key}) : super(key: key);
-
-  State<Animals> createState() => _AnimalsState();
+  State<Sanitari> createState() => _SanitariState();
 }
 
-
-class _AnimalsState extends State<Animals> {
+class _SanitariState extends State<Sanitari> {
 
   App app = App();
-
-  late FlutterTts tts;
-
-
-  void initState() {
-    super.initState();
-    initTts();
-    tts.setLanguage('ca');
-  }
-
-
-  initTts() async {
-
-    tts = FlutterTts();
-    await tts.awaitSpeakCompletion(true);
-
-  }
-
+  late String t = app.txt;
 
   Widget build(BuildContext context) {
 
@@ -39,11 +19,10 @@ class _AnimalsState extends State<Animals> {
 
       appBar: AppBar(
         centerTitle: true,
-        title: const Text('Animals', style: TextStyle(fontSize: 40)),
+        title: const Text('Sanitari', style: TextStyle(fontSize: 40)),
       ),
 
       body: Container(
-
         padding: const EdgeInsets.all(10),
 
         child: Column(
@@ -58,10 +37,9 @@ class _AnimalsState extends State<Animals> {
                         backgroundColor: Colors.white,
                       ),
                       onPressed: () {
-                        app.txt += 'cocodril';
+                        t += 'hospital';
                       },
-                      child: Image.asset('img/cocodril.png', width:160,
-                          height:160, fit: BoxFit.cover)
+                      child: Image.asset('img/hospital.png', width:160, height:160, fit: BoxFit.cover)
                   ),
                   const SizedBox(width: 10),
                   ElevatedButton(
@@ -69,9 +47,9 @@ class _AnimalsState extends State<Animals> {
                         backgroundColor: Colors.white,
                       ),
                       onPressed: () {
-                        app.txt += 'elefant';
+                        t += 'metge';
                       },
-                      child: Image.asset('img/elefant.png', width:160, height:160, fit: BoxFit.cover)
+                      child: Image.asset('img/metge.png', width:160, height:160, fit: BoxFit.cover)
                   ),
                   const SizedBox(width: 10),
                   ElevatedButton(
@@ -79,21 +57,9 @@ class _AnimalsState extends State<Animals> {
                         backgroundColor: Colors.white,
                       ),
                       onPressed: () {
-                        app.txt += 'gos';
+                        t += 'xeringa';
                       },
-                      child: Image.asset('img/gos.png', width:160, height:160, fit: BoxFit.cover)
-                  ),
-
-
-                  const SizedBox(width: 10),
-                  ElevatedButton(
-                      style: ElevatedButton.styleFrom(
-                        backgroundColor: Colors.white,
-                      ),
-                      onPressed: () {
-                        app.txt += 'lloro';
-                      },
-                      child: Image.asset('img/lloro.png', width:160, height:160, fit: BoxFit.cover)
+                      child: Image.asset('img/xeringa.png', width:160, height:160, fit: BoxFit.cover)
                   ),
                   const SizedBox(width: 10),
                   ElevatedButton(
@@ -101,9 +67,19 @@ class _AnimalsState extends State<Animals> {
                         backgroundColor: Colors.white,
                       ),
                       onPressed: () {
-                        app.txt += 'peix';
+                        t += 'infermer';
                       },
-                      child: Image.asset('img/peix.png', width:160, height:160,
+                      child: Image.asset('img/infermer.png', width:160, height:160, fit: BoxFit.cover)
+                  ),
+                  const SizedBox(width: 10),
+                  ElevatedButton(
+                      style: ElevatedButton.styleFrom(
+                        backgroundColor: Colors.white,
+                      ),
+                      onPressed: () {
+                        t += 'analisi de sang';
+                      },
+                      child: Image.asset('img/analisi_sang.png', width:160, height:160,
                           fit: BoxFit.cover)
                   ),
                   const SizedBox(width: 10),
@@ -112,10 +88,9 @@ class _AnimalsState extends State<Animals> {
                         backgroundColor: Colors.white,
                       ),
                       onPressed: () {
-                        app.txt += 'pingüi';
+                        t += 'electro';
                       },
-                      child: Image.asset('img/pingui.png', width:160,
-                          height:160, fit: BoxFit.cover)
+                      child: Image.asset('img/electro.png', width:160, height:160, fit: BoxFit.cover)
                   ),
 
                 ],
@@ -130,10 +105,9 @@ class _AnimalsState extends State<Animals> {
                         backgroundColor: Colors.white,
                       ),
                       onPressed: () {
-                        app.txt += 'caball';
+                        t += 'radiografia';
                       },
-                      child: Image.asset('img/caball.png', width:160,
-                          height:160, fit: BoxFit.cover)
+                      child: Image.asset('img/radiografia.png', width:160, height:160, fit: BoxFit.cover)
                   ),
                   const SizedBox(width: 10),
                   ElevatedButton(
@@ -141,9 +115,29 @@ class _AnimalsState extends State<Animals> {
                         backgroundColor: Colors.white,
                       ),
                       onPressed: () {
-                        app.txt += 'ànec';
+                        t += 'fer una radiografia';
                       },
-                      child: Image.asset('img/anec.png', width:160, height:160,
+                      child: Image.asset('img/fer_radiografia.png', width:160, height:160, fit: BoxFit.cover)
+                  ),
+                  const SizedBox(width: 10),
+                  ElevatedButton(
+                      style: ElevatedButton.styleFrom(
+                        backgroundColor: Colors.white,
+                      ),
+                      onPressed: () {
+                        t += 'anàlisi';
+                      },
+                      child: Image.asset('img/analisi.png', width:160, height:160, fit: BoxFit.cover)
+                  ),
+                  const SizedBox(width: 10),
+                  ElevatedButton(
+                      style: ElevatedButton.styleFrom(
+                        backgroundColor: Colors.white,
+                      ),
+                      onPressed: () {
+                        t += 'electrocardiograma';
+                      },
+                      child: Image.asset('img/electrocardiograma.png', width:160, height:160,
                           fit: BoxFit.cover)
                   ),
                   const SizedBox(width: 10),
@@ -152,19 +146,9 @@ class _AnimalsState extends State<Animals> {
                         backgroundColor: Colors.white,
                       ),
                       onPressed: () {
-                        app.txt += 'aranya';
+                        t += 'prendre la tensió';
                       },
-                      child: Image.asset('img/aranya.png', width:160, height:160, fit: BoxFit.cover)
-                  ),
-                  const SizedBox(width: 10),
-                  ElevatedButton(
-                      style: ElevatedButton.styleFrom(
-                        backgroundColor: Colors.white,
-                      ),
-                      onPressed: () {
-                        app.txt += 'gat';
-                      },
-                      child: Image.asset('img/gat.png', width:160, height:160,
+                      child: Image.asset('img/prendre_tensio.png', width:160, height:160,
                           fit: BoxFit.cover)
                   ),
                   const SizedBox(width: 10),
@@ -173,20 +157,9 @@ class _AnimalsState extends State<Animals> {
                         backgroundColor: Colors.white,
                       ),
                       onPressed: () {
-                        app.txt += 'hipopotam';
+                        t += 'fer un escàner';
                       },
-                      child: Image.asset('img/hipopotam.png', width:160, height:160,
-                          fit: BoxFit.cover)
-                  ),
-                  const SizedBox(width: 10),
-                  ElevatedButton(
-                      style: ElevatedButton.styleFrom(
-                        backgroundColor: Colors.white,
-                      ),
-                      onPressed: () {
-                        app.txt += 'serp';
-                      },
-                      child: Image.asset('img/serp.png', width:160,
+                      child: Image.asset('img/fer_escaner.png', width:160,
                           height:160, fit: BoxFit.cover)
                   ),
 
@@ -204,23 +177,4 @@ class _AnimalsState extends State<Animals> {
 
   }
 
-
-  Future speak() async {
-
-    await tts.setVolume(1);
-    await tts.setSpeechRate(0.5);
-    await tts.setPitch(1);
-
-    if (app.txt != null) {
-
-      if (app.txt!.isNotEmpty) {
-
-        await tts.speak(app.txt!);
-
-      }
-    }
-  }
-
-
-}
-
+}// TODO Implement this library.

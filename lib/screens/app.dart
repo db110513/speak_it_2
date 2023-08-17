@@ -37,7 +37,7 @@ class _AppState extends State<App> {
     return Scaffold(
 
         appBar: AppBar(
-          title: const Text('TTS', style: TextStyle(fontSize:35, color: Colors.black)),
+          title: const Text('Speak It !', style: TextStyle(fontSize:35, color: Colors.black)),
           backgroundColor: Colors.grey,
           centerTitle: true,
         ),
@@ -54,19 +54,34 @@ class _AppState extends State<App> {
 
               children: [
 
-                /*  ElevatedButton(
-                    style: ElevatedButton.styleFrom(
-                      backgroundColor: Colors.white,
-                    ),
-                    onPressed: () {
-                      speak();
-                    },
-                    child: Image.asset('img/play.png', width:80, height:80,
-                        fit: BoxFit.cover)
-                ),*/
+                const SizedBox(height: 40),
+                Container(
+                  margin: const EdgeInsets.only(right:27),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.end,
+                      children: [
+                      ElevatedButton(
+                          style: ElevatedButton.styleFrom(
+                            backgroundColor: Colors.white,
+                          ),
+                          onPressed: () => speak(),
+                          child: Image.asset('img/play.png', width:80, height:90, fit: BoxFit.cover)
+                      ),
+                      const SizedBox(width: 15),
+                      ElevatedButton(
+                          style: ElevatedButton.styleFrom(
+                            backgroundColor: Colors.white,
+
+                          ),
+                          onPressed: () => speak(),
+                          child: Image.asset('img/bckspace.png', width:80, height:90, fit: BoxFit.cover)
+                      )
+                    ]
+                  ),
+                ),
 
 
-                const SizedBox(height: 150),
+                const SizedBox(height: 50),
 
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
@@ -76,9 +91,9 @@ class _AppState extends State<App> {
                           backgroundColor: Colors.white,
                         ),
                         onPressed: () {
-                          app.txt = 'animals';
-                          speak();
-                          Navigator.of(context).push(MaterialPageRoute(builder: (context) => Animals()));
+                          app.txt += 'animals';
+                          // speak();
+                          // Navigator.of(context).push(MaterialPageRoute(builder: (context) => Animals()));
                         },
                         child: Image.asset('img/animals.png', width:160, height:160, fit: BoxFit.cover)
                     ),
@@ -88,9 +103,9 @@ class _AppState extends State<App> {
                           backgroundColor: Colors.white,
                         ),
                         onPressed: () {
-                          app.txt = 'menjar';
-                          speak();
-                          Navigator.of(context).push(MaterialPageRoute(builder: (context) => Menjar()));
+                          app.txt += 'menjar';
+                          // speak();
+                          // Navigator.of(context).push(MaterialPageRoute(builder: (context) => Menjar()));
                         },
                         child: Image.asset('img/menjar.png', width:160, height:160, fit: BoxFit.cover)
                     ),
@@ -100,9 +115,9 @@ class _AppState extends State<App> {
                           backgroundColor: Colors.white,
                         ),
                         onPressed: () {
-                          app.txt = 'emocions';
-                          speak();
-                          Navigator.of(context).push(MaterialPageRoute(builder: (context) => Emocions()));
+                          app.txt += 'emocions';
+                          // speak();
+                          // Navigator.of(context).push(MaterialPageRoute(builder: (context) => Emocions()));
                         },
                         child: Image.asset('img/emocions.png', width:160, height:160, fit: BoxFit.cover)
                     ),
@@ -181,12 +196,11 @@ class _AppState extends State<App> {
                           backgroundColor: Colors.white,
                         ),
                         onPressed: () {
-                          app.txt = 'transports';
+                          app.txt = 'sanitari';
                           speak();
-                          Navigator.of(context).push(MaterialPageRoute(builder: (context) => Transports()));
+                          Navigator.of(context).push(MaterialPageRoute(builder: (context) => Sanitari()));
                         },
-                        child: Image.asset('img/transports.png',
-                            width:160, height:160, fit: BoxFit.cover
+                        child: Image.asset('img/hospital.png', width:160, height:160, fit: BoxFit.cover
                         )
                     ),
                     const SizedBox(width: 10),
