@@ -28,7 +28,8 @@ class _FruitaState extends State<Fruita> {
         child: Column(
 
             children: [
-              const SizedBox(height: 200),
+
+              const SizedBox(height: 150),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
@@ -96,6 +97,7 @@ class _FruitaState extends State<Fruita> {
                 ],
 
               ),
+
               const SizedBox(height: 10),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
@@ -146,9 +148,9 @@ class _FruitaState extends State<Fruita> {
                         backgroundColor: Colors.white,
                       ),
                       onPressed: () {
-                        t += 'billar';
+                        t += 'pera';
                       },
-                      child: Image.asset('img/banana.png', width:160, height:160, fit: BoxFit.cover)
+                      child: Image.asset('img/pera.png', width:160, height:160, fit: BoxFit.cover)
                   ),
                   const SizedBox(width: 10),
                   ElevatedButton(
@@ -159,6 +161,75 @@ class _FruitaState extends State<Fruita> {
                         t += 'taronja';
                       },
                       child: Image.asset('img/taronja.png', width:160,
+                          height:160, fit: BoxFit.cover)
+                  ),
+
+                ],
+
+              ),
+
+              const SizedBox(height: 10),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  ElevatedButton(
+                      style: ElevatedButton.styleFrom(
+                        backgroundColor: Colors.white,
+                      ),
+                      onPressed: () {
+                        t += 'síndria';
+                      },
+                      child: Image.asset('img/sindria.png', width:160, height:160, fit: BoxFit.cover)
+                  ),
+                  const SizedBox(width: 10),
+                  ElevatedButton(
+                      style: ElevatedButton.styleFrom(
+                        backgroundColor: Colors.white,
+                      ),
+                      onPressed: () {
+                        t += 'meló';
+                      },
+                      child: Image.asset('img/melo.png', width:160, height:160, fit: BoxFit.cover)
+                  ),
+                  const SizedBox(width: 10),
+                  ElevatedButton(
+                      style: ElevatedButton.styleFrom(
+                        backgroundColor: Colors.white,
+                      ),
+                      onPressed: () {
+                        t += 'llimona';
+                      },
+                      child: Image.asset('img/llimona.png', width:160, height:160, fit: BoxFit.cover)
+                  ),
+                  const SizedBox(width: 10),
+                  ElevatedButton(
+                      style: ElevatedButton.styleFrom(
+                        backgroundColor: Colors.white,
+                      ),
+                      onPressed: () {
+                        t += 'plàtan';
+                      },
+                      child: Image.asset('img/platan.png', width:160, height:160, fit: BoxFit.cover)
+                  ),
+                  const SizedBox(width: 10),
+                  ElevatedButton(
+                      style: ElevatedButton.styleFrom(
+                        backgroundColor: Colors.white,
+                      ),
+                      onPressed: () {
+                        t += 'gerd';
+                      },
+                      child: Image.asset('img/gerd.png', width:160, height:160, fit: BoxFit.cover)
+                  ),
+                  const SizedBox(width: 10),
+                  ElevatedButton(
+                      style: ElevatedButton.styleFrom(
+                        backgroundColor: Colors.white,
+                      ),
+                      onPressed: () {
+                        t += 'cirera';
+                      },
+                      child: Image.asset('img/cirera.png', width:160,
                           height:160, fit: BoxFit.cover)
                   ),
 

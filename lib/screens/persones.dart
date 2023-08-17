@@ -28,7 +28,7 @@ class _PersonesState extends State<Persones> {
         child: Column(
 
             children: [
-              const SizedBox(height: 200),
+              const SizedBox(height: 150),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
@@ -98,6 +98,7 @@ class _PersonesState extends State<Persones> {
                 ],
 
               ),
+
               const SizedBox(height: 10),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
@@ -167,7 +168,77 @@ class _PersonesState extends State<Persones> {
 
                 ],
 
-              )
+              ),
+
+              const SizedBox(height: 10),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  ElevatedButton(
+                      style: ElevatedButton.styleFrom(
+                        backgroundColor: Colors.white,
+                      ),
+                      onPressed: () {
+                        t += 'persona en croses';
+                      },
+                      child: Image.asset('img/persona_croses.png', width:160, height:160, fit: BoxFit.cover)
+                  ),
+                  const SizedBox(width: 10),
+                  ElevatedButton(
+                      style: ElevatedButton.styleFrom(
+                        backgroundColor: Colors.white,
+                      ),
+                      onPressed: () {
+                        t += 'persona en cadira de rodes';
+                      },
+                      child: Image.asset('img/persona_cadira_rodes.png', width:160, height:160,
+                          fit: BoxFit.cover)
+                  ),
+                  const SizedBox(width: 10),
+                  ElevatedButton(
+                      style: ElevatedButton.styleFrom(
+                        backgroundColor: Colors.white,
+                      ),
+                      onPressed: () {
+                        t += 'home àrab';
+                      },
+                      child: Image.asset('img/arabH.png', width:160, height:160, fit: BoxFit.cover)
+                  ),
+                  const SizedBox(width: 10),
+                  ElevatedButton(
+                      style: ElevatedButton.styleFrom(
+                        backgroundColor: Colors.white,
+                      ),
+                      onPressed: () {
+                        t += 'dona àrab';
+                      },
+                      child: Image.asset('img/arabD.png', width:160, height:160, fit: BoxFit.cover)
+                  ),
+                  const SizedBox(width: 10),
+                  ElevatedButton(
+                      style: ElevatedButton.styleFrom(
+                        backgroundColor: Colors.white,
+                      ),
+                      onPressed: () {
+                        t += 'nens autistes';
+                      },
+                      child: Image.asset('img/nens_autistes.png', width:160, height:160,
+                          fit: BoxFit.cover)
+                  ),
+                  const SizedBox(width: 10),
+                  ElevatedButton(
+                      style: ElevatedButton.styleFrom(
+                        backgroundColor: Colors.white,
+                      ),
+                      onPressed: () {
+                        t += 'adult autista';
+                      },
+                      child: Image.asset('img/adult_autista.png', width:160, height:160, fit: BoxFit.cover)
+                  ),
+
+                ],
+
+              ),
 
             ]
 

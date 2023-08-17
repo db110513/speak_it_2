@@ -105,7 +105,7 @@ class _AppState extends State<App> {
                         onPressed: () {
                           app.txt += 'menjar';
                           // speak();
-                          // Navigator.of(context).push(MaterialPageRoute(builder: (context) => Menjar()));
+                          Navigator.of(context).push(MaterialPageRoute(builder: (context) => Menjar()));
                         },
                         child: Image.asset('img/menjar.png', width:160, height:160, fit: BoxFit.cover)
                     ),

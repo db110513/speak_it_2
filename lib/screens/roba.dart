@@ -29,7 +29,7 @@ class _RobaState extends State<Roba> {
 
             children: [
 
-              const SizedBox(height: 100),
+              const SizedBox(height: 150),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
@@ -146,9 +146,9 @@ class _RobaState extends State<Roba> {
                         backgroundColor: Colors.white,
                       ),
                       onPressed: () {
-                        t += 'gasolinera';
+                        t += 'pantalo curt';
                       },
-                      child: Image.asset('img/gasolinera.png', width: 160,
+                      child: Image.asset('img/pantalo_curt.png', width: 160,
                           height: 160,
                           fit: BoxFit.cover)
                   ),
@@ -203,11 +203,9 @@ class _RobaState extends State<Roba> {
                         backgroundColor: Colors.white,
                       ),
                       onPressed: () {
-                        t += 'botiga';
+                        t += 'xandall';
                       },
-                      child: Image.asset('img/botiga.png', width: 160,
-                          height: 160,
-                          fit: BoxFit.cover)
+                      child: Image.asset('img/xandall.png', width: 160, height: 160, fit: BoxFit.cover)
                   ),
 
                   const SizedBox(width: 10),
@@ -216,9 +214,9 @@ class _RobaState extends State<Roba> {
                         backgroundColor: Colors.white,
                       ),
                       onPressed: () {
-                        t += 'copisteria';
+                        t += 'body';
                       },
-                      child: Image.asset('img/copisteria.png', width: 160,
+                      child: Image.asset('img/body.png', width: 160,
                           height: 160,
                           fit: BoxFit.cover)
                   ),
@@ -228,11 +226,9 @@ class _RobaState extends State<Roba> {
                         backgroundColor: Colors.white,
                       ),
                       onPressed: () {
-                        t += 'basar';
+                        t += 'mitjo';
                       },
-                      child: Image.asset('img/basar.png', width: 160,
-                          height: 160,
-                          fit: BoxFit.cover)
+                      child: Image.asset('img/mitjo.png', width: 160, height: 160, fit: BoxFit.cover)
                   ),
                   const SizedBox(width: 10),
                   ElevatedButton(
@@ -240,11 +236,9 @@ class _RobaState extends State<Roba> {
                         backgroundColor: Colors.white,
                       ),
                       onPressed: () {
-                        t += 'rellotgeria';
+                        t += 'samarreta';
                       },
-                      child: Image.asset('img/rellotgeria.png', width: 160,
-                          height: 160,
-                          fit: BoxFit.cover)
+                      child: Image.asset('img/samarreta.png', width: 160, height: 160, fit: BoxFit.cover)
                   ),
                   const SizedBox(width: 10),
                   ElevatedButton(
@@ -252,11 +246,9 @@ class _RobaState extends State<Roba> {
                         backgroundColor: Colors.white,
                       ),
                       onPressed: () {
-                        t += 'carnisseria';
+                        t += 'vestit';
                       },
-                      child: Image.asset('img/carnisseria.png', width: 160,
-                          height: 160,
-                          fit: BoxFit.cover)
+                      child: Image.asset('img/vestit.png', width: 160, height: 160, fit: BoxFit.cover)
                   ),
                   const SizedBox(width: 10),
                   ElevatedButton(
@@ -264,11 +256,9 @@ class _RobaState extends State<Roba> {
                         backgroundColor: Colors.white,
                       ),
                       onPressed: () {
-                        t += 'peixateria';
+                        t += 'calçotets';
                       },
-                      child: Image.asset('img/peixateria.png', width: 160,
-                          height: 160,
-                          fit: BoxFit.cover)
+                      child: Image.asset('img/calcotets.png', width: 160, height: 160, fit: BoxFit.cover)
                   ),
 
                 ],

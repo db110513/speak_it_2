@@ -48,7 +48,7 @@ class _MenjarState extends State<Menjar> {
         child: Column(
 
             children: [
-              const SizedBox(height: 200),
+              const SizedBox(height: 150),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
@@ -135,9 +135,9 @@ class _MenjarState extends State<Menjar> {
                         backgroundColor: Colors.white,
                       ),
                       onPressed: () {
-                        t += 'pastanaga';
+                        t += 'pollastre';
                       },
-                      child: Image.asset('img/pastanaga.png', width: 160,
+                      child: Image.asset('img/pollastre.png', width: 160,
                           height: 160, fit: BoxFit.cover)
                   ),
                   const SizedBox(width: 10),
@@ -170,11 +170,9 @@ class _MenjarState extends State<Menjar> {
                         backgroundColor: Colors.white,
                       ),
                       onPressed: () {
-                        t += 'dolços';
+                        t += 'magdalena';
                       },
-                      child: Image.asset(
-                          'img/dolcos.png', width: 160, height: 160,
-                          fit: BoxFit.cover)
+                      child: Image.asset('img/magdalena.png', width: 160, height: 160, fit: BoxFit.cover)
                   ),
                   const SizedBox(width: 10),
                   ElevatedButton(
@@ -182,9 +180,61 @@ class _MenjarState extends State<Menjar> {
                         backgroundColor: Colors.white,
                       ),
                       onPressed: () {
-                        t += 'postres';
+                        t += 'iogurt';
                       },
-                      child: Image.asset('img/postres.png', width: 160,
+                      child: Image.asset('img/iogurt.png', width: 160, height: 160, fit: BoxFit.cover)
+                  ),
+                  const SizedBox(width: 10),
+                  ElevatedButton(
+                      style: ElevatedButton.styleFrom(
+                        backgroundColor: Colors.white,
+                      ),
+                      onPressed: () {
+                        t += 'pastis de poma';
+                      },
+                      child: Image.asset('img/pastis_poma.png', width: 160, height: 160, fit: BoxFit.cover)
+                  ),
+
+
+
+                ],
+
+              ),
+
+              const SizedBox(height: 10),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  ElevatedButton(
+                      style: ElevatedButton.styleFrom(
+                        backgroundColor: Colors.white,
+                      ),
+                      onPressed: () {
+                        t += 'xocolata';
+                      },
+                      child: Image.asset('img/xocolata.png', width: 160,
+                          height: 160, fit: BoxFit.cover)
+                  ),
+                  const SizedBox(width: 10),
+                  ElevatedButton(
+                      style: ElevatedButton.styleFrom(
+                        backgroundColor: Colors.white,
+                      ),
+                      onPressed: () {
+                        t += 'galeta de xocolata';
+                      },
+                      child: Image.asset('img/galeta_xocolata.png', width: 160, height: 160, fit: BoxFit.cover)
+                  ),
+
+                  const SizedBox(width: 10),
+                  ElevatedButton(
+                      style: ElevatedButton.styleFrom(
+                        backgroundColor: Colors.white,
+                      ),
+                      onPressed: () {
+                        t += 'pipes';
+                      },
+                      child: Image.asset('img/pipes.png', width: 160,
                           height: 160,
                           fit: BoxFit.cover)
                   ),
@@ -194,9 +244,31 @@ class _MenjarState extends State<Menjar> {
                         backgroundColor: Colors.white,
                       ),
                       onPressed: () {
-                        t += 'marisc';
+                        t += 'sandvitx';
                       },
-                      child: Image.asset('img/marisc.png', width: 160,
+                      child: Image.asset('img/sandvitx.png', width: 160, height: 160, fit: BoxFit.cover)
+                  ),
+                  const SizedBox(width: 10),
+                  ElevatedButton(
+                      style: ElevatedButton.styleFrom(
+                        backgroundColor: Colors.white,
+                      ),
+                      onPressed: () {
+                        t += 'puré';
+                      },
+                      child: Image.asset('img/pure.png', width: 160,
+                          height: 160,
+                          fit: BoxFit.cover)
+                  ),
+                  const SizedBox(width: 10),
+                  ElevatedButton(
+                      style: ElevatedButton.styleFrom(
+                        backgroundColor: Colors.white,
+                      ),
+                      onPressed: () {
+                        t += 'pasta';
+                      },
+                      child: Image.asset('img/pasta.png', width: 160,
                           height: 160, fit: BoxFit.cover)
                   ),
 
@@ -205,7 +277,6 @@ class _MenjarState extends State<Menjar> {
                 ],
 
               ),
-
 
             ]
 

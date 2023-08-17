@@ -153,9 +153,9 @@ class _AccionsState extends State<Accions> {
                         backgroundColor: Colors.white,
                       ),
                       onPressed: () {
-                        t += 'voler';
+                        t += 'festejar';
                       },
-                      child: Image.asset('img/voler.png', width:160, height:160, fit: BoxFit.cover)
+                      child: Image.asset('img/festejar.png', width:160, height:160, fit: BoxFit.cover)
                   ),
                   const SizedBox(width: 10),
                   ElevatedButton(
@@ -218,17 +218,6 @@ class _AccionsState extends State<Accions> {
                         backgroundColor: Colors.white,
                       ),
                       onPressed: () {
-                        t += 'vigilar';
-                      },
-                      child: Image.asset('img/vigilar.png', width:160, height:160, fit: BoxFit.cover)
-                  ),
-
-                  const SizedBox(width: 10),
-                  ElevatedButton(
-                      style: ElevatedButton.styleFrom(
-                        backgroundColor: Colors.white,
-                      ),
-                      onPressed: () {
                         t += 'repartir';
                       },
                       child: Image.asset('img/repartir.png', width:160, height:160, fit: BoxFit.cover)
@@ -240,9 +229,20 @@ class _AccionsState extends State<Accions> {
                         backgroundColor: Colors.white,
                       ),
                       onPressed: () {
-                        t += 'vigilar';
+                        t += 'perdre';
                       },
-                      child: Image.asset('img/vigilar.png', width:160, height:160, fit: BoxFit.cover)
+                      child: Image.asset('img/perdre.png', width:160, height:160, fit: BoxFit.cover)
+                  ),
+
+                  const SizedBox(width: 10),
+                  ElevatedButton(
+                      style: ElevatedButton.styleFrom(
+                        backgroundColor: Colors.white,
+                      ),
+                      onPressed: () {
+                        t += 'trobar';
+                      },
+                      child: Image.asset('img/trobar.png', width:160, height:160, fit: BoxFit.cover)
                   ),
 
                 ],

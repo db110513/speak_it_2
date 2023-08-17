@@ -2,11 +2,13 @@ import 'exports.dart';
 import 'package:flutter_tts/flutter_tts.dart';
 import 'package:flutter/material.dart';
 
+
 class Jocs extends StatefulWidget {
   const Jocs({Key? key}) : super(key: key);
 
   State<Jocs> createState() => _JocsState();
 }
+
 
 class _JocsState extends State<Jocs> {
 
@@ -23,12 +25,14 @@ class _JocsState extends State<Jocs> {
       ),
 
       body: Container(
+
         padding: const EdgeInsets.all(10),
 
         child: Column(
 
             children: [
-              const SizedBox(height: 200),
+
+              const SizedBox(height: 150),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
@@ -97,6 +101,7 @@ class _JocsState extends State<Jocs> {
                 ],
 
               ),
+
               const SizedBox(height: 10),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
@@ -161,6 +166,77 @@ class _JocsState extends State<Jocs> {
                         t += 'ruleta';
                       },
                       child: Image.asset('img/ruleta2.png', width:160,
+                          height:160, fit: BoxFit.cover)
+                  ),
+
+                ],
+
+              ),
+
+              const SizedBox(height: 10),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  ElevatedButton(
+                      style: ElevatedButton.styleFrom(
+                        backgroundColor: Colors.white,
+                      ),
+                      onPressed: () {
+                        t += 'dau';
+                      },
+                      child: Image.asset('img/dau.png', width:160, height:160, fit: BoxFit.cover)
+                  ),
+                  const SizedBox(width: 10),
+                  ElevatedButton(
+                      style: ElevatedButton.styleFrom(
+                        backgroundColor: Colors.white,
+                      ),
+                      onPressed: () {
+                        t += 'fitxes del partxis';
+                      },
+                      child: Image.asset('img/fitxes_partxis.png', width:160, height:160, fit: BoxFit.cover)
+                  ),
+                  const SizedBox(width: 10),
+                  ElevatedButton(
+                      style: ElevatedButton.styleFrom(
+                        backgroundColor: Colors.white,
+                      ),
+                      onPressed: () {
+                        t += 'bingo';
+                      },
+                      child: Image.asset('img/bingo.png', width:160, height:160, fit: BoxFit.cover)
+                  ),
+                  const SizedBox(width: 10),
+                  ElevatedButton(
+                      style: ElevatedButton.styleFrom(
+                        backgroundColor: Colors.white,
+                      ),
+                      onPressed: () {
+                        t += 'oca';
+                      },
+                      child: Image.asset('img/oca.png', width:160, height:160,
+                          fit: BoxFit.cover)
+                  ),
+                  const SizedBox(width: 10),
+                  ElevatedButton(
+                      style: ElevatedButton.styleFrom(
+                        backgroundColor: Colors.white,
+                      ),
+                      onPressed: () {
+                        t += 'jugar amb la tablet';
+                      },
+                      child: Image.asset('img/jugar_tablet.png', width:160, height:160,
+                          fit: BoxFit.cover)
+                  ),
+                  const SizedBox(width: 10),
+                  ElevatedButton(
+                      style: ElevatedButton.styleFrom(
+                        backgroundColor: Colors.white,
+                      ),
+                      onPressed: () {
+                        t += 'goblet';
+                      },
+                      child: Image.asset('img/goblet.png', width:160,
                           height:160, fit: BoxFit.cover)
                   ),
 
