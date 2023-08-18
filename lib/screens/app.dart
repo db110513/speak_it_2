@@ -335,7 +335,7 @@ class _AppState extends State<App> {
 
   Future speak() async {
 
-    // tts instància de FlutterTts
+    // tts instància de FlutterTts > text - veu
     await tts.setVolume(1);
     await tts.setSpeechRate(0.5);
     await tts.setPitch(1);

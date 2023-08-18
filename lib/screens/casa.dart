@@ -112,7 +112,7 @@ class _CasaState extends State<Casa> {
                         backgroundColor: Colors.white,
                       ),
                       onPressed: () {
-                        app.txt = 'sofa';
+                        app.txt = 'sofà';
                         speak();
                       },
                       child: Image.asset('img/sofa.png', width:160, height:160, fit: BoxFit.cover)
@@ -186,7 +186,7 @@ class _CasaState extends State<Casa> {
                         backgroundColor: Colors.white,
                       ),
                       onPressed: () {
-                        app.txt = 'tv';
+                        app.txt = 'tele';
                         speak();
                       },
                       child: Image.asset('img/tv.png', width:160, height:160, fit: BoxFit.cover)
