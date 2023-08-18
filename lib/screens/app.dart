@@ -92,8 +92,8 @@ class _AppState extends State<App> {
                         ),
                         onPressed: () {
                           app.txt += 'animals';
-                          // speak();
-                          // Navigator.of(context).push(MaterialPageRoute(builder: (context) => Animals()));
+                          speak();
+                          Navigator.of(context).push(MaterialPageRoute(builder: (context) => Animals()));
                         },
                         child: Image.asset('img/animals.png', width:160, height:160, fit: BoxFit.cover)
                     ),
@@ -116,8 +116,8 @@ class _AppState extends State<App> {
                         ),
                         onPressed: () {
                           app.txt += 'emocions';
-                          // speak();
-                          // Navigator.of(context).push(MaterialPageRoute(builder: (context) => Emocions()));
+                          speak();
+                          Navigator.of(context).push(MaterialPageRoute(builder: (context) => Emocions()));
                         },
                         child: Image.asset('img/emocions.png', width:160, height:160, fit: BoxFit.cover)
                     ),

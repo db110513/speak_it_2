@@ -49,7 +49,7 @@ class _AnimalsState extends State<Animals> {
         child: Column(
 
             children: [
-              const SizedBox(height: 200),
+              const SizedBox(height: 150),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
@@ -121,6 +121,7 @@ class _AnimalsState extends State<Animals> {
                 ],
 
               ),
+
               const SizedBox(height: 10),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
@@ -188,6 +189,76 @@ class _AnimalsState extends State<Animals> {
                       },
                       child: Image.asset('img/serp.png', width:160,
                           height:160, fit: BoxFit.cover)
+                  ),
+
+                ],
+
+              ),
+
+              const SizedBox(height: 10),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  ElevatedButton(
+                      style: ElevatedButton.styleFrom(
+                        backgroundColor: Colors.white,
+                      ),
+                      onPressed: () {
+                        app.txt += 'periquito';
+                      },
+                      child: Image.asset('img/periquito.png', width:160,
+                          height:160, fit: BoxFit.cover)
+                  ),
+                  const SizedBox(width: 10),
+                  ElevatedButton(
+                      style: ElevatedButton.styleFrom(
+                        backgroundColor: Colors.white,
+                      ),
+                      onPressed: () {
+                        app.txt += 'hàmster';
+                      },
+                      child: Image.asset('img/hamster.png', width:160, height:160,
+                          fit: BoxFit.cover)
+                  ),
+                  const SizedBox(width: 10),
+                  ElevatedButton(
+                      style: ElevatedButton.styleFrom(
+                        backgroundColor: Colors.white,
+                      ),
+                      onPressed: () {
+                        app.txt += 'tortuga';
+                      },
+                      child: Image.asset('img/tortuga.png', width:160, height:160, fit: BoxFit.cover)
+                  ),
+                  const SizedBox(width: 10),
+                  ElevatedButton(
+                      style: ElevatedButton.styleFrom(
+                        backgroundColor: Colors.white,
+                      ),
+                      onPressed: () {
+                        app.txt += 'ós';
+                      },
+                      child: Image.asset('img/os.png', width:160, height:160, fit: BoxFit.cover)
+                  ),
+                  const SizedBox(width: 10),
+                  ElevatedButton(
+                      style: ElevatedButton.styleFrom(
+                        backgroundColor: Colors.white,
+                      ),
+                      onPressed: () {
+                        app.txt += 'ocell';
+                      },
+                      child: Image.asset('img/ocell.png', width:160, height:160, fit: BoxFit.cover)
+                  ),
+                  const SizedBox(width: 10),
+                  ElevatedButton(
+                      style: ElevatedButton.styleFrom(
+                        backgroundColor: Colors.white,
+                      ),
+                      onPressed: () {
+                        app.txt += 'peix pallaso';
+                      },
+                      child: Image.asset('img/peix_pallaso.png', width:160, height:160, fit: BoxFit.cover)
                   ),
 
                 ],
