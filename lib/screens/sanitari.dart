@@ -28,7 +28,8 @@ class _SanitariState extends State<Sanitari> {
         child: Column(
 
             children: [
-              const SizedBox(height: 200),
+
+              const SizedBox(height: 130),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
@@ -96,6 +97,7 @@ class _SanitariState extends State<Sanitari> {
                 ],
 
               ),
+
               const SizedBox(height: 10),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
@@ -115,9 +117,9 @@ class _SanitariState extends State<Sanitari> {
                         backgroundColor: Colors.white,
                       ),
                       onPressed: () {
-                        t += 'fer una radiografia';
+                        t += 'refredat';
                       },
-                      child: Image.asset('img/fer_radiografia.png', width:160, height:160, fit: BoxFit.cover)
+                      child: Image.asset('img/refredat.png', width:160, height:160, fit: BoxFit.cover)
                   ),
                   const SizedBox(width: 10),
                   ElevatedButton(
@@ -125,9 +127,9 @@ class _SanitariState extends State<Sanitari> {
                         backgroundColor: Colors.white,
                       ),
                       onPressed: () {
-                        t += 'anàlisi';
+                        t += 'estetoscopi';
                       },
-                      child: Image.asset('img/analisi.png', width:160, height:160, fit: BoxFit.cover)
+                      child: Image.asset('img/estetoscopi.png', width:160, height:160, fit: BoxFit.cover)
                   ),
                   const SizedBox(width: 10),
                   ElevatedButton(
@@ -135,9 +137,9 @@ class _SanitariState extends State<Sanitari> {
                         backgroundColor: Colors.white,
                       ),
                       onPressed: () {
-                        t += 'electrocardiograma';
+                        t += 'càpsula';
                       },
-                      child: Image.asset('img/electrocardiograma.png', width:160, height:160,
+                      child: Image.asset('img/capsula.png', width:160, height:160,
                           fit: BoxFit.cover)
                   ),
                   const SizedBox(width: 10),
@@ -157,9 +159,78 @@ class _SanitariState extends State<Sanitari> {
                         backgroundColor: Colors.white,
                       ),
                       onPressed: () {
-                        t += 'fer un escàner';
+                        t += 'pomada';
                       },
-                      child: Image.asset('img/fer_escaner.png', width:160,
+                      child: Image.asset('img/pomada.png', width:160,
+                          height:160, fit: BoxFit.cover)
+                  ),
+
+                ],
+
+              ),
+
+              const SizedBox(height: 10),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  ElevatedButton(
+                      style: ElevatedButton.styleFrom(
+                        backgroundColor: Colors.white,
+                      ),
+                      onPressed: () {
+                        t += 'termòmetre';
+                      },
+                      child: Image.asset('img/termometre.png', width:160, height:160, fit: BoxFit.cover)
+                  ),
+                  const SizedBox(width: 10),
+                  ElevatedButton(
+                      style: ElevatedButton.styleFrom(
+                        backgroundColor: Colors.white,
+                      ),
+                      onPressed: () {
+                        t += 'xarop';
+                      },
+                      child: Image.asset('img/xarop.png', width:160, height:160, fit: BoxFit.cover)
+                  ),
+                  const SizedBox(width: 10),
+                  ElevatedButton(
+                      style: ElevatedButton.styleFrom(
+                        backgroundColor: Colors.white,
+                      ),
+                      onPressed: () {
+                        t += 'pastilles';
+                      },
+                      child: Image.asset('img/pastilles.png', width:160, height:160, fit: BoxFit.cover)
+                  ),
+                  const SizedBox(width: 10),
+                  ElevatedButton(
+                      style: ElevatedButton.styleFrom(
+                        backgroundColor: Colors.white,
+                      ),
+                      onPressed: () {
+                        t += 'llitera';
+                      },
+                      child: Image.asset('img/llitera.png', width:160, height:160, fit: BoxFit.cover)
+                  ),
+                  const SizedBox(width: 10),
+                  ElevatedButton(
+                      style: ElevatedButton.styleFrom(
+                        backgroundColor: Colors.white,
+                      ),
+                      onPressed: () {
+                        t += 'tirites';
+                      },
+                      child: Image.asset('img/tirites.png', width:160, height:160, fit: BoxFit.cover)
+                  ),
+                  const SizedBox(width: 10),
+                  ElevatedButton(
+                      style: ElevatedButton.styleFrom(
+                        backgroundColor: Colors.white,
+                      ),
+                      onPressed: () {
+                        t += 'farmaciola';
+                      },
+                      child: Image.asset('img/farmaciola.png', width:160,
                           height:160, fit: BoxFit.cover)
                   ),
 
