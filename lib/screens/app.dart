@@ -28,6 +28,7 @@ class _AppState extends State<App> {
   }
 
   void dispose() {
+    // tanca el lector
     super.dispose();
     tts.stop();
   }
