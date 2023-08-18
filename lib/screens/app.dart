@@ -64,6 +64,7 @@ class _AppState extends State<App> {
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.end,
                       children: [
+
                       ElevatedButton(
                           style: ElevatedButton.styleFrom(
                             backgroundColor: Colors.white,
@@ -72,6 +73,7 @@ class _AppState extends State<App> {
                           child: Image.asset('img/play.png', width:80, height:90, fit: BoxFit.cover)
                       ),
                       const SizedBox(width: 15),
+
                       ElevatedButton(
                           style: ElevatedButton.styleFrom(
                             backgroundColor: Colors.white,
@@ -93,7 +95,7 @@ class _AppState extends State<App> {
                           backgroundColor: Colors.white,
                         ),
                         onPressed: () {
-                          app.txt += 'animals';
+                          app.txt = 'animals';
                           speak();
                           Navigator.of(context).push(MaterialPageRoute(builder: (context) => Animals()));
                         },
@@ -105,8 +107,8 @@ class _AppState extends State<App> {
                           backgroundColor: Colors.white,
                         ),
                         onPressed: () {
-                          app.txt += 'menjar';
-                          // speak();
+                          app.txt = 'menjar';
+                          speak();
                           Navigator.of(context).push(MaterialPageRoute(builder: (context) => Menjar()));
                         },
                         child: Image.asset('img/menjar.png', width:160, height:160, fit: BoxFit.cover)
@@ -117,12 +119,13 @@ class _AppState extends State<App> {
                           backgroundColor: Colors.white,
                         ),
                         onPressed: () {
-                          app.txt += 'emocions';
+                          app.txt = 'emocions';
                           speak();
                           Navigator.of(context).push(MaterialPageRoute(builder: (context) => Emocions()));
                         },
                         child: Image.asset('img/emocions.png', width:160, height:160, fit: BoxFit.cover)
                     ),
+
                     const SizedBox(width: 10),
                     ElevatedButton(
                         style: ElevatedButton.styleFrom(
@@ -135,6 +138,7 @@ class _AppState extends State<App> {
                         },
                         child: Image.asset('img/jocs.png', width:160, height:160, fit: BoxFit.cover)
                     ),
+
                     const SizedBox(width: 10),
                     ElevatedButton(
                         style: ElevatedButton.styleFrom(
@@ -146,6 +150,7 @@ class _AppState extends State<App> {
                         },
                         child: Image.asset('img/jo.png', width:160, height:160, fit: BoxFit.cover)
                     ),
+
                     const SizedBox(width: 10),
                     ElevatedButton(
                         style: ElevatedButton.styleFrom(
@@ -165,6 +170,7 @@ class _AppState extends State<App> {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
+
                     ElevatedButton(
                         style: ElevatedButton.styleFrom(
                           backgroundColor: Colors.white,
@@ -177,6 +183,7 @@ class _AppState extends State<App> {
                         child: Image.asset('img/begudes.png', width:160,
                             height:160, fit: BoxFit.cover)
                     ),
+
                     const SizedBox(width: 10),
                     ElevatedButton(
                         style: ElevatedButton.styleFrom(
@@ -191,6 +198,7 @@ class _AppState extends State<App> {
                             width:160, height:160, fit: BoxFit.cover
                         )
                     ),
+
                     const SizedBox(width: 10),
                     ElevatedButton(
                         style: ElevatedButton.styleFrom(
@@ -204,6 +212,7 @@ class _AppState extends State<App> {
                         child: Image.asset('img/hospital.png', width:160, height:160, fit: BoxFit.cover
                         )
                     ),
+
                     const SizedBox(width: 10),
                     ElevatedButton(
                         style: ElevatedButton.styleFrom(
@@ -216,6 +225,7 @@ class _AppState extends State<App> {
                         },
                         child: Image.asset('img/persones.png', width:160, height:160, fit: BoxFit.cover)
                     ),
+
                     const SizedBox(width: 10),
                     ElevatedButton(
                         style: ElevatedButton.styleFrom(
@@ -227,6 +237,7 @@ class _AppState extends State<App> {
                         },
                         child: Image.asset('img/vull.png', width:160, height:160, fit: BoxFit.cover)
                     ),
+
                     const SizedBox(width: 10),
                     ElevatedButton(
                         style: ElevatedButton.styleFrom(

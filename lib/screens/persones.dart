@@ -28,7 +28,7 @@ class _PersonesState extends State<Persones> {
         child: Column(
 
             children: [
-              const SizedBox(height: 150),
+              const SizedBox(height: 130),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [

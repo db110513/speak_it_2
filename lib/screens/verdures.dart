@@ -30,7 +30,7 @@ class _VerduresState extends State<Verdures> {
 
             children: [
 
-              const SizedBox(height: 150),
+              const SizedBox(height: 130),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [

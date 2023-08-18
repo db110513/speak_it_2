@@ -29,7 +29,7 @@ class _LlocsState extends State<Llocs> {
 
             children: [
 
-              const SizedBox(height: 100),
+              const SizedBox(height: 130),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [

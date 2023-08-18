@@ -29,7 +29,8 @@ class _CasaState extends State<Casa> {
         child: Column(
 
             children: [
-              const SizedBox(height: 200),
+
+              const SizedBox(height: 130),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
@@ -97,6 +98,7 @@ class _CasaState extends State<Casa> {
                 ],
 
               ),
+
               const SizedBox(height: 10),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
@@ -146,9 +148,9 @@ class _CasaState extends State<Casa> {
                         backgroundColor: Colors.white,
                       ),
                       onPressed: () {
-                        t += 'jacuzzi';
+                        t += 'planxa';
                       },
-                      child: Image.asset('img/jacuzzi.png', width:160, height:160, fit: BoxFit.cover)
+                      child: Image.asset('img/planxa.png', width:160, height:160, fit: BoxFit.cover)
                   ),
                   const SizedBox(width: 10),
                   ElevatedButton(
@@ -159,6 +161,74 @@ class _CasaState extends State<Casa> {
                         t += 'tv';
                       },
                       child: Image.asset('img/tv.png', width:160, height:160, fit: BoxFit.cover)
+                  ),
+
+                ],
+
+              ),
+
+              const SizedBox(height: 10),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  ElevatedButton(
+                      style: ElevatedButton.styleFrom(
+                        backgroundColor: Colors.white,
+                      ),
+                      onPressed: () {
+                        t = 'ordinador';
+                      },
+                      child: Image.asset('img/ordinador.png', width:160, height:160, fit: BoxFit.cover)
+                  ),
+                  const SizedBox(width: 10),
+                  ElevatedButton(
+                      style: ElevatedButton.styleFrom(
+                        backgroundColor: Colors.white,
+                      ),
+                      onPressed: () {
+                        t += 'carregador';
+                      },
+                      child: Image.asset('img/carregador.png', width:160, height:160, fit: BoxFit.cover)
+                  ),
+                  const SizedBox(width: 10),
+                  ElevatedButton(
+                      style: ElevatedButton.styleFrom(
+                        backgroundColor: Colors.white,
+                      ),
+                      onPressed: () {
+                        t += 'sala d\'estar';
+                      },
+                      child: Image.asset('img/sala_estar.png', width:160, height:160, fit: BoxFit.cover)
+                  ),
+                  const SizedBox(width: 10),
+                  ElevatedButton(
+                      style: ElevatedButton.styleFrom(
+                        backgroundColor: Colors.white,
+                      ),
+                      onPressed: () {
+                        t += 'rentadora';
+                      },
+                      child: Image.asset('img/rentadora.png', width:160, height:160, fit: BoxFit.cover)
+                  ),
+                  const SizedBox(width: 10),
+                  ElevatedButton(
+                      style: ElevatedButton.styleFrom(
+                        backgroundColor: Colors.white,
+                      ),
+                      onPressed: () {
+                        t += 'cafetera';
+                      },
+                      child: Image.asset('img/cafetera.png', width:160, height:160, fit: BoxFit.cover)
+                  ),
+                  const SizedBox(width: 10),
+                  ElevatedButton(
+                      style: ElevatedButton.styleFrom(
+                        backgroundColor: Colors.white,
+                      ),
+                      onPressed: () {
+                        t += 'forn';
+                      },
+                      child: Image.asset('img/forn.png', width:160, height:160, fit: BoxFit.cover)
                   ),
 
                 ],

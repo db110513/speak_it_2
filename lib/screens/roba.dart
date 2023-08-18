@@ -29,7 +29,7 @@ class _RobaState extends State<Roba> {
 
             children: [
 
-              const SizedBox(height: 150),
+              const SizedBox(height: 130),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
