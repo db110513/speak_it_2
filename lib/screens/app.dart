@@ -3,10 +3,8 @@ import 'exports.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_tts/flutter_tts.dart';
 
-// pantalla principal
 class App extends StatefulWidget {
 
-  // atribut on escriuré el text a llegir
   late String txt = '';
 
   _AppState createState() => _AppState();
@@ -16,30 +14,24 @@ class App extends StatefulWidget {
 class _AppState extends State<App> {
 
   App app = App();
-
-  // FlutterTts > text -> veu
   late FlutterTts tts;
 
   void initState() {
     super.initState();
     initTts();
-    // idioma comunicador > cat
     tts.setLanguage('ca');
   }
 
   void dispose() {
-    // tanca el lector
     super.dispose();
     tts.stop();
   }
 
   initTts() async {
     tts = FlutterTts();
-    // espera fins que s'ha llegit el text associat al picto
     await tts.awaitSpeakCompletion(true);
   }
 
-  // build > dibuixa widgets a la pantalla
   Widget build(BuildContext context) {
 
     return Scaffold(
@@ -50,7 +42,6 @@ class _AppState extends State<App> {
         centerTitle: true,
       ),
 
-      // pantalla amb scroll vertical
       body: SingleChildScrollView(
 
         scrollDirection: Axis.vertical,
@@ -59,7 +50,6 @@ class _AppState extends State<App> {
 
           padding: const EdgeInsets.all(15),
 
-          // 1 columna - 3 files amb 6 widgets individuals
           child: Column(
 
             children: [
@@ -68,23 +58,15 @@ class _AppState extends State<App> {
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  // botó
                   ElevatedButton(
                       style: ElevatedButton.styleFrom(
                         backgroundColor: Colors.white,
                       ),
-                      // acció post click
                       onPressed: () {
-                        // text que llegirà
                         app.txt = 'animals';
-
-                        // mètode per llegir
                         speak();
-
-                        // obre nova pantalla > animals
                         Navigator.of(context).push(MaterialPageRoute(builder: (context) => Animals()));
                       },
-                      // picto imatge botó
                       child: Image.asset('img/animals.png', width:160, height:160, fit: BoxFit.cover)
                   ),
                   const SizedBox(width: 10),
@@ -93,10 +75,8 @@ class _AppState extends State<App> {
                         backgroundColor: Colors.white,
                       ),
                       onPressed: () {
-                        // text a llegir
                         app.txt = 'menjar';
                         speak();
-                        // nova pantalla
                         Navigator.of(context).push(MaterialPageRoute(builder: (context) => Menjar()));
                       },
                       child: Image.asset('img/menjar.png', width:160, height:160, fit: BoxFit.cover)
