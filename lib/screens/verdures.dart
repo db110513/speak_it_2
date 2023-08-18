@@ -11,7 +11,24 @@ class Verdures extends StatefulWidget {
 class _VerduresState extends State<Verdures> {
 
   App app = App();
-  late String t = app.txt;
+
+  late FlutterTts tts;
+
+  void initState() {
+    super.initState();
+    initTts();
+    tts.setLanguage('ca');
+  }
+
+  void dispose() {
+    super.dispose();
+    tts.stop();
+  }
+
+  initTts() async {
+    tts = FlutterTts();
+    await tts.awaitSpeakCompletion(true);
+  }
 
   Widget build(BuildContext context) {
 
@@ -39,7 +56,8 @@ class _VerduresState extends State<Verdures> {
                         backgroundColor: Colors.white,
                       ),
                       onPressed: () {
-                        t += 'tomàquet';
+                        app.txt = 'tomàquet';
+                        speak();
                       },
                       child: Image.asset('img/tomaquet.png', width:160,
                           height:160, fit: BoxFit.cover)
@@ -50,7 +68,8 @@ class _VerduresState extends State<Verdures> {
                         backgroundColor: Colors.white,
                       ),
                       onPressed: () {
-                        t += 'enciam';
+                        app.txt = 'enciam';
+                        speak();
                       },
                       child: Image.asset('img/enciam.png', width:160, height:160, fit: BoxFit.cover)
                   ),
@@ -60,7 +79,8 @@ class _VerduresState extends State<Verdures> {
                         backgroundColor: Colors.white,
                       ),
                       onPressed: () {
-                        t += 'carabassó';
+                        app.txt = 'carabassó';
+                        speak();
                       },
                       child: Image.asset('img/carabasso.png', width:160, height:160, fit: BoxFit.cover)
                   ),
@@ -70,7 +90,8 @@ class _VerduresState extends State<Verdures> {
                         backgroundColor: Colors.white,
                       ),
                       onPressed: () {
-                        t += 'carbassa';
+                        app.txt = 'carbassa';
+                        speak();
                       },
                       child: Image.asset('img/carbassa.png', width:160, height:160, fit: BoxFit.cover)
                   ),
@@ -80,7 +101,8 @@ class _VerduresState extends State<Verdures> {
                         backgroundColor: Colors.white,
                       ),
                       onPressed: () {
-                        t += 'pebrot verd';
+                        app.txt = 'pebrot verd';
+                        speak();
                       },
                       child: Image.asset('img/pebrot_verd.png', width:160, height:160,
                           fit: BoxFit.cover)
@@ -91,7 +113,8 @@ class _VerduresState extends State<Verdures> {
                         backgroundColor: Colors.white,
                       ),
                       onPressed: () {
-                        t += 'carxofa';
+                        app.txt = 'carxofa';
+                        speak();
                       },
                       child: Image.asset('img/carxofa.png', width:160,
                           height:160, fit: BoxFit.cover)
@@ -110,7 +133,8 @@ class _VerduresState extends State<Verdures> {
                         backgroundColor: Colors.white,
                       ),
                       onPressed: () {
-                        t += 'ceba';
+                        app.txt = 'ceba';
+                        speak();
                       },
                       child: Image.asset('img/ceba.png', width:160,
                           height:160, fit: BoxFit.cover)
@@ -121,7 +145,8 @@ class _VerduresState extends State<Verdures> {
                         backgroundColor: Colors.white,
                       ),
                       onPressed: () {
-                        t += 'blat de moro';
+                        app.txt = 'blat de moro';
+                        speak();
                       },
                       child: Image.asset('img/blat_de_moro.png', width:160,
                           height:160,
@@ -133,7 +158,7 @@ class _VerduresState extends State<Verdures> {
                         backgroundColor: Colors.white,
                       ),
                       onPressed: () {
-                        t += 'broquil';
+                        app.txt = 'broquil';
                       },
                       child: Image.asset('img/broquil.png', width:160, height:160, fit: BoxFit.cover)
                   ),
@@ -143,7 +168,8 @@ class _VerduresState extends State<Verdures> {
                         backgroundColor: Colors.white,
                       ),
                       onPressed: () {
-                        t += 'coliflor';
+                        app.txt = 'coliflor';
+                        speak();
                       },
                       child: Image.asset('img/coliflor.png', width:160, height:160, fit: BoxFit.cover)
                   ),
@@ -153,7 +179,8 @@ class _VerduresState extends State<Verdures> {
                         backgroundColor: Colors.white,
                       ),
                       onPressed: () {
-                        t += 'porro';
+                        app.txt = 'porro';
+                        speak();
                       },
                       child: Image.asset('img/porro.png', width:160, height:160, fit: BoxFit.cover)
                   ),
@@ -163,7 +190,8 @@ class _VerduresState extends State<Verdures> {
                         backgroundColor: Colors.white,
                       ),
                       onPressed: () {
-                        t += 'espàrrec verd';
+                        app.txt = 'espàrrec verd';
+                        speak();
                       },
                       child: Image.asset('img/esparrec_verd.png', width:160,
                           height:160, fit: BoxFit.cover)
@@ -182,7 +210,8 @@ class _VerduresState extends State<Verdures> {
                         backgroundColor: Colors.white,
                       ),
                       onPressed: () {
-                        t += 'alberginia';
+                        app.txt = 'alberginia';
+                        speak();
                       },
                       child: Image.asset('img/alberginia.png', width:160,
                           height:160, fit: BoxFit.cover)
@@ -193,7 +222,8 @@ class _VerduresState extends State<Verdures> {
                         backgroundColor: Colors.white,
                       ),
                       onPressed: () {
-                        t += 'pebrot vermell';
+                        app.txt = 'pebrot vermell';
+                        speak();
                       },
                       child: Image.asset('img/pebrot_vermell.png', width:160,
                           height:160,
@@ -205,7 +235,8 @@ class _VerduresState extends State<Verdures> {
                         backgroundColor: Colors.white,
                       ),
                       onPressed: () {
-                        t += 'cogombres';
+                        app.txt = 'cogombres';
+                        speak();
                       },
                       child: Image.asset('img/cogombres.png', width:160, height:160, fit: BoxFit.cover)
                   ),
@@ -215,7 +246,8 @@ class _VerduresState extends State<Verdures> {
                         backgroundColor: Colors.white,
                       ),
                       onPressed: () {
-                        t += 'pèsols';
+                        app.txt = 'pèsols';
+                        speak();
                       },
                       child: Image.asset('img/pesols.png', width:160, height:160, fit: BoxFit.cover)
                   ),
@@ -225,7 +257,8 @@ class _VerduresState extends State<Verdures> {
                         backgroundColor: Colors.white,
                       ),
                       onPressed: () {
-                        t += 'api';
+                        app.txt = 'api';
+                        speak();
                       },
                       child: Image.asset('img/api.png', width:160, height:160, fit: BoxFit.cover)
                   ),
@@ -235,7 +268,8 @@ class _VerduresState extends State<Verdures> {
                         backgroundColor: Colors.white,
                       ),
                       onPressed: () {
-                        t += 'col de brussel·les';
+                        app.txt = 'col de brussel·les';
+                        speak();
                       },
                       child: Image.asset('img/col_brusseles.png', width:160,
                           height:160, fit: BoxFit.cover)
@@ -252,6 +286,24 @@ class _VerduresState extends State<Verdures> {
       ),
 
     );
+
+  }
+
+  Future speak() async {
+
+    await tts.setVolume(1);
+    await tts.setSpeechRate(0.5);
+    await tts.setPitch(1);
+
+    if (app.txt != null) {
+
+      if (app.txt!.isNotEmpty) {
+
+        await tts.speak(app.txt!);
+
+      }
+
+    }
 
   }
 

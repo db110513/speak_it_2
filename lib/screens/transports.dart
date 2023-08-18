@@ -11,7 +11,24 @@ class Transports extends StatefulWidget {
 class _TransportsState extends State<Transports> {
 
   App app = App();
-  late String t = app.txt;
+
+  late FlutterTts tts;
+
+  void initState() {
+    super.initState();
+    initTts();
+    tts.setLanguage('ca');
+  }
+
+  void dispose() {
+    super.dispose();
+    tts.stop();
+  }
+
+  initTts() async {
+    tts = FlutterTts();
+    await tts.awaitSpeakCompletion(true);
+  }
 
   Widget build(BuildContext context) {
 
@@ -38,7 +55,8 @@ class _TransportsState extends State<Transports> {
                         backgroundColor: Colors.white,
                       ),
                       onPressed: () {
-                        t += 'bus';
+                        app.txt = 'bus';
+                        speak();
                       },
                       child: Image.asset('img/bus.png', width:160,
                           height:160, fit: BoxFit.cover)
@@ -49,7 +67,8 @@ class _TransportsState extends State<Transports> {
                         backgroundColor: Colors.white,
                       ),
                       onPressed: () {
-                        t += 'vaixell';
+                        app.txt = 'vaixell';
+                        speak();
                       },
                       child: Image.asset('img/vaixell.png', width:160, height:160, fit: BoxFit.cover)
                   ),
@@ -59,7 +78,8 @@ class _TransportsState extends State<Transports> {
                         backgroundColor: Colors.white,
                       ),
                       onPressed: () {
-                        t += 'globus';
+                        app.txt = 'globus';
+                        speak();
                       },
                       child: Image.asset('img/globus.png', width:160, height:160, fit: BoxFit.cover)
                   ),
@@ -69,7 +89,8 @@ class _TransportsState extends State<Transports> {
                         backgroundColor: Colors.white,
                       ),
                       onPressed: () {
-                        t += 'tren';
+                        app.txt = 'tren';
+                        speak();
                       },
                       child: Image.asset('img/tren.png', width:160, height:160, fit: BoxFit.cover)
                   ),
@@ -79,7 +100,8 @@ class _TransportsState extends State<Transports> {
                         backgroundColor: Colors.white,
                       ),
                       onPressed: () {
-                        t += 'bicicleta';
+                        app.txt = 'bicicleta';
+                        speak();
                       },
                       child: Image.asset('img/bici.png', width:160, height:160,
                           fit: BoxFit.cover)
@@ -90,7 +112,8 @@ class _TransportsState extends State<Transports> {
                         backgroundColor: Colors.white,
                       ),
                       onPressed: () {
-                        t += 'moto';
+                        app.txt = 'moto';
+                        speak();
                       },
                       child: Image.asset('img/moto.png', width:160,
                           height:160, fit: BoxFit.cover)
@@ -109,7 +132,8 @@ class _TransportsState extends State<Transports> {
                         backgroundColor: Colors.white,
                       ),
                       onPressed: () {
-                        t += 'tramvia';
+                        app.txt = 'tramvia';
+                        speak();
                       },
                       child: Image.asset('img/tramvia.png', width:160,
                           height:160, fit: BoxFit.cover)
@@ -120,7 +144,8 @@ class _TransportsState extends State<Transports> {
                         backgroundColor: Colors.white,
                       ),
                       onPressed: () {
-                        t += 'submarí';
+                        app.txt = 'submarí';
+                        speak();
                       },
                       child: Image.asset('img/submari.png', width:160, height:160,
                           fit: BoxFit.cover)
@@ -131,7 +156,8 @@ class _TransportsState extends State<Transports> {
                         backgroundColor: Colors.white,
                       ),
                       onPressed: () {
-                        t += 'avio';
+                        app.txt = 'avió';
+                        speak();
                       },
                       child: Image.asset('img/avio.png', width:160, height:160, fit: BoxFit.cover)
                   ),
@@ -141,10 +167,10 @@ class _TransportsState extends State<Transports> {
                         backgroundColor: Colors.white,
                       ),
                       onPressed: () {
-                        t += 'cotxe';
+                        app.txt = 'cotxe';
+                        speak();
                       },
-                      child: Image.asset('img/cotxe.png', width:160, height:160,
-                          fit: BoxFit.cover)
+                      child: Image.asset('img/cotxe.png', width:160, height:160, fit: BoxFit.cover)
                   ),
                   const SizedBox(width: 10),
                   ElevatedButton(
@@ -152,10 +178,10 @@ class _TransportsState extends State<Transports> {
                         backgroundColor: Colors.white,
                       ),
                       onPressed: () {
-                        t += 'funicular';
+                        app.txt = 'funicular';
+                        speak();
                       },
-                      child: Image.asset('img/funicular.png', width:160, height:160,
-                          fit: BoxFit.cover)
+                      child: Image.asset('img/funicular.png', width:160, height:160, fit: BoxFit.cover)
                   ),
                   const SizedBox(width: 10),
                   ElevatedButton(
@@ -163,10 +189,10 @@ class _TransportsState extends State<Transports> {
                         backgroundColor: Colors.white,
                       ),
                       onPressed: () {
-                        t += 'vaixell';
+                        app.txt = 'ambulància';
+                        speak();
                       },
-                      child: Image.asset('img/vaixell.png', width:160,
-                          height:160, fit: BoxFit.cover)
+                      child: Image.asset('img/ambulancia.png', width:160, height:160, fit: BoxFit.cover)
                   ),
 
                 ],
@@ -182,7 +208,8 @@ class _TransportsState extends State<Transports> {
                         backgroundColor: Colors.white,
                       ),
                       onPressed: () {
-                        t += 'camió';
+                        app.txt = 'camió';
+                        speak();
                       },
                       child: Image.asset('img/camio.png', width:160, height:160, fit: BoxFit.cover)
                   ),
@@ -192,7 +219,8 @@ class _TransportsState extends State<Transports> {
                         backgroundColor: Colors.white,
                       ),
                       onPressed: () {
-                        t += 'helicòpter';
+                        app.txt = 'helicòpter';
+                        speak();
                       },
                       child: Image.asset('img/helicopter.png', width:160, height:160, fit: BoxFit.cover)
                   ),
@@ -202,7 +230,8 @@ class _TransportsState extends State<Transports> {
                         backgroundColor: Colors.white,
                       ),
                       onPressed: () {
-                        t += 'llanxa';
+                        app.txt = 'llanxa';
+                        speak();
                       },
                       child: Image.asset('img/llanxa.png', width:160, height:160, fit: BoxFit.cover)
                   ),
@@ -212,7 +241,8 @@ class _TransportsState extends State<Transports> {
                         backgroundColor: Colors.white,
                       ),
                       onPressed: () {
-                        t += 'furgoneta';
+                        app.txt = 'furgoneta';
+                        speak();
                       },
                       child: Image.asset('img/furgoneta.png', width:160, height:160,
                           fit: BoxFit.cover)
@@ -223,7 +253,8 @@ class _TransportsState extends State<Transports> {
                         backgroundColor: Colors.white,
                       ),
                       onPressed: () {
-                        t += 'patinet elèctric';
+                        app.txt = 'patinet elèctric';
+                        speak();
                       },
                       child: Image.asset('img/patinet_electric.png', width:160, height:160,
                           fit: BoxFit.cover)
@@ -234,7 +265,8 @@ class _TransportsState extends State<Transports> {
                         backgroundColor: Colors.white,
                       ),
                       onPressed: () {
-                        t += 'coet';
+                        app.txt = 'coet';
+                        speak();
                       },
                       child: Image.asset('img/coet.png', width:160,
                           height:160, fit: BoxFit.cover)
@@ -250,6 +282,24 @@ class _TransportsState extends State<Transports> {
 
       ),
     );
+
+  }
+
+  Future speak() async {
+
+    await tts.setVolume(1);
+    await tts.setSpeechRate(0.5);
+    await tts.setPitch(1);
+
+    if (app.txt != null) {
+
+      if (app.txt!.isNotEmpty) {
+
+        await tts.speak(app.txt!);
+
+      }
+
+    }
 
   }
 

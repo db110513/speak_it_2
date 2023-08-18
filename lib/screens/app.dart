@@ -59,32 +59,32 @@ class _AppState extends State<App> {
               children: [
 
                 const SizedBox(height: 40),
-                Container(
-                  margin: const EdgeInsets.only(right:27),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.end,
-                      children: [
-
-                      ElevatedButton(
-                          style: ElevatedButton.styleFrom(
-                            backgroundColor: Colors.white,
-                          ),
-                          onPressed: () => speak(),
-                          child: Image.asset('img/play.png', width:80, height:90, fit: BoxFit.cover)
-                      ),
-                      const SizedBox(width: 15),
-
-                      ElevatedButton(
-                          style: ElevatedButton.styleFrom(
-                            backgroundColor: Colors.white,
-
-                          ),
-                          onPressed: () => speak(),
-                          child: Image.asset('img/bckspace.png', width:80, height:90, fit: BoxFit.cover)
-                      )
-                    ]
-                  ),
-                ),
+                // Container(
+                //   margin: const EdgeInsets.only(right:27),
+                //   child: Row(
+                //     mainAxisAlignment: MainAxisAlignment.end,
+                //       children: [
+                //
+                //       ElevatedButton(
+                //           style: ElevatedButton.styleFrom(
+                //             backgroundColor: Colors.white,
+                //           ),
+                //           onPressed: () => speak(),
+                //           child: Image.asset('img/play.png', width:80, height:90, fit: BoxFit.cover)
+                //       ),
+                //       const SizedBox(width: 15),
+                //
+                //       ElevatedButton(
+                //           style: ElevatedButton.styleFrom(
+                //             backgroundColor: Colors.white,
+                //
+                //           ),
+                //           onPressed: () => speak(),
+                //           child: Image.asset('img/bckspace.png', width:80, height:90, fit: BoxFit.cover)
+                //       )
+                //     ]
+                //   ),
+                // ),
 
                 const SizedBox(height: 50),
                 Row(

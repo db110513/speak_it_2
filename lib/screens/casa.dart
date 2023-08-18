@@ -11,7 +11,24 @@ class Casa extends StatefulWidget {
 class _CasaState extends State<Casa> {
 
   App app = App();
-  late String t = app.txt;
+
+  late FlutterTts tts;
+
+  void initState() {
+    super.initState();
+    initTts();
+    tts.setLanguage('ca');
+  }
+
+  void dispose() {
+    super.dispose();
+    tts.stop();
+  }
+
+  initTts() async {
+    tts = FlutterTts();
+    await tts.awaitSpeakCompletion(true);
+  }
 
   Widget build(BuildContext context) {
 
@@ -39,7 +56,8 @@ class _CasaState extends State<Casa> {
                         backgroundColor: Colors.white,
                       ),
                       onPressed: () {
-                        t += 'llit';
+                        app.txt = 'llit';
+                        speak();
                       },
                       child: Image.asset('img/llit.png', width:160, height:160, fit: BoxFit.cover)
                   ),
@@ -49,7 +67,8 @@ class _CasaState extends State<Casa> {
                         backgroundColor: Colors.white,
                       ),
                       onPressed: () {
-                        t += 'cuina';
+                        app.txt = 'cuina';
+                        speak();
                         Navigator.of(context).push(MaterialPageRoute(builder: (context) => Cuina()));
                       },
                       child: Image.asset('img/cuina.png', width:160, height:160, fit: BoxFit.cover)
@@ -60,7 +79,8 @@ class _CasaState extends State<Casa> {
                         backgroundColor: Colors.white,
                       ),
                       onPressed: () {
-                        t += 'escombra';
+                        app.txt = 'escombra';
+                        speak();
                       },
                       child: Image.asset('img/escombra.png', width:160, height:160, fit: BoxFit.cover)
                   ),
@@ -70,7 +90,8 @@ class _CasaState extends State<Casa> {
                         backgroundColor: Colors.white,
                       ),
                       onPressed: () {
-                        t += 'recollidor';
+                        app.txt = 'recollidor';
+                        speak();
                       },
                       child: Image.asset('img/recollidor.png', width:160, height:160, fit: BoxFit.cover)
                   ),
@@ -80,7 +101,8 @@ class _CasaState extends State<Casa> {
                         backgroundColor: Colors.white,
                       ),
                       onPressed: () {
-                        t += 'habitacio';
+                        app.txt = 'habitacio';
+                        speak();
                       },
                       child: Image.asset('img/habitacio.png', width:160, height:160, fit: BoxFit.cover)
                   ),
@@ -90,7 +112,8 @@ class _CasaState extends State<Casa> {
                         backgroundColor: Colors.white,
                       ),
                       onPressed: () {
-                        t += 'sofa';
+                        app.txt = 'sofa';
+                        speak();
                       },
                       child: Image.asset('img/sofa.png', width:160, height:160, fit: BoxFit.cover)
                   ),
@@ -108,7 +131,8 @@ class _CasaState extends State<Casa> {
                         backgroundColor: Colors.white,
                       ),
                       onPressed: () {
-                        t += 'pica';
+                        app.txt = 'pica';
+                        speak();
                       },
                       child: Image.asset('img/pica.png', width:160, height:160, fit: BoxFit.cover)
                   ),
@@ -118,7 +142,8 @@ class _CasaState extends State<Casa> {
                         backgroundColor: Colors.white,
                       ),
                       onPressed: () {
-                        t += 'lavabo';
+                        app.txt = 'lavabo';
+                        speak();
                       },
                       child: Image.asset('img/lavabo.png', width:160, height:160, fit: BoxFit.cover)
                   ),
@@ -128,7 +153,8 @@ class _CasaState extends State<Casa> {
                         backgroundColor: Colors.white,
                       ),
                       onPressed: () {
-                        t += 'dutxa';
+                        app.txt = 'dutxa';
+                        speak();
                       },
                       child: Image.asset('img/dutxa.png', width:160, height:160, fit: BoxFit.cover)
                   ),
@@ -138,7 +164,8 @@ class _CasaState extends State<Casa> {
                         backgroundColor: Colors.white,
                       ),
                       onPressed: () {
-                        t += 'banyera';
+                        app.txt = 'banyera';
+                        speak();
                       },
                       child: Image.asset('img/banyera.png', width:160, height:160, fit: BoxFit.cover)
                   ),
@@ -148,7 +175,8 @@ class _CasaState extends State<Casa> {
                         backgroundColor: Colors.white,
                       ),
                       onPressed: () {
-                        t += 'planxa';
+                        app.txt = 'planxa';
+                        speak();
                       },
                       child: Image.asset('img/planxa.png', width:160, height:160, fit: BoxFit.cover)
                   ),
@@ -158,7 +186,8 @@ class _CasaState extends State<Casa> {
                         backgroundColor: Colors.white,
                       ),
                       onPressed: () {
-                        t += 'tv';
+                        app.txt = 'tv';
+                        speak();
                       },
                       child: Image.asset('img/tv.png', width:160, height:160, fit: BoxFit.cover)
                   ),
@@ -176,7 +205,8 @@ class _CasaState extends State<Casa> {
                         backgroundColor: Colors.white,
                       ),
                       onPressed: () {
-                        t = 'ordinador';
+                        app.txt = 'ordinador';
+                        speak();
                       },
                       child: Image.asset('img/ordinador.png', width:160, height:160, fit: BoxFit.cover)
                   ),
@@ -186,7 +216,8 @@ class _CasaState extends State<Casa> {
                         backgroundColor: Colors.white,
                       ),
                       onPressed: () {
-                        t += 'carregador';
+                        app.txt = 'carregador';
+                        speak();
                       },
                       child: Image.asset('img/carregador.png', width:160, height:160, fit: BoxFit.cover)
                   ),
@@ -196,7 +227,8 @@ class _CasaState extends State<Casa> {
                         backgroundColor: Colors.white,
                       ),
                       onPressed: () {
-                        t += 'sala d\'estar';
+                        app.txt = 'sala d\'estar';
+                        speak();
                       },
                       child: Image.asset('img/sala_estar.png', width:160, height:160, fit: BoxFit.cover)
                   ),
@@ -206,7 +238,8 @@ class _CasaState extends State<Casa> {
                         backgroundColor: Colors.white,
                       ),
                       onPressed: () {
-                        t += 'rentadora';
+                        app.txt = 'rentadora';
+                        speak();
                       },
                       child: Image.asset('img/rentadora.png', width:160, height:160, fit: BoxFit.cover)
                   ),
@@ -216,7 +249,8 @@ class _CasaState extends State<Casa> {
                         backgroundColor: Colors.white,
                       ),
                       onPressed: () {
-                        t += 'cafetera';
+                        app.txt = 'cafetera';
+                        speak();
                       },
                       child: Image.asset('img/cafetera.png', width:160, height:160, fit: BoxFit.cover)
                   ),
@@ -226,7 +260,8 @@ class _CasaState extends State<Casa> {
                         backgroundColor: Colors.white,
                       ),
                       onPressed: () {
-                        t += 'forn';
+                        app.txt = 'forn';
+                        speak();
                       },
                       child: Image.asset('img/forn.png', width:160, height:160, fit: BoxFit.cover)
                   ),
@@ -242,6 +277,24 @@ class _CasaState extends State<Casa> {
       ),
 
     );
+
+  }
+
+  Future speak() async {
+
+    await tts.setVolume(1);
+    await tts.setSpeechRate(0.5);
+    await tts.setPitch(1);
+
+    if (app.txt != null) {
+
+      if (app.txt!.isNotEmpty) {
+
+        await tts.speak(app.txt!);
+
+      }
+
+    }
 
   }
 

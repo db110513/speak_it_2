@@ -11,7 +11,24 @@ class Persones extends StatefulWidget {
 class _PersonesState extends State<Persones> {
 
   App app = App();
-  late String t = app.txt;
+
+  late FlutterTts tts;
+
+  void initState() {
+    super.initState();
+    initTts();
+    tts.setLanguage('ca');
+  }
+
+  void dispose() {
+    super.dispose();
+    tts.stop();
+  }
+
+  initTts() async {
+    tts = FlutterTts();
+    await tts.awaitSpeakCompletion(true);
+  }
 
   Widget build(BuildContext context) {
 
@@ -37,7 +54,8 @@ class _PersonesState extends State<Persones> {
                         backgroundColor: Colors.white,
                       ),
                       onPressed: () {
-                        t += 'bebé';
+                        app.txt = 'bebé';
+                        speak();
                       },
                       child: Image.asset('img/bebe.png', width:160,
                           height:160, fit: BoxFit.cover)
@@ -48,7 +66,8 @@ class _PersonesState extends State<Persones> {
                         backgroundColor: Colors.white,
                       ),
                       onPressed: () {
-                        t += 'nado';
+                        app.txt = 'nadó';
+                        speak();
                       },
                       child: Image.asset('img/nado.png', width:160, height:160, fit: BoxFit.cover)
                   ),
@@ -58,7 +77,8 @@ class _PersonesState extends State<Persones> {
                         backgroundColor: Colors.white,
                       ),
                       onPressed: () {
-                        t += 'nena';
+                        app.txt = 'nena';
+                        speak();
                       },
                       child: Image.asset('img/nena.png', width:160, height:160, fit: BoxFit.cover)
                   ),
@@ -68,7 +88,8 @@ class _PersonesState extends State<Persones> {
                         backgroundColor: Colors.white,
                       ),
                       onPressed: () {
-                        t += 'nen';
+                        app.txt = 'nen';
+                        speak();
                       },
                       child: Image.asset('img/nen.png', width:160, height:160, fit: BoxFit.cover)
                   ),
@@ -78,7 +99,8 @@ class _PersonesState extends State<Persones> {
                         backgroundColor: Colors.white,
                       ),
                       onPressed: () {
-                        t += 'dona';
+                        app.txt = 'dona';
+                        speak();
                       },
                       child: Image.asset('img/dona.png', width:160, height:160,
                           fit: BoxFit.cover)
@@ -89,7 +111,8 @@ class _PersonesState extends State<Persones> {
                         backgroundColor: Colors.white,
                       ),
                       onPressed: () {
-                        t += 'home';
+                        app.txt = 'home';
+                        speak();
                       },
                       child: Image.asset('img/home.png', width:160,
                           height:160, fit: BoxFit.cover)
@@ -108,7 +131,8 @@ class _PersonesState extends State<Persones> {
                         backgroundColor: Colors.white,
                       ),
                       onPressed: () {
-                        t += 'àvia';
+                        app.txt = 'àvia';
+                        speak();
                       },
                       child: Image.asset('img/avia.png', width:160,
                           height:160, fit: BoxFit.cover)
@@ -119,7 +143,8 @@ class _PersonesState extends State<Persones> {
                         backgroundColor: Colors.white,
                       ),
                       onPressed: () {
-                        t += 'avi';
+                        app.txt = 'avi';
+                        speak();
                       },
                       child: Image.asset('img/avi.png', width:160, height:160,
                           fit: BoxFit.cover)
@@ -130,7 +155,8 @@ class _PersonesState extends State<Persones> {
                         backgroundColor: Colors.white,
                       ),
                       onPressed: () {
-                        t += 'adulta';
+                        app.txt = 'mare';
+                        speak();
                       },
                       child: Image.asset('img/adulta.png', width:160, height:160, fit: BoxFit.cover)
                   ),
@@ -140,7 +166,8 @@ class _PersonesState extends State<Persones> {
                         backgroundColor: Colors.white,
                       ),
                       onPressed: () {
-                        t += 'adult';
+                        app.txt = 'pare';
+                        speak();
                       },
                       child: Image.asset('img/adult.png', width:160, height:160, fit: BoxFit.cover)
                   ),
@@ -150,7 +177,8 @@ class _PersonesState extends State<Persones> {
                         backgroundColor: Colors.white,
                       ),
                       onPressed: () {
-                        t += 'nens';
+                        app.txt = 'nens';
+                        speak();
                       },
                       child: Image.asset('img/nens.png', width:160, height:160,
                           fit: BoxFit.cover)
@@ -161,7 +189,8 @@ class _PersonesState extends State<Persones> {
                         backgroundColor: Colors.white,
                       ),
                       onPressed: () {
-                        t += 'avis';
+                        app.txt = 'avis';
+                        speak();
                       },
                       child: Image.asset('img/avis.png', width:160, height:160, fit: BoxFit.cover)
                   ),
@@ -179,7 +208,8 @@ class _PersonesState extends State<Persones> {
                         backgroundColor: Colors.white,
                       ),
                       onPressed: () {
-                        t += 'persona en croses';
+                        app.txt = 'persona en croses';
+                        speak();
                       },
                       child: Image.asset('img/persona_croses.png', width:160, height:160, fit: BoxFit.cover)
                   ),
@@ -189,7 +219,8 @@ class _PersonesState extends State<Persones> {
                         backgroundColor: Colors.white,
                       ),
                       onPressed: () {
-                        t += 'persona en cadira de rodes';
+                        app.txt = 'persona en cadira de rodes';
+                        speak();
                       },
                       child: Image.asset('img/persona_cadira_rodes.png', width:160, height:160,
                           fit: BoxFit.cover)
@@ -200,7 +231,8 @@ class _PersonesState extends State<Persones> {
                         backgroundColor: Colors.white,
                       ),
                       onPressed: () {
-                        t += 'home àrab';
+                        app.txt = 'home àrab';
+                        speak();
                       },
                       child: Image.asset('img/arabH.png', width:160, height:160, fit: BoxFit.cover)
                   ),
@@ -210,7 +242,8 @@ class _PersonesState extends State<Persones> {
                         backgroundColor: Colors.white,
                       ),
                       onPressed: () {
-                        t += 'dona àrab';
+                        app.txt = 'dona àrab';
+                        speak();
                       },
                       child: Image.asset('img/arabD.png', width:160, height:160, fit: BoxFit.cover)
                   ),
@@ -220,7 +253,8 @@ class _PersonesState extends State<Persones> {
                         backgroundColor: Colors.white,
                       ),
                       onPressed: () {
-                        t += 'nens autistes';
+                        app.txt = 'nens autistes';
+                        speak();
                       },
                       child: Image.asset('img/nens_autistes.png', width:160, height:160,
                           fit: BoxFit.cover)
@@ -231,7 +265,8 @@ class _PersonesState extends State<Persones> {
                         backgroundColor: Colors.white,
                       ),
                       onPressed: () {
-                        t += 'adult autista';
+                        app.txt = 'adult autista';
+                        speak();
                       },
                       child: Image.asset('img/adult_autista.png', width:160, height:160, fit: BoxFit.cover)
                   ),
@@ -247,6 +282,24 @@ class _PersonesState extends State<Persones> {
       ),
 
     );
+
+  }
+
+  Future speak() async {
+
+    await tts.setVolume(1);
+    await tts.setSpeechRate(0.5);
+    await tts.setPitch(1);
+
+    if (app.txt != null) {
+
+      if (app.txt!.isNotEmpty) {
+
+        await tts.speak(app.txt!);
+
+      }
+
+    }
 
   }
 

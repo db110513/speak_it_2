@@ -11,7 +11,24 @@ class Fruita extends StatefulWidget {
 class _FruitaState extends State<Fruita> {
 
   App app = App();
-  late String t = app.txt;
+
+  late FlutterTts tts;
+
+  void initState() {
+    super.initState();
+    initTts();
+    tts.setLanguage('ca');
+  }
+
+  void dispose() {
+    super.dispose();
+    tts.stop();
+  }
+
+  initTts() async {
+    tts = FlutterTts();
+    await tts.awaitSpeakCompletion(true);
+  }
 
   Widget build(BuildContext context) {
 
@@ -38,7 +55,8 @@ class _FruitaState extends State<Fruita> {
                         backgroundColor: Colors.white,
                       ),
                       onPressed: () {
-                        t += 'raïm negre';
+                        app.txt = 'raïm negre';
+                        speak();
                       },
                       child: Image.asset('img/raim_negre.png', width:160, height:160, fit: BoxFit.cover)
                   ),
@@ -48,7 +66,8 @@ class _FruitaState extends State<Fruita> {
                         backgroundColor: Colors.white,
                       ),
                       onPressed: () {
-                        t += 'mango';
+                        app.txt = 'mango';
+                        speak();
                       },
                       child: Image.asset('img/mango.png', width:160, height:160, fit: BoxFit.cover)
                   ),
@@ -58,7 +77,8 @@ class _FruitaState extends State<Fruita> {
                         backgroundColor: Colors.white,
                       ),
                       onPressed: () {
-                        t += 'poma groga';
+                        app.txt = 'poma groga';
+                        speak();
                       },
                       child: Image.asset('img/poma_groga.png', width:160, height:160, fit: BoxFit.cover)
                   ),
@@ -68,7 +88,8 @@ class _FruitaState extends State<Fruita> {
                         backgroundColor: Colors.white,
                       ),
                       onPressed: () {
-                        t += 'poma verda';
+                        app.txt = 'poma verda';
+                        speak();
                       },
                       child: Image.asset('img/poma_verda.png', width:160, height:160, fit: BoxFit.cover)
                   ),
@@ -78,7 +99,8 @@ class _FruitaState extends State<Fruita> {
                         backgroundColor: Colors.white,
                       ),
                       onPressed: () {
-                        t += 'poma vermella';
+                        app.txt = 'poma vermella';
+                        speak();
                       },
                       child: Image.asset('img/poma_vermella.png', width:160, height:160,
                           fit: BoxFit.cover)
@@ -89,7 +111,8 @@ class _FruitaState extends State<Fruita> {
                         backgroundColor: Colors.white,
                       ),
                       onPressed: () {
-                        t += 'mandarina';
+                        app.txt = 'mandarina';
+                        speak();
                       },
                       child: Image.asset('img/mandarina.png', width:160, height:160, fit: BoxFit.cover)
                   ),
@@ -107,7 +130,8 @@ class _FruitaState extends State<Fruita> {
                         backgroundColor: Colors.white,
                       ),
                       onPressed: () {
-                        t += 'coco';
+                        app.txt = 'coco';
+                        speak();
                       },
                       child: Image.asset('img/coco.png', width:160, height:160, fit: BoxFit.cover)
                   ),
@@ -117,7 +141,8 @@ class _FruitaState extends State<Fruita> {
                         backgroundColor: Colors.white,
                       ),
                       onPressed: () {
-                        t += 'kiwi';
+                        app.txt = 'kiwi';
+                        speak();
                       },
                       child: Image.asset('img/kiwi.png', width:160, height:160, fit: BoxFit.cover)
                   ),
@@ -127,7 +152,8 @@ class _FruitaState extends State<Fruita> {
                         backgroundColor: Colors.white,
                       ),
                       onPressed: () {
-                        t += 'prèssec';
+                        app.txt = 'prèssec';
+                        speak();
                       },
                       child: Image.asset('img/pressec.png', width:160, height:160, fit: BoxFit.cover)
                   ),
@@ -137,7 +163,8 @@ class _FruitaState extends State<Fruita> {
                         backgroundColor: Colors.white,
                       ),
                       onPressed: () {
-                        t += 'pinya';
+                        app.txt = 'pinya';
+                        speak();
                       },
                       child: Image.asset('img/pinya.png', width:160, height:160,
                           fit: BoxFit.cover)
@@ -148,7 +175,8 @@ class _FruitaState extends State<Fruita> {
                         backgroundColor: Colors.white,
                       ),
                       onPressed: () {
-                        t += 'pera';
+                        app.txt = 'pera';
+                        speak();
                       },
                       child: Image.asset('img/pera.png', width:160, height:160, fit: BoxFit.cover)
                   ),
@@ -158,7 +186,8 @@ class _FruitaState extends State<Fruita> {
                         backgroundColor: Colors.white,
                       ),
                       onPressed: () {
-                        t += 'taronja';
+                        app.txt = 'taronja';
+                        speak();
                       },
                       child: Image.asset('img/taronja.png', width:160,
                           height:160, fit: BoxFit.cover)
@@ -177,7 +206,8 @@ class _FruitaState extends State<Fruita> {
                         backgroundColor: Colors.white,
                       ),
                       onPressed: () {
-                        t += 'síndria';
+                        app.txt = 'síndria';
+                        speak();
                       },
                       child: Image.asset('img/sindria.png', width:160, height:160, fit: BoxFit.cover)
                   ),
@@ -187,7 +217,8 @@ class _FruitaState extends State<Fruita> {
                         backgroundColor: Colors.white,
                       ),
                       onPressed: () {
-                        t += 'meló';
+                        app.txt = 'meló';
+                        speak();
                       },
                       child: Image.asset('img/melo.png', width:160, height:160, fit: BoxFit.cover)
                   ),
@@ -197,7 +228,8 @@ class _FruitaState extends State<Fruita> {
                         backgroundColor: Colors.white,
                       ),
                       onPressed: () {
-                        t += 'llimona';
+                        app.txt = 'llimona';
+                        speak();
                       },
                       child: Image.asset('img/llimona.png', width:160, height:160, fit: BoxFit.cover)
                   ),
@@ -207,7 +239,8 @@ class _FruitaState extends State<Fruita> {
                         backgroundColor: Colors.white,
                       ),
                       onPressed: () {
-                        t += 'plàtan';
+                        app.txt = 'plàtan';
+                        speak();
                       },
                       child: Image.asset('img/platan.png', width:160, height:160, fit: BoxFit.cover)
                   ),
@@ -217,7 +250,8 @@ class _FruitaState extends State<Fruita> {
                         backgroundColor: Colors.white,
                       ),
                       onPressed: () {
-                        t += 'gerd';
+                        app.txt = 'gerd';
+                        speak();
                       },
                       child: Image.asset('img/gerd.png', width:160, height:160, fit: BoxFit.cover)
                   ),
@@ -227,7 +261,8 @@ class _FruitaState extends State<Fruita> {
                         backgroundColor: Colors.white,
                       ),
                       onPressed: () {
-                        t += 'cirera';
+                        app.txt = 'cirera';
+                        speak();
                       },
                       child: Image.asset('img/cirera.png', width:160,
                           height:160, fit: BoxFit.cover)
@@ -244,6 +279,24 @@ class _FruitaState extends State<Fruita> {
       ),
 
     );
+
+  }
+
+  Future speak() async {
+
+    await tts.setVolume(1);
+    await tts.setSpeechRate(0.5);
+    await tts.setPitch(1);
+
+    if (app.txt != null) {
+
+      if (app.txt!.isNotEmpty) {
+
+        await tts.speak(app.txt!);
+
+      }
+
+    }
 
   }
 

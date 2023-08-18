@@ -11,7 +11,25 @@ class Begudes extends StatefulWidget {
 class _BegudesState extends State<Begudes> {
 
   App app = App();
-  late String t = app.txt;
+
+  late FlutterTts tts;
+
+  void initState() {
+    super.initState();
+    initTts();
+    tts.setLanguage('ca');
+  }
+
+  void dispose() {
+    super.dispose();
+    tts.stop();
+  }
+
+  initTts() async {
+    tts = FlutterTts();
+    await tts.awaitSpeakCompletion(true);
+  }
+
 
   Widget build(BuildContext context) {
 
@@ -39,7 +57,8 @@ class _BegudesState extends State<Begudes> {
                         backgroundColor: Colors.white,
                       ),
                       onPressed: () {
-                        t += 'cafe';
+                        app.txt = 'cafe';
+                        speak();
                       },
                       child: Image.asset('img/cafe.png', width:160,
                           height:160, fit: BoxFit.cover)
@@ -50,7 +69,8 @@ class _BegudesState extends State<Begudes> {
                         backgroundColor: Colors.white,
                       ),
                       onPressed: () {
-                        t += 'got d\'aigua';
+                        app.txt = 'got d\'aigua';
+                        speak();
                       },
                       child: Image.asset('img/got_aigua.png', width:160, height:160, fit: BoxFit.cover)
                   ),
@@ -60,7 +80,8 @@ class _BegudesState extends State<Begudes> {
                         backgroundColor: Colors.white,
                       ),
                       onPressed: () {
-                        t += 'xocolata desfeta';
+                        app.txt = 'xocolata desfeta';
+                        speak();
                       },
                       child: Image.asset('img/xocolata_desfeta.png', width:160, height:160, fit: BoxFit.cover)
                   ),
@@ -70,7 +91,8 @@ class _BegudesState extends State<Begudes> {
                         backgroundColor: Colors.white,
                       ),
                       onPressed: () {
-                        t += 'sidra';
+                        app.txt = 'sidra';
+                        speak();
                       },
                       child: Image.asset('img/sidra.png', width:160, height:160, fit: BoxFit.cover)
                   ),
@@ -80,7 +102,8 @@ class _BegudesState extends State<Begudes> {
                         backgroundColor: Colors.white,
                       ),
                       onPressed: () {
-                        t += 'orxata';
+                        app.txt = 'orxata';
+                        speak();
                       },
                       child: Image.asset('img/orxata.png', width:160, height:160,
                           fit: BoxFit.cover)
@@ -91,7 +114,8 @@ class _BegudesState extends State<Begudes> {
                         backgroundColor: Colors.white,
                       ),
                       onPressed: () {
-                        t += 'llet amb galetes';
+                        app.txt = 'llet amb galetes';
+                        speak();
                       },
                       child: Image.asset('img/llet_galetes.png', width:160,
                           height:160, fit: BoxFit.cover)
@@ -110,7 +134,8 @@ class _BegudesState extends State<Begudes> {
                         backgroundColor: Colors.white,
                       ),
                       onPressed: () {
-                        t += 'cocacola';
+                        app.txt = 'cocacola';
+                        speak();
                       },
                       child: Image.asset('img/cocacola.png', width:160,
                           height:160, fit: BoxFit.cover)
@@ -121,7 +146,8 @@ class _BegudesState extends State<Begudes> {
                         backgroundColor: Colors.white,
                       ),
                       onPressed: () {
-                        t += 'aigua';
+                        app.txt = 'aigua';
+                        speak();
                       },
                       child: Image.asset('img/aigua.png', width:160, height:160,
                           fit: BoxFit.cover)
@@ -132,7 +158,8 @@ class _BegudesState extends State<Begudes> {
                         backgroundColor: Colors.white,
                       ),
                       onPressed: () {
-                        t += 'got de llet';
+                        app.txt = 'got de llet';
+                        speak();
                       },
                       child: Image.asset('img/got_llet.png', width:160, height:160, fit: BoxFit.cover)
                   ),
@@ -142,7 +169,8 @@ class _BegudesState extends State<Begudes> {
                         backgroundColor: Colors.white,
                       ),
                       onPressed: () {
-                        t += 'granitzat';
+                        app.txt = 'granitzat';
+                        speak();
                       },
                       child: Image.asset('img/granitzat.png', width:160, height:160,
                           fit: BoxFit.cover)
@@ -153,7 +181,8 @@ class _BegudesState extends State<Begudes> {
                         backgroundColor: Colors.white,
                       ),
                       onPressed: () {
-                        t += 'vi rosat';
+                        app.txt = 'vi rosat';
+                        speak();
                       },
                       child: Image.asset('img/virosat.png', width:160, height:160,
                           fit: BoxFit.cover)
@@ -164,7 +193,8 @@ class _BegudesState extends State<Begudes> {
                         backgroundColor: Colors.white,
                       ),
                       onPressed: () {
-                        t += 'vi blanc';
+                        app.txt = 'vi blanc';
+                        speak();
                       },
                       child: Image.asset('img/viblanc.png', width:160,
                           height:160, fit: BoxFit.cover)
@@ -183,7 +213,8 @@ class _BegudesState extends State<Begudes> {
                         backgroundColor: Colors.white,
                       ),
                       onPressed: () {
-                        t += 'suc';
+                        app.txt = 'suc';
+                        speak();
                       },
                       child: Image.asset('img/suc.png', width:160,
                           height:160, fit: BoxFit.cover)
@@ -194,7 +225,8 @@ class _BegudesState extends State<Begudes> {
                         backgroundColor: Colors.white,
                       ),
                       onPressed: () {
-                        t += 'suc de raim';
+                        app.txt = 'suc de raim';
+                        speak();
                       },
                       child: Image.asset('img/suc_raim.png', width:160, height:160,
                           fit: BoxFit.cover)
@@ -205,7 +237,8 @@ class _BegudesState extends State<Begudes> {
                         backgroundColor: Colors.white,
                       ),
                       onPressed: () {
-                        t += 'suc de tomàquet';
+                        app.txt = 'suc de tomàquet';
+                        speak();
                       },
                       child: Image.asset('img/suc_tomaquet.png', width:160, height:160, fit: BoxFit.cover)
                   ),
@@ -215,7 +248,8 @@ class _BegudesState extends State<Begudes> {
                         backgroundColor: Colors.white,
                       ),
                       onPressed: () {
-                        t += 'suc de pinya';
+                        app.txt = 'suc de pinya';
+                        speak();
                       },
                       child: Image.asset('img/suc_pinya.png', width:160, height:160,
                           fit: BoxFit.cover)
@@ -226,7 +260,8 @@ class _BegudesState extends State<Begudes> {
                         backgroundColor: Colors.white,
                       ),
                       onPressed: () {
-                        t += 'suc de taronja';
+                        app.txt = 'suc de taronja';
+                        speak();
                       },
                       child: Image.asset('img/suc_taronja.png', width:160, height:160,
                           fit: BoxFit.cover)
@@ -237,7 +272,8 @@ class _BegudesState extends State<Begudes> {
                         backgroundColor: Colors.white,
                       ),
                       onPressed: () {
-                        t += 'suc de poma';
+                        app.txt = 'suc de poma';
+                        speak();
                       },
                       child: Image.asset('img/suc_poma.png', width:160,
                           height:160, fit: BoxFit.cover)
@@ -254,6 +290,24 @@ class _BegudesState extends State<Begudes> {
       ),
 
     );
+
+  }
+
+  Future speak() async {
+
+    await tts.setVolume(1);
+    await tts.setSpeechRate(0.5);
+    await tts.setPitch(1);
+
+    if (app.txt != null) {
+
+      if (app.txt!.isNotEmpty) {
+
+        await tts.speak(app.txt!);
+
+      }
+
+    }
 
   }
 

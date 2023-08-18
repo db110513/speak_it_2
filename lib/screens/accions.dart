@@ -11,7 +11,24 @@ class Accions extends StatefulWidget {
 class _AccionsState extends State<Accions> {
 
   App app = App();
-  late String t = app.txt;
+
+  late FlutterTts tts;
+
+  void initState() {
+    super.initState();
+    initTts();
+    tts.setLanguage('ca');
+  }
+
+  void dispose() {
+    super.dispose();
+    tts.stop();
+  }
+
+  initTts() async {
+    tts = FlutterTts();
+    await tts.awaitSpeakCompletion(true);
+  }
 
   Widget build(BuildContext context) {
 
@@ -39,9 +56,10 @@ class _AccionsState extends State<Accions> {
                         backgroundColor: Colors.white,
                       ),
                       onPressed: () {
-                        t += 'acompanyar';
+                        app.txt = 'protegir';
+                        speak();
                       },
-                      child: Image.asset('img/acompanyar.png', width:160,
+                      child: Image.asset('img/protegir.png', width:160,
                           height:160, fit: BoxFit.cover)
                   ),
                   const SizedBox(width: 10),
@@ -50,7 +68,8 @@ class _AccionsState extends State<Accions> {
                         backgroundColor: Colors.white,
                       ),
                       onPressed: () {
-                        t += 'preguntar';
+                        app.txt = 'preguntar';
+                        speak();
                       },
                       child: Image.asset('img/preguntar.png', width:160, height:160, fit: BoxFit.cover)
                   ),
@@ -60,7 +79,8 @@ class _AccionsState extends State<Accions> {
                         backgroundColor: Colors.white,
                       ),
                       onPressed: () {
-                        t += 'beure';
+                        app.txt = 'beure';
+                        speak();
                       },
                       child: Image.asset('img/beure.png', width:160, height:160, fit: BoxFit.cover)
                   ),
@@ -70,7 +90,8 @@ class _AccionsState extends State<Accions> {
                         backgroundColor: Colors.white,
                       ),
                       onPressed: () {
-                        t += 'renyar';
+                        app.txt = 'renyar';
+                        speak();
                       },
                       child: Image.asset('img/renyar.png', width:160, height:160, fit: BoxFit.cover)
                   ),
@@ -80,7 +101,8 @@ class _AccionsState extends State<Accions> {
                         backgroundColor: Colors.white,
                       ),
                       onPressed: () {
-                        t += 'pixar';
+                        app.txt = 'pixar';
+                        speak();
                       },
                       child: Image.asset('img/pixar.png', width:160, height:160,
                           fit: BoxFit.cover)
@@ -91,7 +113,8 @@ class _AccionsState extends State<Accions> {
                         backgroundColor: Colors.white,
                       ),
                       onPressed: () {
-                        t += 'cagar';
+                        app.txt = 'cagar';
+                        speak();
                       },
                       child: Image.asset('img/cagar.png', width:160,
                           height:160, fit: BoxFit.cover)
@@ -110,7 +133,8 @@ class _AccionsState extends State<Accions> {
                         backgroundColor: Colors.white,
                       ),
                       onPressed: () {
-                        t += 'sortir';
+                        app.txt = 'sortir';
+                        speak();
                       },
                       child: Image.asset('img/sortir.png', width:160,
                           height:160, fit: BoxFit.cover)
@@ -121,7 +145,8 @@ class _AccionsState extends State<Accions> {
                         backgroundColor: Colors.white,
                       ),
                       onPressed: () {
-                        t += 'menjar';
+                        app.txt = 'menjar';
+                        speak();
                       },
                       child: Image.asset('img/menjar2.png', width:160,
                           height:160,
@@ -133,7 +158,8 @@ class _AccionsState extends State<Accions> {
                         backgroundColor: Colors.white,
                       ),
                       onPressed: () {
-                        t += 'dutxar';
+                        app.txt = 'dutxar';
+                        speak();
                       },
                       child: Image.asset('img/dutxar.png', width:160, height:160, fit: BoxFit.cover)
                   ),
@@ -143,7 +169,8 @@ class _AccionsState extends State<Accions> {
                         backgroundColor: Colors.white,
                       ),
                       onPressed: () {
-                        t += 'vigilar';
+                        app.txt = 'vigilar';
+                        speak();
                       },
                       child: Image.asset('img/vigilar.png', width:160, height:160, fit: BoxFit.cover)
                   ),
@@ -153,7 +180,8 @@ class _AccionsState extends State<Accions> {
                         backgroundColor: Colors.white,
                       ),
                       onPressed: () {
-                        t += 'festejar';
+                        app.txt = 'festejar';
+                        speak();
                       },
                       child: Image.asset('img/festejar.png', width:160, height:160, fit: BoxFit.cover)
                   ),
@@ -163,7 +191,8 @@ class _AccionsState extends State<Accions> {
                         backgroundColor: Colors.white,
                       ),
                       onPressed: () {
-                        t += 'anar';
+                        app.txt = 'anar';
+                        speak();
                       },
                       child: Image.asset('img/anar.png', width:160,
                           height:160, fit: BoxFit.cover)
@@ -182,7 +211,8 @@ class _AccionsState extends State<Accions> {
                         backgroundColor: Colors.white,
                       ),
                       onPressed: () {
-                        t += 'acompanyar';
+                        app.txt = 'acompanyar';
+                        speak();
                       },
                       child: Image.asset('img/acompanyar.png', width:160,
                           height:160, fit: BoxFit.cover)
@@ -194,7 +224,8 @@ class _AccionsState extends State<Accions> {
                         backgroundColor: Colors.white,
                       ),
                       onPressed: () {
-                        t += 'renyar';
+                        app.txt = 'renyar';
+                        speak();
                       },
                       child: Image.asset('img/renyar.png', width:160,
                           height:160,
@@ -207,7 +238,8 @@ class _AccionsState extends State<Accions> {
                         backgroundColor: Colors.white,
                       ),
                       onPressed: () {
-                        t += 'fugir';
+                        app.txt = 'fugir';
+                        speak();
                       },
                       child: Image.asset('img/fugir.png', width:160, height:160, fit: BoxFit.cover)
                   ),
@@ -218,7 +250,8 @@ class _AccionsState extends State<Accions> {
                         backgroundColor: Colors.white,
                       ),
                       onPressed: () {
-                        t += 'repartir';
+                        app.txt = 'repartir';
+                        speak();
                       },
                       child: Image.asset('img/repartir.png', width:160, height:160, fit: BoxFit.cover)
                   ),
@@ -229,7 +262,8 @@ class _AccionsState extends State<Accions> {
                         backgroundColor: Colors.white,
                       ),
                       onPressed: () {
-                        t += 'perdre';
+                        app.txt = 'perdre';
+                        speak();
                       },
                       child: Image.asset('img/perdre.png', width:160, height:160, fit: BoxFit.cover)
                   ),
@@ -240,7 +274,8 @@ class _AccionsState extends State<Accions> {
                         backgroundColor: Colors.white,
                       ),
                       onPressed: () {
-                        t += 'trobar';
+                        app.txt = 'trobar';
+                        speak();
                       },
                       child: Image.asset('img/trobar.png', width:160, height:160, fit: BoxFit.cover)
                   ),
@@ -256,6 +291,24 @@ class _AccionsState extends State<Accions> {
         ),
 
     );
+
+  }
+
+  Future speak() async {
+
+    await tts.setVolume(1);
+    await tts.setSpeechRate(0.5);
+    await tts.setPitch(1);
+
+    if (app.txt != null) {
+
+      if (app.txt!.isNotEmpty) {
+
+        await tts.speak(app.txt!);
+
+      }
+
+    }
 
   }
 

@@ -11,7 +11,24 @@ class Roba extends StatefulWidget {
 class _RobaState extends State<Roba> {
 
   App app = App();
-  late String t = app.txt;
+
+  late FlutterTts tts;
+
+  void initState() {
+    super.initState();
+    initTts();
+    tts.setLanguage('ca');
+  }
+
+  void dispose() {
+    super.dispose();
+    tts.stop();
+  }
+
+  initTts() async {
+    tts = FlutterTts();
+    await tts.awaitSpeakCompletion(true);
+  }
 
   Widget build(BuildContext context) {
     return Scaffold(
@@ -38,7 +55,8 @@ class _RobaState extends State<Roba> {
                         backgroundColor: Colors.white,
                       ),
                       onPressed: () {
-                        t += 'jeans';
+                        app.txt = 'jeans';
+                        speak();
                       },
                       child: Image.asset('img/jeans.png', width: 160,
                           height: 160,
@@ -50,9 +68,8 @@ class _RobaState extends State<Roba> {
                         backgroundColor: Colors.white,
                       ),
                       onPressed: () {
-                        t += 'pantaló curt';
-                        Navigator.of(context).push(
-                            MaterialPageRoute(builder: (context) => Cuina()));
+                        app.txt = 'pantaló curt';
+                        speak();
                       },
                       child: Image.asset('img/pant_curt.png', width: 160,
                           height: 160,
@@ -64,7 +81,8 @@ class _RobaState extends State<Roba> {
                         backgroundColor: Colors.white,
                       ),
                       onPressed: () {
-                        t += 'dessuadora';
+                        app.txt = 'dessuadora';
+                        speak();
                       },
                       child: Image.asset('img/dessuadora.png', width: 160,
                           height: 160,
@@ -76,7 +94,8 @@ class _RobaState extends State<Roba> {
                         backgroundColor: Colors.white,
                       ),
                       onPressed: () {
-                        t += 'americana';
+                        app.txt = 'americana';
+                        speak();
                       },
                       child: Image.asset('img/americana.png', width: 160,
                           height: 160,
@@ -88,7 +107,8 @@ class _RobaState extends State<Roba> {
                         backgroundColor: Colors.white,
                       ),
                       onPressed: () {
-                        t += 'taca';
+                        app.txt = 'taca';
+                        speak();
                       },
                       child: Image.asset('img/taca.png', width: 160,
                           height: 160,
@@ -100,7 +120,8 @@ class _RobaState extends State<Roba> {
                         backgroundColor: Colors.white,
                       ),
                       onPressed: () {
-                        t += 'samarreta de tirants';
+                        app.txt = 'samarreta de tirants';
+                        speak();
                       },
                       child: Image.asset('img/samarr_tirants.png', width: 160,
                           height: 160,
@@ -121,7 +142,8 @@ class _RobaState extends State<Roba> {
                         backgroundColor: Colors.white,
                       ),
                       onPressed: () {
-                        t += 'camisa de màniga curta';
+                        app.txt = 'camisa de màniga curta';
+                        speak();
                       },
                       child: Image.asset('img/camina_mng_crta.png', width: 160,
                           height: 160,
@@ -134,7 +156,8 @@ class _RobaState extends State<Roba> {
                         backgroundColor: Colors.white,
                       ),
                       onPressed: () {
-                        t += 'impermeable';
+                        app.txt = 'impermeable';
+                        speak();
                       },
                       child: Image.asset('img/impermeable.png', width: 160,
                           height: 160,
@@ -146,9 +169,10 @@ class _RobaState extends State<Roba> {
                         backgroundColor: Colors.white,
                       ),
                       onPressed: () {
-                        t += 'pantalo curt';
+                        app.txt = 'samarreta de màniga llarga';
+                        speak();
                       },
-                      child: Image.asset('img/pantalo_curt.png', width: 160,
+                      child: Image.asset('img/samarreta_maniga_llarga.png', width: 160,
                           height: 160,
                           fit: BoxFit.cover)
                   ),
@@ -158,7 +182,8 @@ class _RobaState extends State<Roba> {
                         backgroundColor: Colors.white,
                       ),
                       onPressed: () {
-                        t += 'jaqueta de punt';
+                        app.txt = 'jaqueta de punt';
+                        speak();
                       },
                       child: Image.asset('img/jaqueta_punt.png', width: 160,
                           height: 160,
@@ -170,7 +195,8 @@ class _RobaState extends State<Roba> {
                         backgroundColor: Colors.white,
                       ),
                       onPressed: () {
-                        t += 'sostenidor';
+                        app.txt = 'sostenidor';
+                        speak();
                       },
                       child: Image.asset('img/sostenidor.png', width: 160,
                           height: 160,
@@ -182,7 +208,8 @@ class _RobaState extends State<Roba> {
                         backgroundColor: Colors.white,
                       ),
                       onPressed: () {
-                        t += 'jersei';
+                        app.txt = 'jersei';
+                        speak();
                       },
                       child: Image.asset('img/jersei.png', width: 160,
                           height: 160,
@@ -203,7 +230,8 @@ class _RobaState extends State<Roba> {
                         backgroundColor: Colors.white,
                       ),
                       onPressed: () {
-                        t += 'xandall';
+                        app.txt = 'xandall';
+                        speak();
                       },
                       child: Image.asset('img/xandall.png', width: 160, height: 160, fit: BoxFit.cover)
                   ),
@@ -214,7 +242,8 @@ class _RobaState extends State<Roba> {
                         backgroundColor: Colors.white,
                       ),
                       onPressed: () {
-                        t += 'body';
+                        app.txt = 'body';
+                        speak();
                       },
                       child: Image.asset('img/body.png', width: 160,
                           height: 160,
@@ -226,7 +255,8 @@ class _RobaState extends State<Roba> {
                         backgroundColor: Colors.white,
                       ),
                       onPressed: () {
-                        t += 'mitjo';
+                        app.txt = 'mitjó';
+                        speak();
                       },
                       child: Image.asset('img/mitjo.png', width: 160, height: 160, fit: BoxFit.cover)
                   ),
@@ -236,7 +266,8 @@ class _RobaState extends State<Roba> {
                         backgroundColor: Colors.white,
                       ),
                       onPressed: () {
-                        t += 'samarreta';
+                        app.txt = 'samarreta';
+                        speak();
                       },
                       child: Image.asset('img/samarreta.png', width: 160, height: 160, fit: BoxFit.cover)
                   ),
@@ -246,7 +277,8 @@ class _RobaState extends State<Roba> {
                         backgroundColor: Colors.white,
                       ),
                       onPressed: () {
-                        t += 'vestit';
+                        app.txt = 'vestit';
+                        speak();
                       },
                       child: Image.asset('img/vestit.png', width: 160, height: 160, fit: BoxFit.cover)
                   ),
@@ -256,7 +288,8 @@ class _RobaState extends State<Roba> {
                         backgroundColor: Colors.white,
                       ),
                       onPressed: () {
-                        t += 'calçotets';
+                        app.txt = 'calçotets';
+                        speak();
                       },
                       child: Image.asset('img/calcotets.png', width: 160, height: 160, fit: BoxFit.cover)
                   ),
@@ -275,4 +308,22 @@ class _RobaState extends State<Roba> {
 
   }
 
-}// TODO Implement this library.
+  Future speak() async {
+
+    await tts.setVolume(1);
+    await tts.setSpeechRate(0.5);
+    await tts.setPitch(1);
+
+    if (app.txt != null) {
+
+      if (app.txt!.isNotEmpty) {
+
+        await tts.speak(app.txt!);
+
+      }
+
+    }
+
+  }
+
+}

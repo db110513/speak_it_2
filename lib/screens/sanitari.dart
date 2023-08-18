@@ -11,7 +11,24 @@ class Sanitari extends StatefulWidget {
 class _SanitariState extends State<Sanitari> {
 
   App app = App();
-  late String t = app.txt;
+
+  late FlutterTts tts;
+
+  void initState() {
+    super.initState();
+    initTts();
+    tts.setLanguage('ca');
+  }
+
+  void dispose() {
+    super.dispose();
+    tts.stop();
+  }
+
+  initTts() async {
+    tts = FlutterTts();
+    await tts.awaitSpeakCompletion(true);
+  }
 
   Widget build(BuildContext context) {
 
@@ -38,7 +55,8 @@ class _SanitariState extends State<Sanitari> {
                         backgroundColor: Colors.white,
                       ),
                       onPressed: () {
-                        t += 'hospital';
+                        app.txt = 'hospital';
+                        speak();
                       },
                       child: Image.asset('img/hospital.png', width:160, height:160, fit: BoxFit.cover)
                   ),
@@ -48,7 +66,8 @@ class _SanitariState extends State<Sanitari> {
                         backgroundColor: Colors.white,
                       ),
                       onPressed: () {
-                        t += 'metge';
+                        app.txt = 'metge';
+                        speak();
                       },
                       child: Image.asset('img/metge.png', width:160, height:160, fit: BoxFit.cover)
                   ),
@@ -58,7 +77,8 @@ class _SanitariState extends State<Sanitari> {
                         backgroundColor: Colors.white,
                       ),
                       onPressed: () {
-                        t += 'xeringa';
+                        app.txt = 'xeringa';
+                        speak();
                       },
                       child: Image.asset('img/xeringa.png', width:160, height:160, fit: BoxFit.cover)
                   ),
@@ -68,7 +88,8 @@ class _SanitariState extends State<Sanitari> {
                         backgroundColor: Colors.white,
                       ),
                       onPressed: () {
-                        t += 'infermer';
+                        app.txt = 'infermer';
+                        speak();
                       },
                       child: Image.asset('img/infermer.png', width:160, height:160, fit: BoxFit.cover)
                   ),
@@ -78,7 +99,8 @@ class _SanitariState extends State<Sanitari> {
                         backgroundColor: Colors.white,
                       ),
                       onPressed: () {
-                        t += 'analisi de sang';
+                        app.txt = 'anàlisi de sang';
+                        speak();
                       },
                       child: Image.asset('img/analisi_sang.png', width:160, height:160,
                           fit: BoxFit.cover)
@@ -89,7 +111,8 @@ class _SanitariState extends State<Sanitari> {
                         backgroundColor: Colors.white,
                       ),
                       onPressed: () {
-                        t += 'electro';
+                        app.txt = 'electro';
+                        speak();
                       },
                       child: Image.asset('img/electro.png', width:160, height:160, fit: BoxFit.cover)
                   ),
@@ -107,7 +130,8 @@ class _SanitariState extends State<Sanitari> {
                         backgroundColor: Colors.white,
                       ),
                       onPressed: () {
-                        t += 'radiografia';
+                        app.txt = 'radiografia';
+                        speak();
                       },
                       child: Image.asset('img/radiografia.png', width:160, height:160, fit: BoxFit.cover)
                   ),
@@ -117,7 +141,8 @@ class _SanitariState extends State<Sanitari> {
                         backgroundColor: Colors.white,
                       ),
                       onPressed: () {
-                        t += 'refredat';
+                        app.txt = 'refredat';
+                        speak();
                       },
                       child: Image.asset('img/refredat.png', width:160, height:160, fit: BoxFit.cover)
                   ),
@@ -127,7 +152,8 @@ class _SanitariState extends State<Sanitari> {
                         backgroundColor: Colors.white,
                       ),
                       onPressed: () {
-                        t += 'estetoscopi';
+                        app.txt = 'estetoscopi';
+                        speak();
                       },
                       child: Image.asset('img/estetoscopi.png', width:160, height:160, fit: BoxFit.cover)
                   ),
@@ -137,7 +163,8 @@ class _SanitariState extends State<Sanitari> {
                         backgroundColor: Colors.white,
                       ),
                       onPressed: () {
-                        t += 'càpsula';
+                        app.txt = 'càpsula';
+                        speak();
                       },
                       child: Image.asset('img/capsula.png', width:160, height:160,
                           fit: BoxFit.cover)
@@ -148,7 +175,8 @@ class _SanitariState extends State<Sanitari> {
                         backgroundColor: Colors.white,
                       ),
                       onPressed: () {
-                        t += 'prendre la tensió';
+                        app.txt = 'prendre la tensió';
+                        speak();
                       },
                       child: Image.asset('img/prendre_tensio.png', width:160, height:160,
                           fit: BoxFit.cover)
@@ -159,7 +187,8 @@ class _SanitariState extends State<Sanitari> {
                         backgroundColor: Colors.white,
                       ),
                       onPressed: () {
-                        t += 'pomada';
+                        app.txt = 'pomada';
+                        speak();
                       },
                       child: Image.asset('img/pomada.png', width:160,
                           height:160, fit: BoxFit.cover)
@@ -178,7 +207,8 @@ class _SanitariState extends State<Sanitari> {
                         backgroundColor: Colors.white,
                       ),
                       onPressed: () {
-                        t += 'termòmetre';
+                        app.txt = 'termòmetre';
+                        speak();
                       },
                       child: Image.asset('img/termometre.png', width:160, height:160, fit: BoxFit.cover)
                   ),
@@ -188,7 +218,8 @@ class _SanitariState extends State<Sanitari> {
                         backgroundColor: Colors.white,
                       ),
                       onPressed: () {
-                        t += 'xarop';
+                        app.txt = 'xarop';
+                        speak();
                       },
                       child: Image.asset('img/xarop.png', width:160, height:160, fit: BoxFit.cover)
                   ),
@@ -198,7 +229,8 @@ class _SanitariState extends State<Sanitari> {
                         backgroundColor: Colors.white,
                       ),
                       onPressed: () {
-                        t += 'pastilles';
+                        app.txt = 'pastilles';
+                        speak();
                       },
                       child: Image.asset('img/pastilles.png', width:160, height:160, fit: BoxFit.cover)
                   ),
@@ -208,7 +240,8 @@ class _SanitariState extends State<Sanitari> {
                         backgroundColor: Colors.white,
                       ),
                       onPressed: () {
-                        t += 'llitera';
+                        app.txt = 'llitera';
+                        speak();
                       },
                       child: Image.asset('img/llitera.png', width:160, height:160, fit: BoxFit.cover)
                   ),
@@ -218,7 +251,8 @@ class _SanitariState extends State<Sanitari> {
                         backgroundColor: Colors.white,
                       ),
                       onPressed: () {
-                        t += 'tirites';
+                        app.txt = 'tirites';
+                        speak();
                       },
                       child: Image.asset('img/tirites.png', width:160, height:160, fit: BoxFit.cover)
                   ),
@@ -228,7 +262,8 @@ class _SanitariState extends State<Sanitari> {
                         backgroundColor: Colors.white,
                       ),
                       onPressed: () {
-                        t += 'farmaciola';
+                        app.txt = 'farmaciòla';
+                        speak();
                       },
                       child: Image.asset('img/farmaciola.png', width:160,
                           height:160, fit: BoxFit.cover)
@@ -250,4 +285,22 @@ class _SanitariState extends State<Sanitari> {
 
   }
 
-}// TODO Implement this library.
+  Future speak() async {
+
+    await tts.setVolume(1);
+    await tts.setSpeechRate(0.5);
+    await tts.setPitch(1);
+
+    if (app.txt != null) {
+
+      if (app.txt!.isNotEmpty) {
+
+        await tts.speak(app.txt!);
+
+      }
+
+    }
+
+  }
+
+}

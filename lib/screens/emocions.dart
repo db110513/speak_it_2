@@ -11,7 +11,24 @@ class Emocions extends StatefulWidget {
 class _EmocionsState extends State<Emocions> {
 
   App app = App();
-  late String t = app.txt;
+
+  late FlutterTts tts;
+
+  void initState() {
+    super.initState();
+    initTts();
+    tts.setLanguage('ca');
+  }
+
+  void dispose() {
+    super.dispose();
+    tts.stop();
+  }
+
+  initTts() async {
+    tts = FlutterTts();
+    await tts.awaitSpeakCompletion(true);
+  }
 
   Widget build(BuildContext context) {
 
@@ -39,7 +56,8 @@ class _EmocionsState extends State<Emocions> {
                         backgroundColor: Colors.white,
                       ),
                       onPressed: () {
-                        t += 'agradar';
+                        app.txt = 'agradar';
+                        speak();
                       },
                       child: Image.asset('img/agradar.png', width:160,
                           height:160, fit: BoxFit.cover)
@@ -50,7 +68,8 @@ class _EmocionsState extends State<Emocions> {
                         backgroundColor: Colors.white,
                       ),
                       onPressed: () {
-                        t += 'fastic';
+                        app.txt = 'fàstic';
+                        speak();
                       },
                       child: Image.asset('img/fastic.png', width:160, height:160, fit: BoxFit.cover)
                   ),
@@ -60,7 +79,8 @@ class _EmocionsState extends State<Emocions> {
                         backgroundColor: Colors.white,
                       ),
                       onPressed: () {
-                        t += 'content';
+                        app.txt = 'content';
+                        speak();
                       },
                       child: Image.asset('img/content.png', width:160, height:160, fit: BoxFit.cover)
                   ),
@@ -70,7 +90,8 @@ class _EmocionsState extends State<Emocions> {
                         backgroundColor: Colors.white,
                       ),
                       onPressed: () {
-                        t += 'trist';
+                        app.txt = 'trist';
+                        speak();
                       },
                       child: Image.asset('img/trist.png', width:160, height:160, fit: BoxFit.cover)
                   ),
@@ -80,7 +101,8 @@ class _EmocionsState extends State<Emocions> {
                         backgroundColor: Colors.white,
                       ),
                       onPressed: () {
-                        t += 'cansat';
+                        app.txt = 'cansat';
+                        speak();
                       },
                       child: Image.asset('img/cansat.png', width:160, height:160,
                           fit: BoxFit.cover)
@@ -91,7 +113,8 @@ class _EmocionsState extends State<Emocions> {
                         backgroundColor: Colors.white,
                       ),
                       onPressed: () {
-                        t += 'sorpresa';
+                        app.txt = 'sorprès';
+                        speak();
                       },
                       child: Image.asset('img/sorpresa.png', width:160,
                           height:160, fit: BoxFit.cover)
@@ -110,7 +133,8 @@ class _EmocionsState extends State<Emocions> {
                         backgroundColor: Colors.white,
                       ),
                       onPressed: () {
-                        t += 'confos';
+                        app.txt = 'confós';
+                        speak();
                       },
                       child: Image.asset('img/confos.png', width:160,
                           height:160, fit: BoxFit.cover)
@@ -121,7 +145,8 @@ class _EmocionsState extends State<Emocions> {
                         backgroundColor: Colors.white,
                       ),
                       onPressed: () {
-                        t += 'enfadat';
+                        app.txt = 'enfadat';
+                        speak();
                       },
                       child: Image.asset('img/enfadat.png', width:160, height:160,
                           fit: BoxFit.cover)
@@ -132,7 +157,8 @@ class _EmocionsState extends State<Emocions> {
                         backgroundColor: Colors.white,
                       ),
                       onPressed: () {
-                        t += 'avergonyit';
+                        app.txt = 'avergonyit';
+                        speak();
                       },
                       child: Image.asset('img/avergonyit.png', width:160, height:160, fit: BoxFit.cover)
                   ),
@@ -142,7 +168,8 @@ class _EmocionsState extends State<Emocions> {
                         backgroundColor: Colors.white,
                       ),
                       onPressed: () {
-                        t += 'tranquil';
+                        app.txt = 'tranquil';
+                        speak();
                       },
                       child: Image.asset('img/tranquil.png', width:160, height:160,
                           fit: BoxFit.cover)
@@ -153,7 +180,8 @@ class _EmocionsState extends State<Emocions> {
                         backgroundColor: Colors.white,
                       ),
                       onPressed: () {
-                        t += 'desanimat';
+                        app.txt = 'desanimat';
+                        speak();
                       },
                       child: Image.asset('img/desanimat.png', width:160, height:160,
                           fit: BoxFit.cover)
@@ -164,7 +192,8 @@ class _EmocionsState extends State<Emocions> {
                         backgroundColor: Colors.white,
                       ),
                       onPressed: () {
-                        t += 'nervios';
+                        app.txt = 'nervios';
+                        speak();
                       },
                       child: Image.asset('img/nervios.png', width:160,
                           height:160, fit: BoxFit.cover)
@@ -183,7 +212,8 @@ class _EmocionsState extends State<Emocions> {
                         backgroundColor: Colors.white,
                       ),
                       onPressed: () {
-                        t += 'orgullós';
+                        app.txt = 'orgullós';
+                        speak();
                       },
                       child: Image.asset('img/orgullos.png', width:160, height:160, fit: BoxFit.cover)
                   ),
@@ -193,7 +223,8 @@ class _EmocionsState extends State<Emocions> {
                         backgroundColor: Colors.white,
                       ),
                       onPressed: () {
-                        t += 'espantar';
+                        app.txt = 'espantar';
+                        speak();
                       },
                       child: Image.asset('img/espantar.png', width:160, height:160, fit: BoxFit.cover)
                   ),
@@ -203,7 +234,8 @@ class _EmocionsState extends State<Emocions> {
                         backgroundColor: Colors.white,
                       ),
                       onPressed: () {
-                        t += 'enamorat';
+                        app.txt = 'enamorat';
+                        speak();
                       },
                       child: Image.asset('img/enamorat.png', width:160, height:160, fit: BoxFit.cover)
                   ),
@@ -213,7 +245,8 @@ class _EmocionsState extends State<Emocions> {
                         backgroundColor: Colors.white,
                       ),
                       onPressed: () {
-                        t += 'distret';
+                        app.txt = 'distret';
+                        speak();
                       },
                       child: Image.asset('img/distret.png', width:160, height:160, fit: BoxFit.cover)
                   ),
@@ -223,7 +256,8 @@ class _EmocionsState extends State<Emocions> {
                         backgroundColor: Colors.white,
                       ),
                       onPressed: () {
-                        t += 'estic bé';
+                        app.txt = 'estic bé';
+                        speak();
                       },
                       child: Image.asset('img/estic_be.png', width:160, height:160, fit: BoxFit.cover)
                   ),
@@ -233,7 +267,8 @@ class _EmocionsState extends State<Emocions> {
                         backgroundColor: Colors.white,
                       ),
                       onPressed: () {
-                        t += 'estic malament';
+                        app.txt = 'estic malament';
+                        speak();
                       },
                       child: Image.asset('img/estic_malament.png', width:160, height:160, fit: BoxFit.cover)
                   ),
@@ -249,6 +284,24 @@ class _EmocionsState extends State<Emocions> {
       ),
 
     );
+
+  }
+
+  Future speak() async {
+
+    await tts.setVolume(1);
+    await tts.setSpeechRate(0.5);
+    await tts.setPitch(1);
+
+    if (app.txt != null) {
+
+      if (app.txt!.isNotEmpty) {
+
+        await tts.speak(app.txt!);
+
+      }
+
+    }
 
   }
 

@@ -11,7 +11,24 @@ class Llocs extends StatefulWidget {
 class _LlocsState extends State<Llocs> {
 
   App app = App();
-  late String t = app.txt;
+
+  late FlutterTts tts;
+
+  void initState() {
+    super.initState();
+    initTts();
+    tts.setLanguage('ca');
+  }
+
+  void dispose() {
+    super.dispose();
+    tts.stop();
+  }
+
+  initTts() async {
+    tts = FlutterTts();
+    await tts.awaitSpeakCompletion(true);
+  }
 
   Widget build(BuildContext context) {
     return Scaffold(
@@ -38,7 +55,8 @@ class _LlocsState extends State<Llocs> {
                         backgroundColor: Colors.white,
                       ),
                       onPressed: () {
-                        t += 'casa';
+                        app.txt = 'casa';
+                        speak();
                       },
                       child: Image.asset('img/casa.png', width: 160,
                           height: 160,
@@ -50,9 +68,10 @@ class _LlocsState extends State<Llocs> {
                         backgroundColor: Colors.white,
                       ),
                       onPressed: () {
-                        t += 'jardi';
-                        Navigator.of(context).push(
-                            MaterialPageRoute(builder: (context) => Cuina()));
+                        app.txt = 'jardi';
+                        speak();
+                        // Navigator.of(context).push(
+                        //     MaterialPageRoute(builder: (context) => Cuina()));
                       },
                       child: Image.asset('img/jardi.png', width: 160,
                           height: 160,
@@ -64,7 +83,8 @@ class _LlocsState extends State<Llocs> {
                         backgroundColor: Colors.white,
                       ),
                       onPressed: () {
-                        t += 'museu';
+                        app.txt = 'museu';
+                        speak();
                       },
                       child: Image.asset('img/museu.png', width: 160,
                           height: 160,
@@ -76,7 +96,8 @@ class _LlocsState extends State<Llocs> {
                         backgroundColor: Colors.white,
                       ),
                       onPressed: () {
-                        t += 'llibreria';
+                        app.txt = 'biblioteca';
+                        speak();
                       },
                       child: Image.asset('img/llibreria.png', width: 160,
                           height: 160,
@@ -88,7 +109,8 @@ class _LlocsState extends State<Llocs> {
                         backgroundColor: Colors.white,
                       ),
                       onPressed: () {
-                        t += 'spa';
+                        app.txt = 'spa';
+                        speak();
                       },
                       child: Image.asset('img/spa.png', width: 160,
                           height: 160,
@@ -100,7 +122,8 @@ class _LlocsState extends State<Llocs> {
                         backgroundColor: Colors.white,
                       ),
                       onPressed: () {
-                        t += 'castell';
+                        app.txt = 'castell';
+                        speak();
                       },
                       child: Image.asset('img/castell.png', width: 160,
                           height: 160,
@@ -121,7 +144,8 @@ class _LlocsState extends State<Llocs> {
                         backgroundColor: Colors.white,
                       ),
                       onPressed: () {
-                        t += 'parc de bombers';
+                        app.txt = 'parc de bombers';
+                        speak();
                       },
                       child: Image.asset('img/parc_bombers.png', width: 160,
                           height: 160,
@@ -134,7 +158,8 @@ class _LlocsState extends State<Llocs> {
                         backgroundColor: Colors.white,
                       ),
                       onPressed: () {
-                        t += 'passeig';
+                        app.txt = 'passeig';
+                        speak();
                       },
                       child: Image.asset('img/passeig.png', width: 160,
                           height: 160,
@@ -146,7 +171,8 @@ class _LlocsState extends State<Llocs> {
                         backgroundColor: Colors.white,
                       ),
                       onPressed: () {
-                        t += 'gasolinera';
+                        app.txt = 'gasolinera';
+                        speak();
                       },
                       child: Image.asset('img/gasolinera.png', width: 160,
                           height: 160,
@@ -158,7 +184,8 @@ class _LlocsState extends State<Llocs> {
                         backgroundColor: Colors.white,
                       ),
                       onPressed: () {
-                        t += 'estació de trens';
+                        app.txt = 'estació de trens';
+                        speak();
                       },
                       child: Image.asset('img/est_trens.png', width: 160,
                           height: 160,
@@ -170,7 +197,8 @@ class _LlocsState extends State<Llocs> {
                         backgroundColor: Colors.white,
                       ),
                       onPressed: () {
-                        t += 'comisaria';
+                        app.txt = 'comisaria';
+                        speak();
                       },
                       child: Image.asset('img/comisaria.png', width: 160,
                           height: 160,
@@ -182,7 +210,8 @@ class _LlocsState extends State<Llocs> {
                         backgroundColor: Colors.white,
                       ),
                       onPressed: () {
-                        t += 'supermercat';
+                        app.txt = 'supermercat';
+                        speak();
                       },
                       child: Image.asset('img/supermercat.png', width: 160,
                           height: 160,
@@ -203,7 +232,8 @@ class _LlocsState extends State<Llocs> {
                         backgroundColor: Colors.white,
                       ),
                       onPressed: () {
-                        t += 'botiga';
+                        app.txt = 'botiga';
+                        speak();
                       },
                       child: Image.asset('img/botiga.png', width: 160,
                           height: 160,
@@ -216,7 +246,8 @@ class _LlocsState extends State<Llocs> {
                         backgroundColor: Colors.white,
                       ),
                       onPressed: () {
-                        t += 'copisteria';
+                        app.txt = 'copisteria';
+                        speak();
                       },
                       child: Image.asset('img/copisteria.png', width: 160,
                           height: 160,
@@ -228,7 +259,8 @@ class _LlocsState extends State<Llocs> {
                         backgroundColor: Colors.white,
                       ),
                       onPressed: () {
-                        t += 'basar';
+                        app.txt = 'basar';
+                        speak();
                       },
                       child: Image.asset('img/basar.png', width: 160,
                           height: 160,
@@ -240,7 +272,8 @@ class _LlocsState extends State<Llocs> {
                         backgroundColor: Colors.white,
                       ),
                       onPressed: () {
-                        t += 'rellotgeria';
+                        app.txt = 'rellotgeria';
+                        speak();
                       },
                       child: Image.asset('img/rellotgeria.png', width: 160,
                           height: 160,
@@ -252,7 +285,8 @@ class _LlocsState extends State<Llocs> {
                         backgroundColor: Colors.white,
                       ),
                       onPressed: () {
-                        t += 'carnisseria';
+                        app.txt = 'carnisseria';
+                        speak();
                       },
                       child: Image.asset('img/carnisseria.png', width: 160,
                           height: 160,
@@ -264,7 +298,8 @@ class _LlocsState extends State<Llocs> {
                         backgroundColor: Colors.white,
                       ),
                       onPressed: () {
-                        t += 'peixateria';
+                        app.txt = 'peixateria';
+                        speak();
                       },
                       child: Image.asset('img/peixateria.png', width: 160,
                           height: 160,
@@ -282,6 +317,24 @@ class _LlocsState extends State<Llocs> {
       ),
 
     );
+
+  }
+
+  Future speak() async {
+
+    await tts.setVolume(1);
+    await tts.setSpeechRate(0.5);
+    await tts.setPitch(1);
+
+    if (app.txt != null) {
+
+      if (app.txt!.isNotEmpty) {
+
+        await tts.speak(app.txt!);
+
+      }
+
+    }
 
   }
 
