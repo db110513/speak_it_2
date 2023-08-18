@@ -29,7 +29,8 @@ class _EmocionsState extends State<Emocions> {
         child: Column(
 
             children: [
-              const SizedBox(height: 200),
+
+              const SizedBox(height: 130),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
@@ -99,6 +100,7 @@ class _EmocionsState extends State<Emocions> {
                 ],
 
               ),
+
               const SizedBox(height: 10),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
@@ -166,6 +168,74 @@ class _EmocionsState extends State<Emocions> {
                       },
                       child: Image.asset('img/nervios.png', width:160,
                           height:160, fit: BoxFit.cover)
+                  ),
+
+                ],
+
+              ),
+
+              const SizedBox(height: 10),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  ElevatedButton(
+                      style: ElevatedButton.styleFrom(
+                        backgroundColor: Colors.white,
+                      ),
+                      onPressed: () {
+                        t += 'orgullós';
+                      },
+                      child: Image.asset('img/orgullos.png', width:160, height:160, fit: BoxFit.cover)
+                  ),
+                  const SizedBox(width: 10),
+                  ElevatedButton(
+                      style: ElevatedButton.styleFrom(
+                        backgroundColor: Colors.white,
+                      ),
+                      onPressed: () {
+                        t += 'espantar';
+                      },
+                      child: Image.asset('img/espantar.png', width:160, height:160, fit: BoxFit.cover)
+                  ),
+                  const SizedBox(width: 10),
+                  ElevatedButton(
+                      style: ElevatedButton.styleFrom(
+                        backgroundColor: Colors.white,
+                      ),
+                      onPressed: () {
+                        t += 'enamorat';
+                      },
+                      child: Image.asset('img/enamorat.png', width:160, height:160, fit: BoxFit.cover)
+                  ),
+                  const SizedBox(width: 10),
+                  ElevatedButton(
+                      style: ElevatedButton.styleFrom(
+                        backgroundColor: Colors.white,
+                      ),
+                      onPressed: () {
+                        t += 'distret';
+                      },
+                      child: Image.asset('img/distret.png', width:160, height:160, fit: BoxFit.cover)
+                  ),
+                  const SizedBox(width: 10),
+                  ElevatedButton(
+                      style: ElevatedButton.styleFrom(
+                        backgroundColor: Colors.white,
+                      ),
+                      onPressed: () {
+                        t += 'estic bé';
+                      },
+                      child: Image.asset('img/estic_be.png', width:160, height:160, fit: BoxFit.cover)
+                  ),
+                  const SizedBox(width: 10),
+                  ElevatedButton(
+                      style: ElevatedButton.styleFrom(
+                        backgroundColor: Colors.white,
+                      ),
+                      onPressed: () {
+                        t += 'estic malament';
+                      },
+                      child: Image.asset('img/estic_malament.png', width:160, height:160, fit: BoxFit.cover)
                   ),
 
                 ],
