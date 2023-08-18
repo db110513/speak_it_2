@@ -3,13 +3,16 @@ import 'exports.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_tts/flutter_tts.dart';
 
+
 class App extends StatefulWidget {
   late String txt = '';
 
   _AppState createState() => _AppState();
 }
 
+
 enum TtsState { playing, stopped }
+
 
 class _AppState extends State<App> {
 
@@ -34,6 +37,7 @@ class _AppState extends State<App> {
   }
 
   Widget build(BuildContext context) {
+
     return Scaffold(
 
         appBar: AppBar(
@@ -80,9 +84,7 @@ class _AppState extends State<App> {
                   ),
                 ),
 
-
                 const SizedBox(height: 50),
-
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
@@ -160,7 +162,6 @@ class _AppState extends State<App> {
                 ),
 
                 const SizedBox(height: 10),
-
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
@@ -242,7 +243,6 @@ class _AppState extends State<App> {
                 ),
 
                 const SizedBox(height: 10),
-
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [

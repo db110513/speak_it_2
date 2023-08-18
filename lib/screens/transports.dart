@@ -28,7 +28,8 @@ class _TransportsState extends State<Transports> {
         child: Column(
 
             children: [
-              const SizedBox(height: 200),
+
+              const SizedBox(height: 130),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
@@ -98,6 +99,7 @@ class _TransportsState extends State<Transports> {
                 ],
 
               ),
+
               const SizedBox(height: 10),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
@@ -164,6 +166,77 @@ class _TransportsState extends State<Transports> {
                         t += 'vaixell';
                       },
                       child: Image.asset('img/vaixell.png', width:160,
+                          height:160, fit: BoxFit.cover)
+                  ),
+
+                ],
+
+              ),
+
+              const SizedBox(height: 10),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  ElevatedButton(
+                      style: ElevatedButton.styleFrom(
+                        backgroundColor: Colors.white,
+                      ),
+                      onPressed: () {
+                        t += 'camió';
+                      },
+                      child: Image.asset('img/camio.png', width:160, height:160, fit: BoxFit.cover)
+                  ),
+                  const SizedBox(width: 10),
+                  ElevatedButton(
+                      style: ElevatedButton.styleFrom(
+                        backgroundColor: Colors.white,
+                      ),
+                      onPressed: () {
+                        t += 'helicòpter';
+                      },
+                      child: Image.asset('img/helicopter.png', width:160, height:160, fit: BoxFit.cover)
+                  ),
+                  const SizedBox(width: 10),
+                  ElevatedButton(
+                      style: ElevatedButton.styleFrom(
+                        backgroundColor: Colors.white,
+                      ),
+                      onPressed: () {
+                        t += 'llanxa';
+                      },
+                      child: Image.asset('img/llanxa.png', width:160, height:160, fit: BoxFit.cover)
+                  ),
+                  const SizedBox(width: 10),
+                  ElevatedButton(
+                      style: ElevatedButton.styleFrom(
+                        backgroundColor: Colors.white,
+                      ),
+                      onPressed: () {
+                        t += 'furgoneta';
+                      },
+                      child: Image.asset('img/furgoneta.png', width:160, height:160,
+                          fit: BoxFit.cover)
+                  ),
+                  const SizedBox(width: 10),
+                  ElevatedButton(
+                      style: ElevatedButton.styleFrom(
+                        backgroundColor: Colors.white,
+                      ),
+                      onPressed: () {
+                        t += 'patinet elèctric';
+                      },
+                      child: Image.asset('img/patinet_electric.png', width:160, height:160,
+                          fit: BoxFit.cover)
+                  ),
+                  const SizedBox(width: 10),
+                  ElevatedButton(
+                      style: ElevatedButton.styleFrom(
+                        backgroundColor: Colors.white,
+                      ),
+                      onPressed: () {
+                        t += 'coet';
+                      },
+                      child: Image.asset('img/coet.png', width:160,
                           height:160, fit: BoxFit.cover)
                   ),
 
