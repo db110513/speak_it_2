@@ -63,42 +63,16 @@ class _AppState extends State<App> {
 
             children: [
 
-              const SizedBox(height: 40),
-              // Container(
-              //   margin: const EdgeInsets.only(right:27),
-              //   child: Row(
-              //     mainAxisAlignment: MainAxisAlignment.end,
-              //       children: [
-              //
-              //       ElevatedButton(
-              //           style: ElevatedButton.styleFrom(
-              //             backgroundColor: Colors.white,
-              //           ),
-              //           onPressed: () => speak(),
-              //           child: Image.asset('img/play.png', width:80, height:90, fit: BoxFit.cover)
-              //       ),
-              //       const SizedBox(width: 15),
-              //
-              //       ElevatedButton(
-              //           style: ElevatedButton.styleFrom(
-              //             backgroundColor: Colors.white,
-              //
-              //           ),
-              //           onPressed: () => speak(),
-              //           child: Image.asset('img/bckspace.png', width:80, height:90, fit: BoxFit.cover)
-              //       )
-              //     ]
-              //   ),
-              // ),
-
-              const SizedBox(height: 50),
+              const SizedBox(height: 110),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
+                  // botó
                   ElevatedButton(
                       style: ElevatedButton.styleFrom(
                         backgroundColor: Colors.white,
                       ),
+                      // acció post click
                       onPressed: () {
                         // text que llegirà
                         app.txt = 'animals';
@@ -109,6 +83,7 @@ class _AppState extends State<App> {
                         // obre nova pantalla > animals
                         Navigator.of(context).push(MaterialPageRoute(builder: (context) => Animals()));
                       },
+                      // picto imatge botó
                       child: Image.asset('img/animals.png', width:160, height:160, fit: BoxFit.cover)
                   ),
                   const SizedBox(width: 10),
