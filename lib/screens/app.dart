@@ -41,7 +41,8 @@ class _AppState extends State<App> {
     return Scaffold(
 
         appBar: AppBar(
-          title: const Text('Speak It !', style: TextStyle(fontSize:35, color: Colors.black)),
+          title: const Text('Comunica\'t !', style: TextStyle(fontSize:35, color:
+          Colors.black)),
           backgroundColor: Colors.grey,
           centerTitle: true,
         ),
