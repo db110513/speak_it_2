@@ -4,7 +4,8 @@ import 'package:flutter_tts/flutter_tts.dart';
 
 
 class Bar extends StatefulWidget {
-  const Bar({Key? key}) : super(key: key);
+
+  late String txt = '';
 
   State<Bar> createState() => _BarState();
 }
@@ -12,7 +13,7 @@ class Bar extends StatefulWidget {
 
 class _BarState extends State<Bar> {
 
-  App app = App();
+  Bar bar = Bar();
 
   late FlutterTts tts;
 
@@ -76,6 +77,7 @@ class _BarState extends State<Bar> {
                 backgroundColor: Colors.white,
               ),
               onPressed: () {
+                speak();
               },
               child: Image.asset('img/play.png', width:80, height:100, fit:
               BoxFit.cover)
@@ -112,11 +114,11 @@ class _BarState extends State<Bar> {
     await tts.setSpeechRate(0.5);
     await tts.setPitch(1);
 
-    if (app.txt != null) {
+    if (bar.txt != null) {
 
-      if (app.txt!.isNotEmpty) {
+      if (bar.txt!.isNotEmpty) {
 
-        await tts.speak(app.txt!);
+        await tts.speak(bar.txt!);
 
       }
 

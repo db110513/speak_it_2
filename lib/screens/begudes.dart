@@ -3,7 +3,6 @@ import 'package:flutter_tts/flutter_tts.dart';
 import 'package:flutter/material.dart';
 
 class Begudes extends StatefulWidget {
-  const Begudes({Key? key}) : super(key: key);
 
   State<Begudes> createState() => _BegudesState();
 }

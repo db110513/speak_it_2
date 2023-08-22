@@ -3,7 +3,6 @@ import 'package:flutter_tts/flutter_tts.dart';
 import 'package:flutter/material.dart';
 
 class Roba extends StatefulWidget {
-  const Roba({Key? key}) : super(key: key);
 
   State<Roba> createState() => _RobaState();
 }

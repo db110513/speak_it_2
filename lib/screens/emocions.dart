@@ -3,7 +3,6 @@ import 'package:flutter_tts/flutter_tts.dart';
 import 'package:flutter/material.dart';
 
 class Emocions extends StatefulWidget {
-  const Emocions({Key? key}) : super(key: key);
 
   State<Emocions> createState() => _EmocionsState();
 }

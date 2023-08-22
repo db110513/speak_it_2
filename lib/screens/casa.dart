@@ -3,7 +3,6 @@ import 'package:flutter_tts/flutter_tts.dart';
 import 'package:flutter/material.dart';
 
 class Casa extends StatefulWidget {
-  const Casa({Key? key}) : super(key: key);
 
   State<Casa> createState() => _CasaState();
 }

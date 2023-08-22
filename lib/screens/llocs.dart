@@ -3,7 +3,6 @@ import 'package:flutter_tts/flutter_tts.dart';
 import 'package:flutter/material.dart';
 
 class Llocs extends StatefulWidget {
-  const Llocs({Key? key}) : super(key: key);
 
   State<Llocs> createState() => _LlocsState();
 }

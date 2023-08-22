@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_tts/flutter_tts.dart';
 
 class Accions extends StatefulWidget {
-  const Accions({Key? key}) : super(key: key);
 
   State<Accions> createState() => _AccionsState();
 }
@@ -29,6 +28,7 @@ class _AccionsState extends State<Accions> {
     tts = FlutterTts();
     await tts.awaitSpeakCompletion(true);
   }
+
 
   Widget build(BuildContext context) {
 

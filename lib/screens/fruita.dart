@@ -3,7 +3,6 @@ import 'package:flutter_tts/flutter_tts.dart';
 import 'package:flutter/material.dart';
 
 class Fruita extends StatefulWidget {
-  const Fruita({Key? key}) : super(key: key);
 
   State<Fruita> createState() => _FruitaState();
 }

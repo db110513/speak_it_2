@@ -4,7 +4,6 @@ import 'package:flutter/material.dart';
 
 
 class Jocs extends StatefulWidget {
-  const Jocs({Key? key}) : super(key: key);
 
   State<Jocs> createState() => _JocsState();
 }

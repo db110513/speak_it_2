@@ -3,7 +3,6 @@ import 'package:flutter_tts/flutter_tts.dart';
 import 'package:flutter/material.dart';
 
 class Cuina extends StatefulWidget {
-  const Cuina({Key? key}) : super(key: key);
 
   State<Cuina> createState() => _CuinaState();
 }

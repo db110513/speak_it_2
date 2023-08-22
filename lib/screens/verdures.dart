@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_tts/flutter_tts.dart';
 
 class Verdures extends StatefulWidget {
-  const Verdures({Key? key}) : super(key: key);
 
   State<Verdures> createState() => _VerduresState();
 }
