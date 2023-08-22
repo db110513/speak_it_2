@@ -1,5 +1,7 @@
-import 'package:flutter/material.dart';
 import 'exports.dart';
+import 'package:flutter/material.dart';
+import 'package:flutter_tts/flutter_tts.dart';
+
 
 class Bar extends StatefulWidget {
   const Bar({Key? key}) : super(key: key);
@@ -7,7 +9,28 @@ class Bar extends StatefulWidget {
   State<Bar> createState() => _BarState();
 }
 
+
 class _BarState extends State<Bar> {
+
+  App app = App();
+
+  late FlutterTts tts;
+
+  void initState() {
+    super.initState();
+    initTts();
+    tts.setLanguage('ca');
+  }
+
+  void dispose() {
+    super.dispose();
+    tts.stop();
+  }
+
+  initTts() async {
+    tts = FlutterTts();
+    await tts.awaitSpeakCompletion(true);
+  }
 
   Widget build(BuildContext context) {
 
@@ -80,6 +103,24 @@ class _BarState extends State<Bar> {
         ],
       ),
     );
+
+  }
+
+  Future speak() async {
+
+    await tts.setVolume(1);
+    await tts.setSpeechRate(0.5);
+    await tts.setPitch(1);
+
+    if (app.txt != null) {
+
+      if (app.txt!.isNotEmpty) {
+
+        await tts.speak(app.txt!);
+
+      }
+
+    }
 
   }
 
