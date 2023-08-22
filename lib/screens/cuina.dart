@@ -17,11 +17,6 @@ class _CuinaState extends State<Cuina> {
 
     return Scaffold(
 
-      appBar: AppBar(
-        centerTitle: true,
-        title: const Text('Cuina', style: TextStyle(fontSize: 40)),
-      ),
-
       body: Container(
 
         padding: const EdgeInsets.all(10),
@@ -30,7 +25,9 @@ class _CuinaState extends State<Cuina> {
 
             children: [
 
-              const SizedBox(height: 150),
+              Bar(),
+
+              const SizedBox(height: 50),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [

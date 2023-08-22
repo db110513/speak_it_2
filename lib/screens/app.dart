@@ -36,12 +36,6 @@ class _AppState extends State<App> {
 
     return Scaffold(
 
-      appBar: AppBar(
-        title: const Text('Comunica\'t !', style: TextStyle(fontSize:35, color: Colors.black)),
-        backgroundColor: Colors.grey,
-        centerTitle: true,
-      ),
-
       body: SingleChildScrollView(
 
         scrollDirection: Axis.vertical,
@@ -53,6 +47,8 @@ class _AppState extends State<App> {
           child: Column(
 
             children: [
+
+              Bar(),
 
               const SizedBox(height: 110),
               Row(

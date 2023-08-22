@@ -14,3 +14,4 @@ export 'cuina.dart';
 export 'llocs.dart';
 export 'roba.dart';
 export 'sanitari.dart';
+export 'bar.dart';

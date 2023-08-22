@@ -37,11 +37,6 @@ class _AnimalsState extends State<Animals> {
 
     return Scaffold(
 
-      appBar: AppBar(
-        centerTitle: true,
-        title: const Text('Animals', style: TextStyle(fontSize: 40)),
-      ),
-
       body: Container(
 
         padding: const EdgeInsets.all(10),
@@ -49,7 +44,10 @@ class _AnimalsState extends State<Animals> {
         child: Column(
 
             children: [
-              const SizedBox(height: 150),
+
+              Bar(),
+
+              const SizedBox(height: 50),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [

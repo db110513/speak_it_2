@@ -48,7 +48,9 @@ class _BegudesState extends State<Begudes> {
 
             children: [
 
-              const SizedBox(height: 130),
+              Bar(),
+
+              const SizedBox(height: 50),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [

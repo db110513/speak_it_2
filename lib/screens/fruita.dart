@@ -34,11 +34,6 @@ class _FruitaState extends State<Fruita> {
 
     return Scaffold(
 
-      appBar: AppBar(
-        centerTitle: true,
-        title: const Text('Fruita', style: TextStyle(fontSize: 40)),
-      ),
-
       body: Container(
         padding: const EdgeInsets.all(10),
 
@@ -46,7 +41,9 @@ class _FruitaState extends State<Fruita> {
 
             children: [
 
-              const SizedBox(height: 130),
+              Bar(),
+
+              const SizedBox(height: 50),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [

@@ -34,11 +34,6 @@ class _AccionsState extends State<Accions> {
 
     return Scaffold(
 
-      appBar: AppBar(
-        centerTitle: true,
-        title: const Text('Accions', style: TextStyle(fontSize: 40)),
-      ),
-
       body: Container(
 
           padding: const EdgeInsets.all(10),
@@ -47,7 +42,9 @@ class _AccionsState extends State<Accions> {
 
             children: [
 
-              const SizedBox(height: 130),
+              Bar(),
+
+              const SizedBox(height: 110),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [

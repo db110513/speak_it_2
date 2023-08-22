@@ -36,11 +36,6 @@ class _JocsState extends State<Jocs> {
 
     return Scaffold(
 
-      appBar: AppBar(
-        centerTitle: true,
-        title: const Text('Jocs', style: TextStyle(fontSize: 40)),
-      ),
-
       body: Container(
 
         padding: const EdgeInsets.all(10),
@@ -49,7 +44,9 @@ class _JocsState extends State<Jocs> {
 
             children: [
 
-              const SizedBox(height: 130),
+              Bar(),
+
+              const SizedBox(height: 50),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [

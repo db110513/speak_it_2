@@ -34,11 +34,6 @@ class _EmocionsState extends State<Emocions> {
 
     return Scaffold(
 
-      appBar: AppBar(
-        centerTitle: true,
-        title: const Text('Emocions', style: TextStyle(fontSize: 40)),
-      ),
-
       body: Container(
 
         padding: const EdgeInsets.all(10),
@@ -47,7 +42,9 @@ class _EmocionsState extends State<Emocions> {
 
             children: [
 
-              const SizedBox(height: 130),
+              Bar(),
+
+              const SizedBox(height: 50),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [

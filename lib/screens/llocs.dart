@@ -33,11 +33,6 @@ class _LlocsState extends State<Llocs> {
   Widget build(BuildContext context) {
     return Scaffold(
 
-      appBar: AppBar(
-        centerTitle: true,
-        title: const Text('Llocs', style: TextStyle(fontSize: 40)),
-      ),
-
       body: Container(
 
         padding: const EdgeInsets.all(10),
@@ -46,7 +41,9 @@ class _LlocsState extends State<Llocs> {
 
             children: [
 
-              const SizedBox(height: 130),
+              Bar(),
+
+              const SizedBox(height: 50),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
