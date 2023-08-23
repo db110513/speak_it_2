@@ -33,12 +33,17 @@ class _BarState extends State<Bar> {
     await tts.awaitSpeakCompletion(true);
   }
 
+
   Widget build(BuildContext context) {
 
     return SafeArea(
+
       child: Row(
+        mainAxisAlignment: MainAxisAlignment.center,
+
         children: [
 
+          const SizedBox(height: 15),
           ElevatedButton(
               style: ElevatedButton.styleFrom(
                 backgroundColor: Colors.white,
@@ -48,6 +53,7 @@ class _BarState extends State<Bar> {
               },
               child: Image.asset('img/homeICON.png', width:100, height:100, fit: BoxFit.cover)
           ),
+
           const SizedBox(width: 10),
           ElevatedButton(
               style: ElevatedButton.styleFrom(
@@ -56,9 +62,9 @@ class _BarState extends State<Bar> {
               onPressed: () {
                 Navigator.pop(context);
               },
-              child: Image.asset('img/back.png', width:68, height:100, fit:
-              BoxFit.cover)
+              child: Image.asset('img/back.png', width:68, height:100, fit: BoxFit.cover)
           ),
+
           const SizedBox(width: 10),
 
           Scrollbar(
@@ -69,9 +75,8 @@ class _BarState extends State<Bar> {
               height: 100,
             ),
           ),
+
           const SizedBox(width: 10),
-
-
           ElevatedButton(
               style: ElevatedButton.styleFrom(
                 backgroundColor: Colors.white,
@@ -79,9 +84,9 @@ class _BarState extends State<Bar> {
               onPressed: () {
                 speak();
               },
-              child: Image.asset('img/play.png', width:80, height:100, fit:
-              BoxFit.cover)
+              child: Image.asset('img/play.png', width:80, height:100, fit: BoxFit.cover)
           ),
+
           const SizedBox(width: 10),
           ElevatedButton(
               style: ElevatedButton.styleFrom(
@@ -92,6 +97,7 @@ class _BarState extends State<Bar> {
               child: Image.asset('img/delete.png', width:95, height:100, fit:
               BoxFit.cover)
           ),
+
           const SizedBox(width: 10),
           ElevatedButton(
               style: ElevatedButton.styleFrom(
@@ -103,10 +109,13 @@ class _BarState extends State<Bar> {
           ),
 
         ],
+
       ),
+
     );
 
   }
+
 
   Future speak() async {
 
