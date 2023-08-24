@@ -19,6 +19,7 @@ class _BarState extends State<Bar> {
 
   late FlutterTts tts;
 
+
   void initState() {
     super.initState();
     initTts();
