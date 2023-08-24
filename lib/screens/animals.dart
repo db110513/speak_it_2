@@ -12,7 +12,7 @@ class Animals extends StatefulWidget {
 
 class _AnimalsState extends State<Animals> {
 
-  Bar bar = Bar();
+  App app = App();
 
   late FlutterTts tts;
 
@@ -53,7 +53,7 @@ class _AnimalsState extends State<Animals> {
                         backgroundColor: Colors.white,
                       ),
                       onPressed: () {
-                        bar.txt = 'cocodril';
+                        app.txt = 'cocodril';
                         speak();
                       },
                       child: Image.asset('img/cocodril.png', width:160,
@@ -65,7 +65,7 @@ class _AnimalsState extends State<Animals> {
                         backgroundColor: Colors.white,
                       ),
                       onPressed: () {
-                        bar.txt = 'elefant';
+                        app.txt = 'elefant';
                         speak();
                       },
                       child: Image.asset('img/elefant.png', width:160, height:160, fit: BoxFit.cover)
@@ -76,7 +76,7 @@ class _AnimalsState extends State<Animals> {
                         backgroundColor: Colors.white,
                       ),
                       onPressed: () {
-                        bar.txt = 'gos';
+                        app.txt = 'gos';
                         speak();
                       },
                       child: Image.asset('img/gos.png', width:160, height:160, fit: BoxFit.cover)
@@ -89,7 +89,7 @@ class _AnimalsState extends State<Animals> {
                         backgroundColor: Colors.white,
                       ),
                       onPressed: () {
-                        bar.txt = 'lloro';
+                        app.txt = 'lloro';
                         speak();
                       },
                       child: Image.asset('img/lloro.png', width:160, height:160, fit: BoxFit.cover)
@@ -100,7 +100,7 @@ class _AnimalsState extends State<Animals> {
                         backgroundColor: Colors.white,
                       ),
                       onPressed: () {
-                        bar.txt = 'peix';
+                        app.txt = 'peix';
                         speak();
                       },
                       child: Image.asset('img/peix.png', width:160, height:160,
@@ -112,7 +112,7 @@ class _AnimalsState extends State<Animals> {
                         backgroundColor: Colors.white,
                       ),
                       onPressed: () {
-                        bar.txt = 'pingüi';
+                        app.txt = 'pingüi';
                         speak();
                       },
                       child: Image.asset('img/pingui.png', width:160,
@@ -132,7 +132,7 @@ class _AnimalsState extends State<Animals> {
                         backgroundColor: Colors.white,
                       ),
                       onPressed: () {
-                        bar.txt = 'caball';
+                        app.txt = 'caball';
                         speak();
                       },
                       child: Image.asset('img/caball.png', width:160,
@@ -144,7 +144,7 @@ class _AnimalsState extends State<Animals> {
                         backgroundColor: Colors.white,
                       ),
                       onPressed: () {
-                        bar.txt = 'ànec';
+                        app.txt = 'ànec';
                         speak();
                       },
                       child: Image.asset('img/anec.png', width:160, height:160,
@@ -156,7 +156,7 @@ class _AnimalsState extends State<Animals> {
                         backgroundColor: Colors.white,
                       ),
                       onPressed: () {
-                        bar.txt = 'aranya';
+                        app.txt = 'aranya';
                         speak();
                       },
                       child: Image.asset('img/aranya.png', width:160, height:160, fit: BoxFit.cover)
@@ -167,7 +167,7 @@ class _AnimalsState extends State<Animals> {
                         backgroundColor: Colors.white,
                       ),
                       onPressed: () {
-                        bar.txt = 'gat';
+                        app.txt = 'gat';
                         speak();
                       },
                       child: Image.asset('img/gat.png', width:160, height:160,
@@ -179,7 +179,7 @@ class _AnimalsState extends State<Animals> {
                         backgroundColor: Colors.white,
                       ),
                       onPressed: () {
-                        bar.txt = 'hipopòtam';
+                        app.txt = 'hipopòtam';
                         speak();
                       },
                       child: Image.asset('img/hipopotam.png', width:160, height:160,
@@ -191,7 +191,7 @@ class _AnimalsState extends State<Animals> {
                         backgroundColor: Colors.white,
                       ),
                       onPressed: () {
-                        bar.txt = 'serp';
+                        app.txt = 'serp';
                         speak();
                       },
                       child: Image.asset('img/serp.png', width:160,
@@ -211,7 +211,7 @@ class _AnimalsState extends State<Animals> {
                         backgroundColor: Colors.white,
                       ),
                       onPressed: () {
-                        bar.txt = 'periquito';
+                        app.txt = 'periquito';
                         speak();
                       },
                       child: Image.asset('img/periquito.png', width:160,
@@ -223,7 +223,7 @@ class _AnimalsState extends State<Animals> {
                         backgroundColor: Colors.white,
                       ),
                       onPressed: () {
-                        bar.txt = 'hàmster';
+                        app.txt = 'hàmster';
                         speak();
                       },
                       child: Image.asset('img/hamster.png', width:160, height:160,
@@ -235,7 +235,7 @@ class _AnimalsState extends State<Animals> {
                         backgroundColor: Colors.white,
                       ),
                       onPressed: () {
-                        bar.txt = 'tortuga';
+                        app.txt = 'tortuga';
                         speak();
                       },
                       child: Image.asset('img/tortuga.png', width:160, height:160, fit: BoxFit.cover)
@@ -246,7 +246,7 @@ class _AnimalsState extends State<Animals> {
                         backgroundColor: Colors.white,
                       ),
                       onPressed: () {
-                        bar.txt = 'ós';
+                        app.txt = 'ós';
                         speak();
                       },
                       child: Image.asset('img/os.png', width:160, height:160, fit: BoxFit.cover)
@@ -257,7 +257,7 @@ class _AnimalsState extends State<Animals> {
                         backgroundColor: Colors.white,
                       ),
                       onPressed: () {
-                        bar.txt = 'ocell';
+                        app.txt = 'ocell';
                         speak();
                       },
                       child: Image.asset('img/ocell.png', width:160, height:160, fit: BoxFit.cover)
@@ -268,7 +268,7 @@ class _AnimalsState extends State<Animals> {
                         backgroundColor: Colors.white,
                       ),
                       onPressed: () {
-                        bar.txt = 'peix pallaso';
+                        app.txt = 'peix pallaso';
                         speak();
                       },
                       child: Image.asset('img/peix_pallaso.png', width:160, height:160, fit: BoxFit.cover)
@@ -288,23 +288,23 @@ class _AnimalsState extends State<Animals> {
 
   }
 
-
   Future speak() async {
 
     await tts.setVolume(1);
     await tts.setSpeechRate(0.5);
     await tts.setPitch(1);
 
-    if (bar.txt != null) {
+    if (app.txt != null) {
 
-      if (bar.txt!.isNotEmpty) {
+      if (app.txt!.isNotEmpty) {
 
-        await tts.speak(bar.txt!);
+        await tts.speak(app.txt!);
 
       }
-    }
-  }
 
+    }
+
+  }
 
 }
 

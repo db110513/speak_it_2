@@ -11,6 +11,8 @@ class _AccionsState extends State<Accions> {
 
   App app = App();
 
+  Bar bar = Bar();
+
   late FlutterTts tts;
 
   void initState() {
@@ -54,10 +56,10 @@ class _AccionsState extends State<Accions> {
                       ),
                       onPressed: () {
                         app.txt = 'protegir';
+                        bar.message.add('protegir');
                         speak();
                       },
-                      child: Image.asset('img/protegir.png', width:160,
-                          height:160, fit: BoxFit.cover)
+                      child: Image.asset('img/protegir.png', width:160, height:160, fit: BoxFit.cover)
                   ),
                   const SizedBox(width: 10),
                   ElevatedButton(
@@ -66,6 +68,7 @@ class _AccionsState extends State<Accions> {
                       ),
                       onPressed: () {
                         app.txt = 'preguntar';
+                        bar.message.add('preguntar');
                         speak();
                       },
                       child: Image.asset('img/preguntar.png', width:160, height:160, fit: BoxFit.cover)
@@ -76,7 +79,8 @@ class _AccionsState extends State<Accions> {
                         backgroundColor: Colors.white,
                       ),
                       onPressed: () {
-                        app.txt = 'beure';
+                        // app.txt = 'beure';
+                        bar.message.add('beure');
                         speak();
                       },
                       child: Image.asset('img/beure.png', width:160, height:160, fit: BoxFit.cover)
@@ -87,7 +91,8 @@ class _AccionsState extends State<Accions> {
                         backgroundColor: Colors.white,
                       ),
                       onPressed: () {
-                        app.txt = 'renyar';
+                        // app.txt = 'renyar';
+                        bar.message.add('renyar');
                         speak();
                       },
                       child: Image.asset('img/renyar.png', width:160, height:160, fit: BoxFit.cover)
@@ -98,7 +103,8 @@ class _AccionsState extends State<Accions> {
                         backgroundColor: Colors.white,
                       ),
                       onPressed: () {
-                        app.txt = 'pixar';
+                        // app.txt = 'pixar';
+                        bar.message.add('pixar');
                         speak();
                       },
                       child: Image.asset('img/pixar.png', width:160, height:160,
@@ -110,7 +116,8 @@ class _AccionsState extends State<Accions> {
                         backgroundColor: Colors.white,
                       ),
                       onPressed: () {
-                        app.txt = 'cagar';
+                        // app.txt = 'cagar';
+                        bar.message.add('cagar');
                         speak();
                       },
                       child: Image.asset('img/cagar.png', width:160,

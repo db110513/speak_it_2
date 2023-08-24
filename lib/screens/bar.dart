@@ -5,13 +5,17 @@ import 'package:flutter_tts/flutter_tts.dart';
 
 class Bar extends StatefulWidget {
 
-  late String txt = '';
+  late String t = '';
+
+  var message = [];
 
   State<Bar> createState() => _BarState();
 }
 
 
 class _BarState extends State<Bar> {
+
+  late String txt = '';
 
   Bar bar = Bar();
 
@@ -123,15 +127,15 @@ class _BarState extends State<Bar> {
     await tts.setSpeechRate(0.5);
     await tts.setPitch(1);
 
-    if (bar.txt != null) {
 
-      if (bar.txt!.isNotEmpty) {
 
-        await tts.speak(bar.txt!);
+    for (int i = 0; i < 10; i++) {
+
+        txt += bar.message[i];
 
       }
 
-    }
+    await tts.speak(txt!);
 
   }
 
